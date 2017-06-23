@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+        学海拾遗
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="尘渡">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="null">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="学海拾遗">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="学海拾遗">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="6月 24, 2017" />
+        <meta property="article:modified_time" content="5月 17, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="学海拾遗">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://yoursite.com" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2017/06/24/笔记_1/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "学海拾遗",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "尘渡",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "欢迎啊！"
+    },
+    "headline": "",
+    "url": "http://yoursite.com/2017/06/24/笔记_1/index.html",
+    "datePublished": "6月 24, 2017",
+    "dateModified": "5月 17, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    .footer-sns-facebook {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNiA3OGMtMjIuNCA1LjItNTUuOCA0MC4yLTYwLjYgNjMuNC0xLjQgNi40LTIgMTI5LjgtMS42IDM2Ny42LjYgMjk4LjYgMSAzNTguOCAzLjQgMzYzIDExIDIwLjIgMjEuNiAzMi40IDM3LjIgNDMgMTUgMTAuMiAxNy40IDExLjIgMzMgMTMgMTEuMiAxLjQgMTM2IDIgMzY1IDEuNiAzMTQtLjYgMzQ4LjYtMSAzNTUtMy44IDE1LjgtNy4yIDMzLjgtMjIgNDMuMi0zNS40IDUuMi03LjQgMTAuOC0xNi42IDEyLjYtMjAuNCAyLjgtNi40IDMuMi00MC44IDMuOC0zNTQgLjQtMjIzLS4yLTM1My40LTEuNC0zNjUtMi0xNy0yLjYtMTguNi0xMy0zNC04LjYtMTIuNi0xNC4yLTE4LjQtMjUuMi0yNS44LTcuOC01LjQtMTcuNC0xMS0yMS42LTEyLjQtNi0yLjItNzIuOC0yLjYtMzY1LjQtMi42LTE5Ni44LjItMzYxIC44LTM2NC40IDEuOHptNjU3LjYgODcuOGw0LjggMy44djU1LjJjMCA1NC42IDAgNTUuMi00LjYgNTkuNi00LjQgNC40LTYgNC42LTUwLjIgNS42bC00NS42IDEtNy4yIDUuNmMtMTAuNCA4LTE2LjggMTcuMi0xOS4yIDI3LjQtMSA1LTEuOCAyNC44LTEuOCA0NCAuMiAzOCAxLjYgNDQuNiAxMC44IDQ4IDIuOCAxLjIgMjguNCAyIDU2LjggMiA0Ny44IDAgNTIgLjIgNTYuMiAzLjhsNC44IDMuOHY1NS4yYzAgNTQuNiAwIDU1LjItNC42IDU5LjYtNC40IDQuNi01LjQgNC42LTU3IDUuMi0yOC44LjItNTQuNC44LTU2LjggMS40LTIuNC42LTUuNiAzLTYuOCA1LjQtMS44IDMuMi0yLjQgNDEuNC0yLjYgMTQzLjJsLS4yIDEzOC44LTUuNiA0LjgtNS42IDQuOEg2MDljLTUyLjQgMC01Mi44IDAtNTguMi00LjZsLTUuNC00LjYtLjItMTQwLjYtLjItMTQwLjYtNC44LTMuOGMtNC4yLTMuNC04LTMuOC0zNS42LTMuOC0zMi44IDAtNDEtMS44LTQzLjYtMTAtLjYtMi4yLTEuMi0yNS40LTEuMi01MS40IDAtNjAuOC0uMi01NyAzLjQtNjEuNiAyLjgtMy42IDYtNCAzNy44LTUgMzMtMSAzNS4yLTEuMiAzOS40LTUuNiA0LjYtNC40IDQuNi01LjIgNS44LTcxIDEuMi03My40LjItNjcuMiAxNi42LTk5LjQgOC0xNS44IDEyLjgtMjIgMjgtMzcgMTUuMi0xNS4yIDIxLjQtMTkuNiAzOC4yLTI4IDExLTUuNCAyNC0xMSAyOS0xMi4yIDYuMi0xLjggMjguNi0yLjYgNzEuMi0yLjYgNTguNi0uMiA2Mi42IDAgNjcgMy42eiIvPjwvc3ZnPg==);
+    }
+    
+    
+    .footer-sns-twitter {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNiA3OGMtMjIuNCA1LjItNTUuOCA0MC4yLTYwLjYgNjMuNC0xLjQgNi40LTIgMTI5LjgtMS42IDM2Ny42LjYgMjk4LjYgMSAzNTguOCAzLjQgMzYzIDExIDIwLjIgMjEuNiAzMi40IDM3LjIgNDMgMTUgMTAuMiAxNy40IDExLjIgMzMgMTMgMTEuMiAxLjQgMTM2IDIgMzY1IDEuNiAzMTQtLjYgMzQ4LjYtMSAzNTUtMy44IDE1LjgtNy4yIDMzLjgtMjIgNDMuMi0zNS40IDUuMi03LjQgMTAuOC0xNi42IDEyLjYtMjAuNCAyLjgtNi40IDMuMi00MC44IDMuOC0zNTQgLjQtMjIzLS4yLTM1My40LTEuNC0zNjUtMi0xNy0yLjYtMTguNi0xMy0zNC04LjYtMTIuNi0xNC4yLTE4LjQtMjUuMi0yNS44LTcuOC01LjQtMTcuNC0xMS0yMS42LTEyLjQtNi0yLjItNzIuOC0yLjYtMzY1LjQtMi42LTE5Ni44LjItMzYxIC44LTM2NC40IDEuOHptNTMyLjggMjA1YzEwIDQgMjMgMTAuOCAyOC44IDE1LjIgMTIuNiA5LjIgMTYuNiAxMC42IDI5LjQgOS40IDYuNi0uNiAxMy0zLjIgMjAuNC04LjIgMTEuMi03LjYgMTkuNC05LjIgMjMuNi01IDMuNiAzLjYgMi44IDktMi44IDE4LjYtNy4yIDEyLjQtNiAxOC44IDQuMiAyNC4yIDQuNCAyLjIgOC4yIDUuNiA4LjYgNy40IDEgNC44LTEyLjYgMjQuMi0yMiAzMS44LTExLjggOS4yLTE3LjIgMjIuNi0xOS42IDQ3LjgtNC44IDUwLjQtNy44IDY2LjYtMTYuNCA4NS40LTMgNy03IDE3LjgtOC44IDI0LTEuOCA2LjQtNSAxNC42LTcuNCAxOC40LTIuMiAzLjgtNy40IDEzLTExLjQgMjAuNC0xNy4yIDMwLjgtNDMuNCA2MS40LTcxLjQgODMuOC0yNS42IDIwLjQtNDYgMzMuMi02NC4yIDQwLjItOC40IDMuMi0xOCA3LjYtMjEuNCA5LjYtNy40IDQuNi0yMi40IDguNi01Ny4yIDE1LTYyLjIgMTEuNi03OS4yIDExLjQtMTM1LjYtMS0zMi40LTctMzguNi05LTUyLTE2LjgtMjEuNC0xMi42LTI0LjItMTQuOC0yNC4yLTE5LjQgMC02LjIgMTAuMi05LjIgMzUtMTAuNCAyMi40LTEgMjguNi0yLjYgNTctMTQuMiAyMy44LTkuOCAyOS40LTEyLjggMzAuNC0xNi44IDIuMi04LjItMy0xMy4yLTI2LjgtMjUuNC0yNS44LTEzLjItMzIuMi0xOC40LTQzLjgtMzUuOC05LTEzLjYtMTAtMjEuMi0zLjYtMzMuNiA1LjQtMTAuOCAzLjYtMTUtMTEuOC0yNS40LTktNi0xNC0xMS42LTIwLjgtMjIuNi0yMy40LTM3LjgtMjUtNTAuOC03LjItNTkuOCA0LjgtMi40IDkuNC01LjQgMTAuMi02LjYgMi44LTQuMi0uNC0xNS42LTguNC0yOS0xMS42LTE5LjYtMTMuMi0yNS44LTEzLjItNTUuMiAwLTI4LjggMi42LTM3LjggMTItNDAuMiA5LTIuMiAxNC44IDEgMzUuNiAyMC4yIDI0LjggMjIuOCA0My42IDM2LjYgNjIuOCA0NS44IDggMy44IDE3LjggOS4yIDIyIDEyIDQuMiAyLjggMTQuOCA3IDIzLjQgOS4yIDguNiAyLjIgMjQuMiA2LjggMzQuOCAxMC4yIDEzLjQgNC40IDIzLjYgNi40IDMzIDYuNiAxMi44LjIgMTQuMi0uMiAxOC42LTUuNCA0LTQuOCA0LjgtNy44IDQuOC0xOS4yIDAtMTQuNCA1LjYtMzkuNiAxMS4yLTUwLjYgNC4yLTguNCAyOS4yLTM0LjIgMzkuOC00MS40IDcuOC01LjQgMzUuNi0xNiA1Mi0yMCAxNC4yLTMuNiAzMi42LTEuMiA1Mi40IDYuOHoiLz48L3N2Zz4=);
+    }
+    
+    
+    .footer-sns-gplus {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNiA3OGMtMjIuNCA1LjItNTUuOCA0MC4yLTYwLjYgNjMuNC0xLjQgNi40LTIgMTI5LjgtMS42IDM2Ny42LjYgMjk4LjYgMSAzNTguOCAzLjQgMzYzIDExIDIwLjIgMjEuNiAzMi40IDM3LjIgNDMgMTUgMTAuMiAxNy40IDExLjIgMzMgMTMgMTEuMiAxLjQgMTM2IDIgMzY1IDEuNiAzMTQtLjYgMzQ4LjYtMSAzNTUtMy44IDE1LjgtNy4yIDMzLjgtMjIgNDMuMi0zNS40IDUuMi03LjQgMTAuOC0xNi42IDEyLjYtMjAuNCAyLjgtNi40IDMuMi00MC44IDMuOC0zNTQgLjQtMjIzLS4yLTM1My40LTEuNC0zNjUtMi0xNy0yLjYtMTguNi0xMy0zNC04LjYtMTIuNi0xNC4yLTE4LjQtMjUuMi0yNS44LTcuOC01LjQtMTcuNC0xMS0yMS42LTEyLjQtNi0yLjItNzIuOC0yLjYtMzY1LjQtMi42LTE5Ni44LjItMzYxIC44LTM2NC40IDEuOHpNNDMwIDI5NS40YzQwLjYgMTUuNCA1Ni42IDIzLjggNzIuNiAzOC40IDYuOCA2LjIgNy4yIDE1LjIgMSAyMy40LTYuMiA4LTMzLjYgMzMuOC0zOSAzNi42LTUuNiAyLjgtMTcuNiAyLjgtMjMuMi0uMi0yLjQtMS4yLTguMi01LjItMTMtOC44LTExLjItOC42LTI0LjYtMTEuMi01NS4yLTExLjItMjcuNCAwLTQwLjYgMi42LTUyLjIgMTAuNC00LjQgMi44LTEyLjIgNy42LTE3LjIgMTAuNi0yMyAxMy4yLTUxLjQgNTUtNTUuOCA4Mi40LTIuNiAxNS42LTIuNCAzNC44LjIgNTEgMi44IDE3LjQgMTkuOCA0OC44IDM1LjIgNjUuMiAxNiAxNi42IDQ1IDMzLjYgNjIuOCAzNi42IDI2LjggNC40IDY1LjggMS42IDc5LjQtNS44IDIwLjYtMTEuNCAzMS0xOSA0MS0zMC40IDE4LjgtMjEuNiAyMy40LTM0LjIgMTUuNi00My44LTMuOC00LjgtNC40LTQuOC01MS01LjgtNjAuOC0xLjItNTYuMiAyLjItNTYuMi00My4yIDAtMzIuNC4yLTMzLjIgNC44LTM3IDQuNC0zLjYgOS0zLjggOTItMy44IDc5IDAgODcuOC40IDk0LjIgMy42IDExLjIgNS42IDEzIDExLjQgMTIuOCA0My40IDAgMjUuNC0uOCAzMC44LTcuNiA1OC00IDE2LjYtOS44IDM0LTEyLjYgMzktMi44IDUtOC4yIDE0LjItMTEuNiAyMC42LTguNCAxNS40LTI3LjIgMzYuOC00MC44IDQ2LjYtNS44IDQuNC0xMy44IDEwLjItMTcuNiAxMy4yLTMuOCAzLTExIDctMTYuMiA4LjgtNS4yIDEuOC0xNi4yIDYuNC0yNC40IDEwLTIyLjQgOS42LTM0LjggMTEuNi03MyAxMS42LTM3LjYuMi00Ny0xLjQtNzEtMTItOC4yLTMuNi0xNy42LTcuMi0yMC44LTgtMTUuOC0zLjgtNjctNDUuMi03Ny44LTYyLjgtMi4yLTMuOC03LjYtMTEuNi0xMS44LTE3LjItNC4yLTUuNC05LTE0LTEwLjYtMTktMS44LTQuOC02LjItMTYtMTAtMjQuOC0zLjYtOC44LTcuOC0yMi4yLTkuMi0yOS42LTMuMi0xOC44LTEuNC03OS40IDIuOC05MS40IDEzLjgtNDAuNiAzNS42LTc4IDU4LjgtMTAwLjIgMTQtMTMuNiA0Ny4yLTM2LjQgNTgtMzkuOCA0LjItMS40IDEzLjQtNS4yIDIwLjYtOC40IDIyLTEwIDMyLjgtMTEuNiA3Ni0xMSAzMy44LjYgNDAuNCAxLjIgNTAgNC44em0zNDAuOCA4MC44YzggMy42IDkuNiAxMS4yIDkuMiAzOS4yLS42IDM0LjQtLjYgMzQgNSAzOS42IDQuOCA1IDUuNCA1IDM3LjYgNSA0My40IDAgNDQuNC44IDQzLjIgMzYuMi0uOCAxNy0xLjIgMTguNC02LjQgMjMtNS40IDQuNi02LjYgNC44LTM3LjYgNC44LTMxLjIgMC0zMiAuMi0zNi44IDUtNS42IDUuNC01LjYgNC40LTUgNDEuMi40IDI2LjQuMiAyNy40LTQuNiAzMy00LjggNS42LTYgNS44LTI0LjQgNi40LTIwLjguOC0yOS42LTEuNC0zMy40LTguNC0xLjQtMi42LTItMTUuNi0xLjgtMzUuNi40LTMxLjIuNC0zMS42LTQuNi0zNi42cy01LjYtNS0zNi01Yy0xOC44IDAtMzMtLjgtMzYtMi4yLTcuNi0zLjYtOS42LTExLjItOC44LTMzLjguOC0yOC4yLjQtMjggNDEtMjggNDUuNCAwIDQ1LjQgMCA0NC42LTQyLjYtLjYtMzMtLjYtMzMgNS0zOC40IDQuNC00LjYgNi4yLTUgMjQuOC01IDExIDAgMjIuMiAxIDI1IDIuMnoiLz48L3N2Zz4=);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前端开发"><span class="post-toc-number">1.</span> <span class="post-toc-text">前端开发</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前端开发要做的事情"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">前端开发要做的事情</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一个网站从头到尾的过程"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">一个网站从头到尾的过程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开发工具"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">开发工具</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前端开发语言"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">前端开发语言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#html-基本结构"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">html 基本结构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#w3c-万维网"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">w3c 万维网</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#祖师爷-蒂姆·伯纳斯·李"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">祖师爷 蒂姆·伯纳斯·李</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第一个标签"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">第一个标签</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在页面上添加样式的方式"><span class="post-toc-number">1.8.1.</span> <span class="post-toc-text">在页面上添加样式的方式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#div常用样式"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">div常用样式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结构关系"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">结构关系</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#background-背景"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">background 背景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#边距"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">边距</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#css-selector-选择器，选择符"><span class="post-toc-number">2.</span> <span class="post-toc-text">css selector (选择器，选择符)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础选择器"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">基础选择器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#伪类选择器"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">伪类选择器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#包含选择器-（后代选择器）"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">包含选择器 （后代选择器）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#群组选择器，群组选择符"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">群组选择器，群组选择符</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>尘渡</strong>
+        <span>6月 24, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&url=http://yoursite.com/2017/06/24/笔记_1/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=&url=http://yoursite.com/2017/06/24/笔记_1/index.html&via=尘渡" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/06/24/笔记_1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/06/24/笔记_1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="前端开发"><a href="#前端开发" class="headerlink" title="前端开发"></a>前端开发</h1><p>程序提供给用户用来操作界面，或者程序展示给用户浏览的界面，都叫前端。WEB前端开发，通俗的理解做页面的。</p>
+<h2 id="前端开发要做的事情"><a href="#前端开发要做的事情" class="headerlink" title="前端开发要做的事情"></a>前端开发要做的事情</h2><ol>
+<li>网站页面</li>
+<li>部分APP中的界面</li>
+<li>部分数字电视的界面</li>
+</ol>
+<h2 id="一个网站从头到尾的过程"><a href="#一个网站从头到尾的过程" class="headerlink" title="一个网站从头到尾的过程"></a>一个网站从头到尾的过程</h2><ol>
+<li>采集需求</li>
+<li>制作原型</li>
+<li>UI设计</li>
+<li>前端开发</li>
+<li>后端开发</li>
+<li>测试</li>
+</ol>
+<h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><ul>
+<li>浏览器<ul>
+<li>chrome 谷歌浏览器</li>
+<li>firefox 火狐</li>
+<li>safari 苹果浏览器</li>
+</ul>
+</li>
+<li>切图工具 PS Photoshop</li>
+<li>编辑器<ul>
+<li>sublime </li>
+<li>DW</li>
+<li>HBuilder<h2 id="前端开发语言"><a href="#前端开发语言" class="headerlink" title="前端开发语言"></a>前端开发语言</h2></li>
+</ul>
+</li>
+<li>html（Hypertext Markup Language） 超文本标记语言</li>
+<li>css（Cascading Style Sheets） 层叠样式表</li>
+<li>js（JavaScript） 脚本语言</li>
+</ul>
+<h2 id="html-基本结构"><a href="#html-基本结构" class="headerlink" title="html 基本结构"></a>html 基本结构</h2><pre><code>- &lt;!doctype html&gt;  文档声明
+- 双标签（标签对） &apos;&lt;开始&gt;标签里面的内容&lt;/结束&gt;&apos; 
+- &lt;html&gt; 页面内容 &lt;/html&gt; html的正文
+- &lt;head&gt;&lt;/head&gt; HTML头文档信息
+- &lt;title&gt;我的页面标题&lt;/title&gt; 
+- &lt;body&gt;我的页面内容&lt;/body&gt;
+- 单标签 &lt;标签 /&gt;
+- &lt;meta&gt; 附属信息
+- charset 编码声明(建议使用utf-8) 
+</code></pre><h2 id="w3c-万维网"><a href="#w3c-万维网" class="headerlink" title="w3c 万维网"></a>w3c 万维网</h2><ul>
+<li>html5 &lt;!DOCTYPE html&gt;</li>
+<li>XHTML 文档声明<ul>
+<li>严格型 &lt;!DOCTYPE html<br>PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN”<br>“<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;" target="_blank" rel="external">http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;</a></li>
+<li>过渡型 &lt;!DOCTYPE html<br>PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”<br>“<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;" target="_blank" rel="external">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a></li>
+<li>框架型 &lt;!DOCTYPE html<br>PUBLIC “-//W3C//DTD XHTML 1.0 Frameset//EN”<br>“<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt;" target="_blank" rel="external">http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt;</a><h2 id="祖师爷-蒂姆·伯纳斯·李"><a href="#祖师爷-蒂姆·伯纳斯·李" class="headerlink" title="祖师爷 蒂姆·伯纳斯·李"></a>祖师爷 蒂姆·伯纳斯·李</h2></li>
+</ul>
+</li>
+</ul>
+<h2 id="第一个标签"><a href="#第一个标签" class="headerlink" title="第一个标签"></a>第一个标签</h2><p><div></div>  块，用来划分内容区域</p>
+<h3 id="在页面上添加样式的方式"><a href="#在页面上添加样式的方式" class="headerlink" title="在页面上添加样式的方式"></a>在页面上添加样式的方式</h3><ul>
+<li>标签属性: 属性名 = “属性值”</li>
+<li>行间样式: 写在标签内容的style属性中    </li>
+<li>内嵌样式表(内部样式表): 写在页面内部的style标签里<ul>
+<li>通常是写在head标签中，但是页面的任何地方都可以加style标签</li>
+</ul>
+</li>
+<li>id属性 id=”name”<ul>
+<li>name 不能是数字或者特殊符号开始的</li>
+<li>id的name 在页面中应该是唯一的</li>
+<li>“#name {样式…}” </li>
+</ul>
+</li>
+<li>外部样式表 写在单独的css文件中，通过link引入当前页面    </li>
+<li>link 引入外部文件<ul>
+<li>rel属性 文件的类型 (stylesheet 样式表)</li>
+<li>href属性 文件路径     </li>
+</ul>
+</li>
+<li>路径(文件地址)<ul>
+<li>绝对路径<ul>
+<li>本地绝对路径 文件放在我的电脑中那个位置(禁止使用) </li>
+<li>网络绝对路径 放在某个网址下边的某个文件夹下某个文件 例如:<a href="https://gss1.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/her/static/indexher/pkg/aio_z.339071b.png" target="_blank" rel="external">https://gss1.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/her/static/indexher/pkg/aio_z.339071b.png</a> (工作中一般使用 网络绝对路径)</li>
+</ul>
+</li>
+<li>相对路径 (相对于当前文件的地址)<ul>
+<li>“/“ 这个文件夹下</li>
+<li>“../“ 返回上一级文件夹</li>
+<li>“./“ 链接到根目录 <h2 id="div常用样式"><a href="#div常用样式" class="headerlink" title="div常用样式"></a>div常用样式</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>单位 像素(px) </li>
+<li>width 宽度</li>
+<li>height 高度</li>
+<li><p>border 边框</p>
+<ul>
+<li>border-width 边框宽度(复合样式)<ul>
+<li>border-top-width</li>
+<li>border-right-width</li>
+<li>border-bottom-width</li>
+<li>border-left-width </li>
+</ul>
+</li>
+<li>border-style 边框样式(复合样式)(solid 实线/ dashed 虚线/ dotted 点线/ 默认none 无)<ul>
+<li>border-top-style</li>
+<li>border-right-style</li>
+<li>border-bottom-style</li>
+<li>border-left-style</li>
+</ul>
+</li>
+<li>border-color 边框颜色(复合样式)<ul>
+<li>border-top-color</li>
+<li>border-right-color</li>
+<li>border-bottom-color</li>
+<li>border-left-color</li>
+<li>关键字(red、blue、yellow、green、pink、gray……)</li>
+<li>rgb(0-255, 0-255, 0-255);</li>
+<li>十六进制(0-9,a,b,c,d,e,f)的六位或三位数字</li>
+<li>transparent 透明</li>
+</ul>
+</li>
+<li>多值写法<ul>
+<li>两个值 (上下) (左右)</li>
+<li>三个值 (上) (左右) (下)</li>
+<li>四个值 (上) (右) (下) (左)</li>
+</ul>
+</li>
+<li><strong>注意：同一条样式后边的代码会覆盖前边的代码</strong></li>
+<li>border: width style color; (复合样式)    </li>
+<li>none 没有边框</li>
+<li>border-top (复合样式)    </li>
+<li>border-right (复合样式)</li>
+<li>border-bottom (复合样式)<em>**</em></li>
+<li>border-left (复合样式)</li>
+<li>边框在宽高以外</li>
+<li><p>border- radius 圆角</p>
+<p>Demo</p>
+<p>  &lt;!DOCTYPE html&gt;</p>
+  <html lang="en"><br>  <head><br>      <meta charset="UTF-8"><br>      <title>Document</title><br>      <style type="text/css"><br>          #box {<br>              width: 298px;<br>              /<em> height: 416px; </em>/<br>              border: 1px solid #cfcfcf;<br>              border-top: 2px solid #206f96;<br>          }<br>          #div1 {<br>              height: 29px;<br>              border-bottom: 1px solid #cfcfcf;<br>          }<br>          #div2 {<br>              height: 55px;<br>              border-bottom: 2px solid #06a43a;<br>          }<br>          #div3 {<br>              height: 125px;<br>              border-bottom: 1px solid #f3fb64;<br>          }<br>          #div4 {<br>              height: 75px;<br>              border-bottom: 1px solid #f7a530;<br>          }<br>          #div5 {<br>              height: 127px;<br>          }<br>      </style><br>  </head><br>  <body><br>      <div id="box"><br>          <div id="div1"></div><br>          <div id="div2"></div><br>          <div id="div3"></div><br>          <div id="div4"></div><br>          <div id="div5"></div><br>      </div><br>  </body><br>  </html>
+</li>
+<li><p>在同一个元素中，两条相交的边框，相交的地方是斜边</p>
+<p>  Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #top {
+            width: 0;
+            height: 0;
+            border-top: solid #000;
+            border-left: solid transparent;
+            border-right: solid transparent;
+            border-width: 50px;
+        }
+        /* transparent 透明 */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;top&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></li>
+<li><p>div 不设置高度，高度可以被内容撑开</p>
+</li>
+<li><p>div 不设置宽度，宽度跟随父级</p>
+<p>  Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #box {
+            width: 298px;
+            border: 5px solid #000;
+        }
+        #div {
+            border: 5px solid red;
+            height: 100px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;box&quot;&gt;
+        &lt;div id=&quot;div&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h2 id="结构关系"><a href="#结构关系" class="headerlink" title="结构关系"></a>结构关系</h2><pre><code>- 嵌套关系 （父子级关系）
+    &lt;父级&gt;
+            &lt;子级&gt;&lt;/子级&gt;
+    &lt;/父级&gt;
+- 并列关系 （兄弟标签）
+    &lt;父级&gt; 
+            &lt;兄弟&gt;&lt;/兄弟&gt;
+            &lt;兄弟&gt;&lt;/兄弟&gt;
+            &lt;兄弟&gt;&lt;/兄弟&gt;
+    &lt;/父级&gt;
+</code></pre><h2 id="background-背景"><a href="#background-背景" class="headerlink" title="background 背景"></a>background 背景</h2><ul>
+<li><p>background 背景        </p>
+<ul>
+<li>background-color 背景颜色 (rgb,关键，十六进制)         </li>
+<li>background-image url(图片地址); 背景图片        </li>
+<li>background-repeat 背景图是否平铺 (repeat 平铺/repeat-x x方向平铺/repeat-y y方向平铺/no-repeat y方向平铺 )</li>
+<li><p>background-position 背景定位 （只设置了x方向 Y方向不设置 默认是center）</p>
+<ul>
+<li>关键字：<ul>
+<li>x方向(默认left)    <ul>
+<li>left（图的左侧和元素左侧对齐）     </li>
+<li>center （图的中间和中间左侧对齐）  </li>
+<li>right （图的右侧和中间右侧对齐）   </li>
+</ul>
+</li>
+<li>y方向(默认top)    <ul>
+<li>top （图的顶部和元素顶部对齐）</li>
+<li>center （图的中间和中间左侧对齐）</li>
+<li>bottom （图的底部和元素底部对齐）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>具体数值:<ul>
+<li>x方向(默认是0)<ul>
+<li>正值从左向右移动，负值从右向左移动</li>
+</ul>
+</li>
+<li>y方向(默认是0)             <ul>
+<li>正值从上向下移动，负值从下向上移动</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>百分比    图的百分之N，对齐元素的百分之N</li>
+</ul>
+<p>Demo</p>
+<p>  &lt;!DOCTYPE html&gt;</p>
+  <html lang="en"><br>  <head><br>      <meta charset="UTF-8"><br>      <title>Document</title><br>      <style type="text/css"><br>          #box {<br>              width: 300px;<br>              height: 300px;<br>              border: 5px solid #000;<br>              /<em> background-color: #f60;<br>              background-image: url(img/timg.jpg);<br>              background-repeat: no-repeat;<br>              background-position: 50% 20%; </em>/<br>              background: #f60 url(img/timg.jpg) no-repeat 10px 20px;<br>          }<br>      </style><br>  </head><br>  <body><br>      <div id="box"></div><br>  </body><br>  </html>
+</li>
+<li><p>background-attachment （fixed 固定背景的位置，不随着滚动条移动而移动，背景添加了 fixed 坐标计算就会根据整个可视区来计算/scroll 随滚动条滚动）</p>
+<p>  Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        body {
+            background: url(img/bg.jpg) no-repeat center center;
+            background-attachment: fixed;
+        }
+        div {
+            width: 600px;
+            height: 300px;
+            border: 2px solid #000;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></li>
+<li><p>background_fixed图片替换效果</p>
+<p>  Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        body {
+            height: 3000px;
+        }
+        #box {
+            height: 300px;
+            border: 2px solid #000;
+            background: url(img/bg.jpg) center 40px no-repeat fixed;
+        }
+        #box2 {
+            height: 300px;
+            border: 2px solid red;
+            background: url(img/bg2.jpg) center 40px no-repeat fixed;
+        }
+        #box3 {
+            height: 300px;
+            border: 2px solid blue;
+            background: url(img/bg3.jpg) center 40px no-repeat fixed;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;box2&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;box3&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>##内容样式</p>
+</li>
+</ul>
+</li>
+<li>文字样式（font 文字）<ul>
+<li>color 文字颜色 (rgb,关键，十六进制)</li>
+<li>font-size 文字大小 （浏览器默认大小一般是16px 一般不会是奇数 支持最小是12px）</li>
+<li>font-family 字体 (前设置英文字体，后设置中文字体)</li>
+<li>font-style 斜体 (italic 倾斜/normal 正常)</li>
+<li>font-weight 加粗 (bold 加粗/normal 正常/number)</li>
+<li>line-height 行高：文字在一行中上下居中 （px/当前元素字体大小的倍数 不同浏览器默认行高不同，需要覆盖)</li>
+<li>font (集合样式)<ul>
+<li>固定顺寻 (font-weight font-style font-size/line-height font-family)</li>
+<li>必写项 (font-size font-family)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>文本样式    <ul>
+<li>text-indent 首行缩进 （px/em 1em=当前元素的1个文字大小)<pre><code>正值 从左向右移动首行文字
+负值 从右向左移动首行文字
+</code></pre></li>
+<li>text-align 文本对齐方式 (left/center/right)</li>
+<li>text-decoration 文本修饰 (none/underline下划线/overline上划线/line-through删除线)</li>
+<li>word-spacing 单词间距</li>
+<li>letter-spacing 字母间距</li>
+</ul>
+</li>
+</ul>
+<p>Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #div {
+            width: 300px;
+            border: 2px solid #000;
+            font: bold italic 18px/2 &quot;宋体&quot;;
+            color: red;
+            text-indent: 2em;
+            text-align: right;
+            text-decoration: line-through;
+            word-spacing: 20px;
+            letter-spacing: 3px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;div&quot;&gt;MiaoV 妙味课堂妙味课堂妙味课堂妙味课堂妙味课堂妙味课堂妙味课堂妙味课堂妙味课堂妙味课堂妙味课堂妙味课堂妙味课堂妙味课堂&lt;/div&gt;    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><strong>win7中 宋体下 英文特殊字符的宽度（空格是特殊字符），是字体大小的一半。<br>两个词中间的距离= word-spacing + 2<em>*</em></strong>letter-spacing +空格；宋体中，文字右边一般会保留1px的空隙**</p>
+<h2 id="边距"><a href="#边距" class="headerlink" title="边距"></a>边距</h2><ul>
+<li><p>padding(内填充(内边距))</p>
+<ul>
+<li>在元素的边框以里，内容以外产生一个距离</li>
+<li>padding区域可以显示元素背景</li>
+<li>可视宽度(元素可以被看到的部分的宽度) 可视宽度 = padding + width + border</li>
+<li>元素背景位置的 (0,0) 点在元素padding区域的左上角</li>
+<li>元素和内容之间的距离，用padding控制</li>
+<li>padding的多值写法:<ul>
+<li>两个值: (上下) (左右)</li>
+<li>三个值: (上) (左右) (下)</li>
+<li>四个值: (上) (右) (下) (左)</li>
+</ul>
+</li>
+<li><p>分值</p>
+<ul>
+<li>padding-top</li>
+<li>padding-right</li>
+<li>padding-bottom</li>
+<li>padding-left </li>
+</ul>
+<p>Demo</p>
+<p>  &lt;!DOCTYPE html&gt;</p>
+  <html lang="en"><br>  <head><br>      <meta charset="UTF-8"><br>      <title>Document</title><br>      <style type="text/css"><br>          #wrap {<br>              width: 380px;<br>              border: 1px solid #999;<br>              padding: 0 10px;<br>              font: 14px “宋体”;<br>              text-indent: 2em;<br>              letter-spacing: -1px;<br>              color: #666;<br>          }<br>          #txt1 {<br>              padding: 9px 20px 12px;<br>              line-height: 30px;<br>              border-bottom: 1px dashed #999;<br>          }<br>          #txt2 {<br>              padding: 12px 20px 10px;<br>              line-height: 24px;<br>          }<br>      </style><br>  </head><br>  <body><br>      <div id="wrap"><br>          <div id="txt1">11月22日,江西宜春人邹生怀因与同村三个村民一起在山中挖出干红树根…[详细]</div><br>          <div id="txt2">11月22日,江西宜春人邹生怀因与同村三个村民一起在山中挖出干红树宜春人邹生怀因与同村三个村民一起在山中挖出干红树宜春人邹生怀因与同村三个村民一起在山中挖出干红树根…[详细]</div><br>      </div><br>  </body><br>  </html></li>
+</ul>
+</li>
+<li><p>margin 外边距</p>
+<ul>
+<li>多值写法:<ul>
+<li>两个值 (上下) (左右)</li>
+<li>三个值 (上) (左右) (下)</li>
+<li>四个值 (上) (右) (下) (左)</li>
+</ul>
+</li>
+<li><p>分值</p>
+<ul>
+<li>margin-top</li>
+<li>margin-right</li>
+<li>margin-bottom</li>
+<li><p>margin-left</p>
+<p>Demo</p>
+<p>  &lt;!DOCTYPE html&gt;</p>
+  <html lang="en"><br>  <head><br>      <meta charset="UTF-8"><br>      <title>Document</title><br>      <style type="text/css"><br>          #box {<br>              width: 100px;<br>              height: 100px;<br>              background: Red;<br>              margin: 20px;<br>          }<br>          #box2 {<br>              width: 200px;<br>              height: 200px;<br>              background: blue;<br>          }<br>      </style><br>  </head><br>  <body><br>      <div id="box"></div><br>      <div id="box2"></div><br>  </body><br>  </html>
+
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- 重叠：两个相邻元素的上下margin是重叠在一起的，左右不会，两个元素之间的距离，以大的为准
+
+    Demo
+
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+            &lt;style type=&quot;text/css&quot;&gt;
+                #box {
+                    width: 100px;
+                    height: 100px;
+                    background: Red;
+                    margin: 50px;
+                }
+                #box2 {
+                    margin-top: 20px;
+                    width: 200px;
+                    height: 200px;
+                    background: blue;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+            &lt;div id=&quot;box2&quot;&gt;&lt;/div&gt;    
+        &lt;/body&gt;
+        &lt;/html&gt;
+
+- 传递：元素的上下margin，会传递给父级（父级元素有padding不会传递），不会传递给左右。如果紧邻着同级元素则不会传递
+
+    Demo
+
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+            &lt;style type=&quot;text/css&quot;&gt;
+                #box {
+                    width: 500px;
+                    background: Red;
+                }
+                #box2 {
+                    margin: 50px;
+                    width: 200px;
+                    height: 200px;
+                    background: blue;
+                }
+                #top {
+                    width: 500px;
+                    height: 50px;
+                    background: yellow;
+                }
+                #bottom {
+                    width: 500px;
+                    height: 50px;
+                    background: green;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div id=&quot;top&quot;&gt;&lt;/div&gt;
+            &lt;div id=&quot;box&quot;&gt;
+                &lt;div id=&quot;box2&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;    
+            &lt;div id=&quot;bottom&quot;&gt;&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+
+- auto 自动
+    - margin-left: auto; (元素在父级中居右显示)
+    - margin-right: auto;(元素在父级中居左显示)
+    - margin: 0 auto; (元素在父级中水平居中显示)
+
+    Demo
+
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+            &lt;style type=&quot;text/css&quot;&gt;
+                #box {
+                    width: 300px;
+                    height: 300px;
+                    background: red;
+                    margin: 0 auto;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+</code></pre><ul>
+<li>盒模型:内容(content)、填充(padding)、边框(border)、边界(margin)。这些属性我们可以用日常生活中的常见事物——盒子作一个比喻来理解，所以叫它盒子模式。</li>
+<li>元素的占位大小: content(width/height) + padding + border +margin</li>
+<li>元素的显示大小: content(width/height) + padding + border</li>
+<li>margin的负值可以提高显示大小</li>
+<li>margin和padding的区别：<ul>
+<li>margin在元素的边框以外，padding在元素的边框以里</li>
+<li>margin区域不显示元素的背景，padding显示元素的背景</li>
+<li>margin通常用来给两个同级元素加距离，padding用来添加元素和它内容之间的距离。</li>
+</ul>
+</li>
+<li>a 标签<ul>
+<li>可以和其他a标签在一行显示</li>
+<li>默认会有下划线</li>
+<li>不会继承父级的字体颜色,必须加载他自己上</li>
+<li>换行会产生一个空格，空格大小会受到字体大小的影响</li>
+<li>a 标签中不能再包含a标签</li>
+<li>下划线加在哪个标签上，下划线的颜色就和哪个标签的颜色一致</li>
+<li>不建议加行高，不同浏览器会有不同</li>
+<li>(herf)作用：<ul>
+<li>页面地址的时候，点击之后跳转页面</li>
+<li>压缩文件的时候，点击之后下载文件</li>
+<li>id名字，点击之后跳转至ID多在位置 -锚点</li>
+<li>可以写js    </li>
+</ul>
+</li>
+<li>target=”_blank” 空白窗口 打开链接</li>
+<li>margin padding 左右有效，上下没有影响，但padding的效果会显示</li>
+</ul>
+</li>
+<li><p>base 定义页面上所有的链接的默认打开方式和默认地址 写在头部</p>
+<ul>
+<li><base target="_self">当前窗口打开</li>
+<li><base target="_blank"> 新窗口打开</li>
+<li><p>href属性，默认地址</p>
+<p>Demo</p>
+<p>  &lt;!DOCTYPE html&gt;</p>
+  <html lang="en"><br>  <head><br>      <meta charset="UTF-8"><br>      <title>Document</title><br>      <base target="_blank" href="http://miaov.com/"><br>  </head><br>  <body><br>      <a href="">首页</a><br>      <a href="index.php/Course/courseList">课程</a><br>      <a href="index.php/example/exampleList">学员作品</a><br>      <a href="http://www.baidu.com/" target="_blank" rel="external">百度</a><br>      <!--
+          target="_self" 当前窗口打开
+
+          base 定义页面上所有的链接的默认打开方式 和 默认地址
+      --><br>  </body><br>  </html></li>
+</ul>
+</li>
+<li>换行问题<ul>
+<li>white-space: nowrap; 强制不换行（一直到文本的换行处才会换行）</li>
+<li>white-space: pre; 保留输入格式</li>
+<li>word-break: break-all; 英文单词或者数字没有结束的话，不会自己换行，强制词内断行</li>
+<li>word-wrap: break-word; 在长单词或URL地址内部进行换行</li>
+</ul>
+</li>
+</ul>
+<p>Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;网易模块&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #box {
+            background: url(img/bg.png) no-repeat;
+            font: 16px &quot;宋体&quot;;
+            padding: 93px 0 87px 0;
+        }
+        #zt {
+            width: 496px;
+            border: #beafe2 solid 2px;
+            margin: 0 150px;
+            background: #fff;
+        }
+        #hd {
+            height: 120px;
+            background: url(img/hd4.png) no-repeat;
+        }
+        a {
+            color: #7d7d7d;
+            text-decoration: none;
+            margin: 0 16px;
+            white-space: nowrap;
+        }
+        #b1 {
+            background: url(img/b1.png) no-repeat 39px 34px;
+            border-bottom: #ebe7f6 2px solid;
+            line-height: 90px;
+            padding: 8px 0 0 89px;
+        }
+        #b2 {
+            background: url(img/sb.png) no-repeat 39px 30px;
+            border-bottom: #ebe7f6 2px solid;
+            line-height: 38px;
+            padding: 12px 8px 12px 89px;
+        }
+        #b3 {
+            background: url(img/xl.png) no-repeat 39px 32px;
+            border-bottom: #ebe7f6 2px solid;
+            line-height: 38px;
+            padding: 14px 0px 10px 89px;
+        }
+        #b4 {
+            background: url(img/xx.png) no-repeat 39px 32px;
+            line-height: 38px;
+            padding: 15px 0 25px 89px;
+        }
+        #cz {
+            margin-left: 8px;
+        }
+        #khd {
+            margin: 8px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;box&quot;&gt;
+        &lt;div id=&quot;zt&quot;&gt;
+            &lt;div id=&quot;hd&quot;&gt;&lt;/div&gt;
+            &lt;div id=&quot;b1&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;免费邮&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;VIP邮箱&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;企业邮&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;邮箱大师&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;b2&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;梦幻西游&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;新大话&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;藏地传奇&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;魔兽世界&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;星际争霸&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;倩女幽魂&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;武魂&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;天下&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;新飞飞&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;b3&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;考拉海购&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;LOFTER&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;博客&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;相册&lt;/a&gt;&lt;a id=&quot;cz&quot; href=&quot;#&quot;&gt;花田交友&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;约会&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;女神&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;跟帖&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;抢购&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;CC语音&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;直播&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;b4&quot;&gt;&lt;a href=&quot;#&quot;&gt;彩票&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;理财&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;商城&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;贵金属&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;电影票&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;车险&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;有道词典&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;翻译&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;云笔记&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;印像派&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;公开课&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;云课堂&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;读小说&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;云音乐&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;火车票&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;游戏助手&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;公正邮&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;应用&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;杂志&lt;/a&gt;&lt;a id=&quot;khd&quot; href=&quot;#&quot;&gt;新闻客户端&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;大学慕课&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="css-selector-选择器，选择符"><a href="#css-selector-选择器，选择符" class="headerlink" title="css selector (选择器，选择符)"></a>css selector (选择器，选择符)</h1><h2 id="基础选择器"><a href="#基础选择器" class="headerlink" title="基础选择器"></a>基础选择器</h2><ul>
+<li>id 选择器 通过查找具有某个id属性的元素来添加样式<ul>
+<li><strong>同一个页面中id不能重名</strong></li>
+</ul>
+</li>
+<li>tag selector(类型选择器，标签选择器，元素选择器) 通过标签的名字找到某一类型标签添加样式</li>
+<li>class 选择器(类选择器) 通过查找具有某类class属性的元素来添加样式<ul>
+<li>class可以重复调用 </li>
+<li>元素可以具有多个className,每个名字中间以空格隔开,每个名字添加的样式，元素都会识别</li>
+</ul>
+</li>
+<li><ul>
+<li>通配符 (通配选择器),代表所有的元素 (不推荐使用)</li>
+</ul>
+</li>
+<li>元素可以同时使用多种选择器,每种选择器添加的样式，元素都会识别，当我们在不同的选择器中，添加了同一条样式,元素最终显示那个选择器下的样式，这个选择器的优先级高<ul>
+<li>id选择器的优先级高于class</li>
+<li>class选择器的优先级高于tag选择器</li>
+<li>tag选择器的优先级高于*</li>
+<li>style 行间样式优先级最高</li>
+<li>style &gt; id &gt; class &gt; tag &gt; *</li>
+<li>inherit 继承 <ul>
+<li>父级的这条样式是怎样的，元素的这条样式就是怎样的</li>
+<li>文本样式，自己没有设置这条样式，就会继承父级，如果子元素设置就显示子元素自己的样式</li>
+<li>选择器优先级一致的情况下，后边的覆盖前边的    <h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>a:<ul>
+<li>:link 此链接未被访问</li>
+<li>:visited 此链接已经被访问过</li>
+<li>:hover 鼠标移入</li>
+<li>:active 鼠标按下</li>
+<li><strong>优先级L V H A</strong></li>
+<li>span 区分样式<h2 id="包含选择器-（后代选择器）"><a href="#包含选择器-（后代选择器）" class="headerlink" title="包含选择器 （后代选择器）"></a>包含选择器 （后代选择器）</h2></li>
+</ul>
+</li>
+<li>父级 子级 {}<ul>
+<li>层级数目不要过多 一般不超过三层</li>
+<li>子级是id话，一般不用包含选择器</li>
+<li><strong>包含选择器的优先级是其中用到的所有选择器的累加</strong><h2 id="群组选择器，群组选择符"><a href="#群组选择器，群组选择符" class="headerlink" title="群组选择器，群组选择符"></a>群组选择器，群组选择符</h2></li>
+</ul>
+</li>
+<li><p>优先级相当于单个标签</p>
+<pre><code>a, span { color: red; } 
+相对于
+a {
+    color: red;
+}
+span {
+    color: red;
+}
+a标签 和 span 的样式
+</code></pre></li>
+</ul>
+<p>单词</p>
+<pre><code>- width 宽度
+- height 高度
+- border 边框
+- color 颜色
+- style 样式
+- top 上
+- right 右
+- center 中间
+- bottom 下
+- left 左
+- background 背景
+- repeat 平铺
+- position 定位
+- transparent 透明度
+- text 文本
+- align 对齐
+- decoration 修饰
+- underline 下划线
+- line-through 删除线
+- overline 上划线
+- none 无
+- indent 缩进
+- letter 字母
+- word 单词
+- spacing 间距
+- font 文字
+- family 家族
+- weight 加重
+- bold 加粗
+- normal 正常
+- italic 倾斜
+- line 行
+- margin 外边距
+- padding 内填充
+- white-space
+- nowrap 不换行
+- break
+- size
+- image
+- link
+- href
+- sheet 表
+- doctype
+- body
+- head
+- fixed
+</code></pre>
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/06/24/笔记_3/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/06/24/js应用/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="尘渡's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="2677334070@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">31</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">31</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>学海拾遗
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
