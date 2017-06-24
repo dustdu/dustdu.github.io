@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-23T11:18:07.475Z</updated>
+  <updated>2017-06-24T18:09:48.844Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浏览器对象模型(BOM)的一些方法和属性</title>
+    <link href="http://yoursite.com/2017/06/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-BOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/"/>
+    <id>http://yoursite.com/2017/06/25/浏览器对象模型-BOM-的一些方法和属性/</id>
+    <published>2017-06-24T18:03:21.000Z</published>
+    <updated>2017-06-24T18:09:48.844Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;window对象&quot;&gt;&lt;a href=&quot;#window对象&quot; class=&quot;headerlink&quot; title=&quot;window对象&quot;&gt;&lt;/a&gt;window对象&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;表示浏览器中打开的窗口&lt;/li&gt;
+&lt;li&gt;如果文档包含框架（frame 或 if
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/BOM/"/>
+    <id>http://yoursite.com/2017/06/24/BOM/</id>
+    <published>2017-06-23T17:26:02.824Z</published>
+    <updated>2017-06-24T14:45:21.958Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;window对象&quot;&gt;&lt;a href=&quot;#window对象&quot; class=&quot;headerlink&quot; title=&quot;window对象&quot;&gt;&lt;/a&gt;window对象&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;表示浏览器中打开的窗口&lt;/li&gt;
+&lt;li&gt;如果文档包含框架（frame 或 if
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
