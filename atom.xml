@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>学海拾遗</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-06-17T19:36:13.196Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>尘渡</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E8%BD%AF%E4%BB%B6%E6%B3%A8%E5%86%8C%E7%A0%81/"/>
+    <id>http://yoursite.com/2017/06/24/软件注册码/</id>
+    <published>2017-06-23T19:52:25.721Z</published>
+    <updated>2017-06-17T19:36:13.196Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;BenVista-PhotoZoom-Pro-7-0-6-64-bit&quot;&gt;&lt;a href=&quot;#BenVista-PhotoZoom-Pro-7-0-6-64-bit&quot; class=&quot;headerlink&quot; title=&quot;BenVista PhotoZoom Pro
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E8%BD%AF%E4%BB%B6%E6%8F%92%E4%BB%B6%E4%BF%A1%E6%81%AF/"/>
+    <id>http://yoursite.com/2017/06/24/软件插件信息/</id>
+    <published>2017-06-23T19:52:25.710Z</published>
+    <updated>2017-05-30T13:18:50.485Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##sublime插件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Alignment&lt;ul&gt;
+&lt;li&gt;代码对齐，写几个变量，选中这几行，Ctrl+Alt+A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;BracketHighlighter&lt;ul&gt;
+&lt;li&gt;类似于代码匹配，可以匹配括号，引号等
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/vscode/"/>
+    <id>http://yoursite.com/2017/06/24/vscode/</id>
+    <published>2017-06-23T19:52:25.696Z</published>
+    <updated>2017-06-21T06:17:54.363Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;快捷键&quot;&gt;&lt;a href=&quot;#快捷键&quot; class=&quot;headerlink&quot; title=&quot;快捷键&quot;&gt;&lt;/a&gt;快捷键&lt;/h1&gt;&lt;h2 id=&quot;主命令框&quot;&gt;&lt;a href=&quot;#主命令框&quot; class=&quot;headerlink&quot; title=&quot;主命令框&quot;&gt;&lt;/a&gt;主命令
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/PHP/"/>
+    <id>http://yoursite.com/2017/06/24/PHP/</id>
+    <published>2017-06-23T19:52:25.659Z</published>
+    <updated>2017-05-01T18:05:04.254Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;PHP3&quot;&gt;&lt;a href=&quot;#PHP3&quot; class=&quot;headerlink&quot; title=&quot;PHP3&quot;&gt;&lt;/a&gt;PHP3&lt;/h1&gt;&lt;h2 id=&quot;自定义网站&quot;&gt;&lt;a href=&quot;#自定义网站&quot; class=&quot;headerlink&quot; title=&quot;自定义网站&quot;&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/less/"/>
+    <id>http://yoursite.com/2017/06/24/less/</id>
+    <published>2017-06-23T19:52:25.628Z</published>
+    <updated>2017-05-17T10:17:42.439Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量:&quot;&gt;&lt;/a&gt;变量:&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;变量: 存储数据的容器，数据本身可以修改&lt;/li&gt;
+&lt;li&gt;声明：@变量名称:变量的值;&lt;/li&gt;
+&lt;li&gt;使用：&lt;ul&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/hexo/"/>
+    <id>http://yoursite.com/2017/06/24/hexo/</id>
+    <published>2017-06-23T19:52:25.605Z</published>
+    <updated>2017-06-23T16:59:15.250Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;命令&quot;&gt;&lt;a href=&quot;#命令&quot; class=&quot;headerlink&quot; title=&quot;命令&quot;&gt;&lt;/a&gt;命令&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;hexo init &lt;folder&gt; 可以直接在空白文件夹建立&lt;/folder&gt;&lt;/li&gt;
+&lt;li&gt;cd &lt;folder&gt;&lt;/f
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/git%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2017/06/24/git命令/</id>
+    <published>2017-06-23T19:52:25.595Z</published>
+    <updated>2017-06-23T11:52:00.046Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;大概流程&quot;&gt;&lt;a href=&quot;#大概流程&quot; class=&quot;headerlink&quot; title=&quot;大概流程&quot;&gt;&lt;/a&gt;大概流程&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;首次使用，进行配置&lt;ul&gt;
+&lt;li&gt;git config –global user.username ‘dust
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/github/"/>
+    <id>http://yoursite.com/2017/06/24/github/</id>
+    <published>2017-06-23T19:52:25.571Z</published>
+    <updated>2017-06-18T07:16:50.615Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/git/"/>
+    <id>http://yoursite.com/2017/06/24/git/</id>
+    <published>2017-06-23T19:52:25.568Z</published>
+    <updated>2017-06-18T08:12:24.029Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;在中文情况下 Git status是 “\344\272\247\345\223\201\351\234\200\346\261\202” 差不多这样的。&lt;ul&gt;
+&lt;li&gt;解决这个问题方法是： &lt;code&gt;git config --global core.quo
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/bootstrap/"/>
+    <id>http://yoursite.com/2017/06/24/bootstrap/</id>
+    <published>2017-06-23T19:52:03.548Z</published>
+    <updated>2017-05-25T12:41:47.455Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;引用注意&quot;&gt;&lt;a href=&quot;#引用注意&quot; class=&quot;headerlink&quot; title=&quot;引用注意&quot;&gt;&lt;/a&gt;引用注意&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+&amp;lt;meta http-e
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E4%BD%9C%E7%94%A8%E5%9F%9F&amp;%E9%A2%84%E8%A7%A3%E6%9E%90/"/>
+    <id>http://yoursite.com/2017/06/24/作用域&amp;预解析/</id>
+    <published>2017-06-23T19:52:03.471Z</published>
+    <updated>2017-05-19T09:39:00.269Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;作用域-scope-：一条数据可以在哪个范围中使用&quot;&gt;&lt;a href=&quot;#作用域-scope-：一条数据可以在哪个范围中使用&quot; class=&quot;headerlink&quot; title=&quot;作用域(scope)：一条数据可以在哪个范围中使用&quot;&gt;&lt;/a&gt;作用域(scope)：
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E6%A0%B7%E5%BC%8F%E6%B8%85%E9%99%A4/"/>
+    <id>http://yoursite.com/2017/06/24/样式清除/</id>
+    <published>2017-06-23T19:52:03.296Z</published>
+    <updated>2017-06-14T01:47:40.099Z</updated>
+    
+    <summary type="html">
+    
+      &lt;pre&gt;&lt;code&gt;body {
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: normal;
+    margin: 0;
+}
+p,
+dl,
+dd {
+    margin: 0;
+}
+ul,
+ol {
+ 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E6%96%B0%E6%96%87%E6%A1%A3/"/>
+    <id>http://yoursite.com/2017/06/24/新文档/</id>
+    <published>2017-06-23T19:52:03.286Z</published>
+    <updated>2017-06-07T08:48:10.964Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://172.160.0.45:8081/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://172.160.0.45:8081/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;重绘 &lt;/li&gt;
+&lt;li&gt;回流 导致整个页面重新排
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E5%93%8D%E5%BA%94%E5%BC%8F/"/>
+    <id>http://yoursite.com/2017/06/24/响应式/</id>
+    <published>2017-06-23T19:52:03.256Z</published>
+    <updated>2017-04-20T06:55:08.684Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Media-Query-媒体查询&quot;&gt;&lt;a href=&quot;#Media-Query-媒体查询&quot; class=&quot;headerlink&quot; title=&quot;Media Query 媒体查询&quot;&gt;&lt;/a&gt;Media Query 媒体查询&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;媒询 设置了媒体
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E5%90%84%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2017/06/24/各种方法/</id>
+    <published>2017-06-23T19:52:03.224Z</published>
+    <updated>2017-06-12T11:26:28.035Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;时间对象&quot;&gt;&lt;a href=&quot;#时间对象&quot; class=&quot;headerlink&quot; title=&quot;时间对象&quot;&gt;&lt;/a&gt;时间对象&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Date() 日期对象,获取当前系统的时间&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;var date = new Date(
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
+    <id>http://yoursite.com/2017/06/24/定时器/</id>
+    <published>2017-06-23T19:52:03.162Z</published>
+    <updated>2017-05-25T11:08:28.720Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;定时器&quot;&gt;&lt;a href=&quot;#定时器&quot; class=&quot;headerlink&quot; title=&quot;定时器&quot;&gt;&lt;/a&gt;定时器&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;setInterval(fn,间隔时间); 间隔多长时间 重复执行某件事情
+setTimeout(fn,延迟时间);
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90/"/>
+    <id>http://yoursite.com/2017/06/24/弹性盒子/</id>
+    <published>2017-06-23T19:52:03.069Z</published>
+    <updated>2017-05-17T10:23:20.894Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Flex布局&quot;&gt;&lt;a href=&quot;#Flex布局&quot; class=&quot;headerlink&quot; title=&quot;Flex布局&quot;&gt;&lt;/a&gt;Flex布局&lt;/h1&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Flex是Flexible Box的缩写，意为”弹性布局”&lt;/li&gt;
+&lt;li&gt;采用Fl
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E7%AC%94%E8%AE%B0_4/"/>
+    <id>http://yoursite.com/2017/06/24/笔记_4/</id>
+    <published>2017-06-23T19:52:03.044Z</published>
+    <updated>2017-05-17T10:23:03.344Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##table 表格&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;caption 表格标题（用的少） &lt;/li&gt;
+&lt;li&gt;thead 表格头部&lt;/li&gt;
+&lt;li&gt;tbody 表格主体&lt;/li&gt;
+&lt;li&gt;tfoot 表格底部（用的少）&lt;ul&gt;
+&lt;li&gt;tr 行&lt;/li&gt;
+&lt;li&gt;th 单元格 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E7%AC%94%E8%AE%B0_3/"/>
+    <id>http://yoursite.com/2017/06/24/笔记_3/</id>
+    <published>2017-06-23T19:52:02.987Z</published>
+    <updated>2017-05-17T10:22:40.017Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;定位&quot;&gt;&lt;a href=&quot;#定位&quot; class=&quot;headerlink&quot; title=&quot;#定位&quot;&gt;&lt;/a&gt;#定位&lt;/h2&gt;&lt;p&gt;##position: relative;相对定位&lt;br&gt;    position: relative;&lt;br&gt;    top: 10p
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/%E7%AC%94%E8%AE%B0_1/"/>
+    <id>http://yoursite.com/2017/06/24/笔记_1/</id>
+    <published>2017-06-23T19:52:02.909Z</published>
+    <updated>2017-05-17T10:21:42.639Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前端开发&quot;&gt;&lt;a href=&quot;#前端开发&quot; class=&quot;headerlink&quot; title=&quot;前端开发&quot;&gt;&lt;/a&gt;前端开发&lt;/h1&gt;&lt;p&gt;程序提供给用户用来操作界面，或者程序展示给用户浏览的界面，都叫前端。WEB前端开发，通俗的理解做页面的。&lt;/p&gt;
+&lt;h2 i
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/js%E5%BA%94%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/06/24/js应用/</id>
+    <published>2017-06-23T19:52:02.880Z</published>
+    <updated>2017-06-06T08:35:35.360Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;在n个数中随机出现m个数&quot;&gt;&lt;a href=&quot;#在n个数中随机出现m个数&quot; class=&quot;headerlink&quot; title=&quot;在n个数中随机出现m个数&quot;&gt;&lt;/a&gt;在n个数中随机出现m个数&lt;/h2&gt;&lt;p&gt;Demo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTY
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/JavaScript%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%BA%94%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/06/24/JavaScript事件处理应用/</id>
+    <published>2017-06-23T19:52:02.843Z</published>
+    <updated>2017-05-25T11:46:51.958Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;定义变量，判断，进行循环&quot;&gt;&lt;a href=&quot;#定义变量，判断，进行循环&quot; class=&quot;headerlink&quot; title=&quot;定义变量，判断，进行循环&quot;&gt;&lt;/a&gt;定义变量，判断，进行循环&lt;/h2&gt;&lt;p&gt;Demo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTY
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/JavaScript/"/>
+    <id>http://yoursite.com/2017/06/24/JavaScript/</id>
+    <published>2017-06-23T19:52:02.688Z</published>
+    <updated>2017-06-20T10:57:11.671Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;JS本身严格区分大小写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;javascript-JS-的组成&quot;&gt;&lt;a href=&quot;#java
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/HTML5%E8%A1%A8%E5%8D%95/"/>
+    <id>http://yoursite.com/2017/06/24/HTML5表单/</id>
+    <published>2017-06-23T19:52:02.576Z</published>
+    <updated>2017-06-14T11:36:02.591Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;HTML5（方便开发人员-亲和移动端）&quot;&gt;&lt;a href=&quot;#HTML5（方便开发人员-亲和移动端）&quot; class=&quot;headerlink&quot; title=&quot;HTML5（方便开发人员,亲和移动端）&quot;&gt;&lt;/a&gt;HTML5（方便开发人员,亲和移动端）&lt;/h1&gt;&lt;ul&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/function/"/>
+    <id>http://yoursite.com/2017/06/24/function/</id>
+    <published>2017-06-23T19:52:02.557Z</published>
+    <updated>2017-05-19T09:51:21.012Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;function 功能方法 把一个个零散的代码和数据，组合成一个完整的方法.&lt;h2 id=&quot;函数声明&quot;&gt;&lt;a href=&quot;#函数
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/ECMAScript/"/>
+    <id>http://yoursite.com/2017/06/24/ECMAScript/</id>
+    <published>2017-06-23T19:52:02.492Z</published>
+    <updated>2017-06-07T12:17:51.370Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;标准划分&lt;ul&gt;
+&lt;li&gt;基本类型: number/string/boolean/undefined/null&lt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/css%E7%BB%BC%E5%90%88%E5%BA%94%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/06/24/css综合应用/</id>
+    <published>2017-06-23T19:52:02.357Z</published>
+    <updated>2017-05-25T11:56:56.212Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;滑动门&quot;&gt;&lt;a href=&quot;#滑动门&quot; class=&quot;headerlink&quot; title=&quot;滑动门&quot;&gt;&lt;/a&gt;滑动门&lt;/h2&gt;&lt;h3 id=&quot;滑动门导航背景&quot;&gt;&lt;a href=&quot;#滑动门导航背景&quot; class=&quot;headerlink&quot; title=&quot;滑动门导航背景
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/css%E5%85%BC%E5%AE%B9%E6%80%A7/"/>
+    <id>http://yoursite.com/2017/06/24/css兼容性/</id>
+    <published>2017-06-23T19:52:02.327Z</published>
+    <updated>2017-05-17T10:23:42.800Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##兼容性&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于代码写的不规范，或者不正确导致的错误，这就叫错误，不叫兼容性。&lt;/p&gt;
+&lt;p&gt;当我们学了一段正确的代码，但是在不同浏览器下，产生一些不正确的解析，这叫做兼容性问题&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/CSS3%E6%A0%B7%E5%BC%8F/"/>
+    <id>http://yoursite.com/2017/06/24/CSS3样式/</id>
+    <published>2017-06-23T19:52:02.274Z</published>
+    <updated>2017-06-20T09:46:17.135Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;box-sizing-盒模型设置&quot;&gt;&lt;a href=&quot;#box-sizing-盒模型设置&quot; class=&quot;headerlink&quot; title=&quot;box-sizing 盒模型设置&quot;&gt;&lt;/a&gt;box-sizing 盒模型设置&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;border-b
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/CSS3%E9%80%89%E6%8B%A9%E5%99%A8/"/>
+    <id>http://yoursite.com/2017/06/24/CSS3选择器/</id>
+    <published>2017-06-23T19:52:02.242Z</published>
+    <updated>2017-05-17T10:13:25.412Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;## &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;odd 奇数&lt;/li&gt;
+&lt;li&gt;even 偶数&lt;/li&gt;
+&lt;li&gt;数列 &lt;ul&gt;
+&lt;li&gt;body&amp;gt;*:nth-child(3n+1) {&lt;br&gt;background: green;&lt;br&gt;}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/24/BOM/"/>
+    <id>http://yoursite.com/2017/06/24/BOM/</id>
+    <published>2017-06-23T17:26:02.824Z</published>
+    <updated>2017-06-24T14:45:21.958Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;window对象&quot;&gt;&lt;a href=&quot;#window对象&quot; class=&quot;headerlink&quot; title=&quot;window对象&quot;&gt;&lt;/a&gt;window对象&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;表示浏览器中打开的窗口&lt;/li&gt;
+&lt;li&gt;如果文档包含框架（frame 或 if
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
