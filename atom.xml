@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-24T18:39:58.632Z</updated>
+  <updated>2017-06-24T18:41:16.781Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/06/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-BOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/"/>
     <id>http://yoursite.com/2017/06/25/浏览器对象模型-BOM-的一些方法和属性/</id>
     <published>2017-06-24T18:03:21.000Z</published>
-    <updated>2017-06-24T18:39:58.632Z</updated>
+    <updated>2017-06-24T18:41:16.781Z</updated>
     
     <summary type="html">
     
@@ -30,7 +30,7 @@
     
     </summary>
     
-      <category term="other" scheme="http://yoursite.com/categories/other/"/>
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
     
     
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
