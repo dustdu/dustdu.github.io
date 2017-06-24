@@ -36,24 +36,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2017/06/24/BOM/"/>
-    <id>http://yoursite.com/2017/06/24/BOM/</id>
-    <published>2017-06-23T17:26:02.824Z</published>
-    <updated>2017-06-24T14:45:21.958Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;window对象&quot;&gt;&lt;a href=&quot;#window对象&quot; class=&quot;headerlink&quot; title=&quot;window对象&quot;&gt;&lt;/a&gt;window对象&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;表示浏览器中打开的窗口&lt;/li&gt;
-&lt;li&gt;如果文档包含框架（frame 或 if
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2017/06/23/hello-world/"/>
     <id>http://yoursite.com/2017/06/23/hello-world/</id>
