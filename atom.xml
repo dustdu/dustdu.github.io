@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-24T18:41:16.781Z</updated>
+  <updated>2017-06-25T14:42:39.846Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo建站的一些流程记录</title>
+    <link href="http://yoursite.com/2017/06/25/hexo%E5%BB%BA%E7%AB%99%E7%9A%84%E7%AE%80%E5%8D%95%E6%B5%81%E7%A8%8B/"/>
+    <id>http://yoursite.com/2017/06/25/hexo建站的简单流程/</id>
+    <published>2017-06-25T13:36:17.000Z</published>
+    <updated>2017-06-25T14:42:39.846Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;hexo的简单介绍&quot;&gt;&lt;a href=&quot;#hexo的简单介绍&quot; class=&quot;headerlink&quot; title=&quot;hexo的简单介绍&quot;&gt;&lt;/a&gt;hexo的简单介绍&lt;/h1&gt;&lt;p&gt;Hexo 使用 Markdown（或其他渲染引擎）解析文章，配合上github和co
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="建站" scheme="http://yoursite.com/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="Node.js" scheme="http://yoursite.com/tags/Node-js/"/>
+    
+  </entry>
   
   <entry>
     <title>浏览器对象模型(BOM)的一些方法和属性</title>

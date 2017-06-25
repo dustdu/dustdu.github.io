@@ -12,7 +12,7 @@
     
     <title>
         
-            标签: javascript | 
+            hexo建站的一些流程记录 | 
         
         学海拾遗
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="李康">
     <meta name="description" itemprop="description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,建站,hexo,github,git,Node.js">
 
     <!-- Site Verification -->
     
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: javascript | 学海拾遗">
+    <meta property="og:title" content="hexo建站的一些流程记录 | 学海拾遗">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。">
-    
+    <meta property="og:article:tag" content="建站"> <meta property="og:article:tag" content="hexo"> <meta property="og:article:tag" content="github"> <meta property="og:article:tag" content="git"> <meta property="og:article:tag" content="Node.js"> 
 
+    
+        <meta property="article:published_time" content="6月 25, 2017" />
+        <meta property="article:modified_time" content="6月 25, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="标签: javascript | 学海拾遗">
+    <meta name="twitter:title" content="hexo建站的一些流程记录 | 学海拾遗">
     <meta name="twitter:description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/tags/javascript/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/06/25/hexo建站的简单流程/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "学海拾遗",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "李康",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "欢迎啊！"
+    },
+    "headline": "hexo建站的一些流程记录",
+    "url": "http://yoursite.com/2017/06/25/hexo建站的简单流程/index.html",
+    "datePublished": "6月 25, 2017",
+    "dateModified": "6月 25, 2017",
+    "description": "一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com"
+    }
+}
+</script>
 
 
     
@@ -267,98 +300,294 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hexo的简单介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">hexo的简单介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建hexo"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">创建hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#新建文章"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">新建文章</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Front-Matter"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Front-Matter</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部署"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">部署</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/06/25/浏览器对象模型-BOM-的一些方法和属性/">浏览器对象模型(BOM)的一些方法和属性</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            window对象
-表示浏览器中打开的窗口
-如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/06/25/浏览器对象模型-BOM-的一些方法和属性/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar1.png" width="44px" height="44px" alt="李康's avatar">
-            </div>
-            <div>
-                <strong>李康</strong>
-                <span>6月 25, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/javascript/">javascript</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                hexo建站的一些流程记录
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar1.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>李康</strong>
+        <span>6月 25, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC20lEQVR42u3awU7DMBAE0Pz/T8MVCRVm1kGk9vOpKk3jl0qsdtbXx5HrwsbGxsbGxsbGxn4k+4rX189/v/bVt7261897+H6vlT1jY2Njn8D+5V9/fPv8qvxBvLqq3TM2Njb2Cey8aCW3j4pKUBrzIvrz3rCxsbGxk6Zi1jbkO8HGxsbG/gt2G/3kLUT+GhsbGxu73cosDMpHAo/L0rCxsbEfz15pGP7r9T/Pt7GxsbEfw15Zs6M2yXGffNhc7BYbGxt7U3bbNiRX3XWUM3k/t2BjY2OfwL7rIE47SMjZSdkrOjBsbGzsLdhtycmHBHmZaUtX/vNgY2Njn8OOLhuNb9eP7LQ/xlKWho2Njf2G7Py4TP4g8sgpj/6T9qMoYNjY2NjbsfMC045+V2Kg9juxsbGxz2TnjJWhwgoj/+sNHRg2Njb2Ruwctv5Q8lakHSFgY2Njn8CelZNZ0Wrvm0Rdw0EvNjY29nbsduttoDMb6N47VMbGxsY+gd2G+8mG2nalbWyKq7CxsbE3Zd91y6QxyB9ZPhgooitsbGzsrdl3lbT2kbURfx5RYWNjY5/DvmuguxIDrYRHH/HCxsbG3pWdD01nI95ZFNWWumHdxsbGxt6CnTcSSelqN1cfu4kbmOKkEjY2NvZG7GS7ebFJSsvKYcq6lcLGxsbelL2CX29C8iOY7cOqj+xgY2Njvy37ilfbeMyahzY2KvaJjY2NvSk7GQbMPj8rSPn7+U+FjY2NvTf7KlfbxsyKTd6oFIdBsbGxsTdlt6t9EG2bUYf+eauDjY2NvSl7FiolJSoZ2c7CrHw/2NjY2Oewk6KVl7eVEW8bcuXjCmxsbOwT2G3o0zYJK/FQPQzAxsbGxo4jnlkklPBmgdTLnwcbGxsbu4z+E+oKLA+esLGxsc9hr4RKs5FAy5gNBrCxsbFPYM8GrivHevJYqr1jUcCwsbGxt2Cfs7CxsbGxsbGxsbEfsz4BrkX3qmVO4tMAAAAASUVORK5CYII=">
+    
+</ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Node-js/">Node.js</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/git/">git</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/github/">github</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/hexo/">hexo</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/建站/">建站</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=hexo建站的一些流程记录&url=http://yoursite.com/2017/06/25/hexo建站的简单流程/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/06/25/hexo建站的简单流程/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=学海拾遗&title=hexo建站的一些流程记录&summary=一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2017/06/25/hexo建站的简单流程/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="hexo的简单介绍"><a href="#hexo的简单介绍" class="headerlink" title="hexo的简单介绍"></a>hexo的简单介绍</h1><p>Hexo 使用 Markdown（或其他渲染引擎）解析文章，配合上github和coding或其他类似产品建立网站，在安装前，电脑中要安装下列应用程序：</p>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+</ul>
+<p>之后使用使用 npm安装hexo:</p>
+<pre><code>npm install -g hexo-cli
+</code></pre><p>升级hexo:</p>
+<pre><code>npm update hexo -g  
+</code></pre><p>以下的命令可以简写成首字母</p>
+<h2 id="创建hexo"><a href="#创建hexo" class="headerlink" title="创建hexo"></a>创建hexo</h2><ul>
+<li>hexo init <folder> #初始化，可以直接在空白文件夹建立</folder></li>
+<li>cd <folder></folder></li>
+<li>npm install</li>
+</ul>
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ul>
+<li>hexo new [layout] <title> #新建文章（md）</title></li>
+<li>hexo new page”pageName” #新建页面（html）<ul>
+<li>如果不想文章被处理，可以将 Front-Matter(文章头部）中的layout: 设为 false 。</li>
+<li>将储存到 source/_posts 文件夹。</li>
+<li>布局（layout），有 post、page 和 draft，默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。</li>
+</ul>
+</li>
+</ul>
+<h3 id="Front-Matter"><a href="#Front-Matter" class="headerlink" title="Front-Matter"></a>Front-Matter</h3><pre><code>---
+layout    布局 #可以省略
+title: title #文章标题（新建文章时标题和文件名一样，在这可以改）
+date: 2013/7/13 20:46:25 #新建文章时间
+updated: 更新日期    #可以省略
+comments: true    #开启文章的评论功能    可以省略 默认true
+categories: 建站 #文章目录 可以省略
+tags: #文章标签 可以省略
+     - 标签1
+     - 标签2
+description: #文章描述 可以省略
+permalink    覆盖文章网址 #可以省略 这个我没了解
+---
+</code></pre><ul>
+<li>tags和categories是不一样的，categories会出现在侧边栏形成文件夹，tags只是文章的不同标签 </li>
+</ul>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><ul>
+<li>hexo clean #一般先清一下</li>
+<li>hexo generate #生成静态页面至public目录<ul>
+<li>hexo generate –watch #监视文件变动</li>
+</ul>
+</li>
+<li><p>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</p>
+<ul>
+<li>hexo server -i 192.168.1.1 #自定义 IP</li>
+<li>hexo server -s #静态模式</li>
+<li><p>hexo s -p 端口</p>
+<ul>
+<li>hexo安装没错，也能成功运行，启动也没错，但不能访问页面。<ul>
+<li>电脑端口被占用了。（可能你的电脑安装了福昕阅读器，他占用4000端口，很不幸，我就安装了它）要改下端口   </li>
+</ul>
+</li>
+<li><p>遇到 ERROR Deployer not found: github  的错误，HEXO更新到3.0之后，deploy的type 的github需要改成Git  或者运行 </p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre></li>
+<li><p>想要README.md文件不被渲染，在博客根目录下的配置文件_config.yml中配置一下”skip_render”选项就行了，将不需要渲染的文件名称加入其选项下就行了。</p>
+<pre><code>skip_render: README.md
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>hexo deploy #将.deploy目录部署到GitHub</li>
+<li>hexo help # 查看帮助</li>
+<li>hexo version #查看Hexo的版本</li>
+</ul>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/06/25/浏览器对象模型-BOM-的一些方法和属性/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -544,6 +773,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
