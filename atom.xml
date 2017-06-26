@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-25T14:47:09.458Z</updated>
+  <updated>2017-06-26T13:48:50.621Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文档对象模型(DOM)的一些方法和属性</title>
+    <link href="http://yoursite.com/2017/06/26/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-DOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/"/>
+    <id>http://yoursite.com/2017/06/26/文档对象模型-DOM-的一些方法和属性/</id>
+    <published>2017-06-26T02:20:34.000Z</published>
+    <updated>2017-06-26T13:48:50.621Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;document-对象&quot;&gt;&lt;a href=&quot;#document-对象&quot; class=&quot;headerlink&quot; title=&quot;document 对象&quot;&gt;&lt;/a&gt;document 对象&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Document 对象是 Window 对象的一部分，可
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="DOM" scheme="http://yoursite.com/tags/DOM/"/>
+    
+      <category term="js事件" scheme="http://yoursite.com/tags/js%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo建站的一些流程记录</title>
@@ -48,7 +73,7 @@
     <link href="http://yoursite.com/2017/06/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-BOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/"/>
     <id>http://yoursite.com/2017/06/25/浏览器对象模型-BOM-的一些方法和属性/</id>
     <published>2017-06-24T18:03:21.000Z</published>
-    <updated>2017-06-24T18:41:16.781Z</updated>
+    <updated>2017-06-26T09:15:07.109Z</updated>
     
     <summary type="html">
     
@@ -62,6 +87,8 @@
     
     
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="BOM" scheme="http://yoursite.com/tags/BOM/"/>
     
   </entry>
   

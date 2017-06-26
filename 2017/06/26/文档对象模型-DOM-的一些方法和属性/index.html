@@ -12,7 +12,7 @@
     
     <title>
         
-            归档: 2017 | 
+            文档对象模型(DOM)的一些方法和属性 | 
         
         学海拾遗
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="李康">
     <meta name="description" itemprop="description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,javascript,DOM,js事件">
 
     <!-- Site Verification -->
     
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017 | 学海拾遗">
+    <meta property="og:title" content="文档对象模型(DOM)的一些方法和属性 | 学海拾遗">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。">
-    
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="DOM"> <meta property="og:article:tag" content="js事件"> 
 
+    
+        <meta property="article:published_time" content="6月 26, 2017" />
+        <meta property="article:modified_time" content="6月 26, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="归档: 2017 | 学海拾遗">
+    <meta name="twitter:title" content="文档对象模型(DOM)的一些方法和属性 | 学海拾遗">
     <meta name="twitter:description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2017/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/06/26/文档对象模型-DOM-的一些方法和属性/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "学海拾遗",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "李康",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "欢迎啊！"
+    },
+    "headline": "文档对象模型(DOM)的一些方法和属性",
+    "url": "http://yoursite.com/2017/06/26/文档对象模型-DOM-的一些方法和属性/index.html",
+    "datePublished": "6月 26, 2017",
+    "dateModified": "6月 26, 2017",
+    "description": "一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com"
+    }
+}
+</script>
 
 
     
@@ -267,219 +300,549 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#document-对象"><span class="post-toc-number">1.</span> <span class="post-toc-text">document 对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#document-write（）"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">document.write（）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Event-对象"><span class="post-toc-number">2.</span> <span class="post-toc-text">Event 对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">事件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#mouseover与mouseenter"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">mouseover与mouseenter</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#mouseout与mouseleave"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">mouseout与mouseleave</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#滚轮"><span class="post-toc-number">2.1.3.</span> <span class="post-toc-text">滚轮</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#鼠标-键盘属性"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">鼠标 / 键盘属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#IE-属性"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">IE 属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件流："><span class="post-toc-number">2.4.</span> <span class="post-toc-text">事件流：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件委托："><span class="post-toc-number">2.5.</span> <span class="post-toc-text">事件委托：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件绑定和监听"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">事件绑定和监听</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#阻止默认事件"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">阻止默认事件</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/06/26/文档对象模型-DOM-的一些方法和属性/">文档对象模型(DOM)的一些方法和属性</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            document 对象
-Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/06/26/文档对象模型-DOM-的一些方法和属性/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar1.png" width="44px" height="44px" alt="李康's avatar">
-            </div>
-            <div>
-                <strong>李康</strong>
-                <span>6月 26, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/javascript/">javascript</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/06/25/hexo建站的简单流程/">hexo建站的一些流程记录</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            hexo的简单介绍Hexo 使用 Markdown（或其他渲染引擎）解析文章，配合上github和coding或其他类似产品建立网站，在安装前，电脑中要安装下列应用程序：
-
-Node.js
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/06/25/hexo建站的简单流程/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar1.png" width="44px" height="44px" alt="李康's avatar">
-            </div>
-            <div>
-                <strong>李康</strong>
-                <span>6月 25, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/hexo/">hexo</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/06/25/浏览器对象模型-BOM-的一些方法和属性/">浏览器对象模型(BOM)的一些方法和属性</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            window对象
-表示浏览器中打开的窗口
-如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/06/25/浏览器对象模型-BOM-的一些方法和属性/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar1.png" width="44px" height="44px" alt="李康's avatar">
-            </div>
-            <div>
-                <strong>李康</strong>
-                <span>6月 25, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/javascript/">javascript</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                文档对象模型(DOM)的一些方法和属性
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar1.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>李康</strong>
+        <span>6月 26, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADcElEQVR42u3aMY4bMQwFUN//0kkbYBHtJymOp3iqjIE8kp4LmhQ/f4x/xgcBDhw4cODAgQMHDhwv5vjE4+f85MnP5+c5/930jznJuuez4MCBAweOPY58K9ECgyfJzPPeyqw4cODAgWONoxogz5vIw3Y56TqumJ8FBw4cOHC8gSMBOj/vpXO3UkQcOHDgwPE2jl45r3rU5DMOHDhw4Hg/Ry9lqpYOe2lYfhH1aK0UBw4cOHBcamh48+cv9HfgwIEDB45LYx5Ke4XCuwMHDhw4cNzlOF8XVduy7zZkJ3BzYhw4cODA8TxHL/RWaeYtDg8FWhw4cODAUeRIDlndVu9IeYGvGrBx4MCBA8c2R7WFenKYeQFxXrjEgQMHDhzPcPRKe+dNlMNeMWz3GsRx4MCBA8c2R/XVSfjslfyq3JM/Bzhw4MCBY5sjebLd4nBr9Tz9w4EDBw4cdzmShSdXQXnxLi81Jm8u/C3AgQMHDhwLHLea26oBu/eT9N4WpXA4cODAgeMSR6/0tpeeTZotquEfBw4cOHDc5ciTolEBrtUSUU3Y8sswHDhw4MDxPMck6PYaF5JvJQfOQzsOHDhw4NjjKF/VFNsOqgG7F2Lz6y4cOHDgwLHHUV2m14KQh+QEaFKmLNRKceDAgQPHJY6NRG4eMpPWuvMPgAMHDhw4nuGohtU85ettrkfQm48DBw4cODY48qugvHGh2vSQwPWSySiE48CBAweOqxzVL8+ZqiEzTwWrcDhw4MCB41sc5wCZlxEnb04SxbxRAwcOHDhwbHNMDp/M711Z5QleXqDEgQMHDhzPcNxaoHdNNeGuFg1x4MCBA8d3OZLLoXxOTp/vIWlr+KWYiAMHDhw4FjjmxbjqqLbT9cp/zUCLAwcOHDgWOHpNBr1Gh0kaOSkL4sCBAweObY68CWCy9TxtyxPFatjGgQMHDhx7HPPUq7rFeflv8lPhwIEDB45tjl7Qyp9Prq8mJUUcOHDgwPFdjiS4Vj9XySar9PaMAwcOHDi2OfIAVj1YtYyYr/hpDRw4cODA8TaOPKBWj1S9lEpStXJDAw4cOHDgeJAjb2Wopoi3VqmWHXHgwIEDxx5HUhzMk7peq0FCOSlE4sCBAweOZziqpbokpPVCYJ7gnUN18i0cOHDgwLHBYeDAgQMHDhw4cODAgeNl4y+H4OgZBfI4eAAAAABJRU5ErkJggg==">
+    
+</ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/DOM/">DOM</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/js事件/">js事件</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=文档对象模型(DOM)的一些方法和属性&url=http://yoursite.com/2017/06/26/文档对象模型-DOM-的一些方法和属性/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/06/26/文档对象模型-DOM-的一些方法和属性/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=学海拾遗&title=文档对象模型(DOM)的一些方法和属性&summary=一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2017/06/26/文档对象模型-DOM-的一些方法和属性/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="document-对象"><a href="#document-对象" class="headerlink" title="document 对象"></a>document 对象</h2><ul>
+<li>Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。<h3 id="document-write（）"><a href="#document-write（）" class="headerlink" title="document.write（）"></a>document.write（）</h3></li>
+<li>方法可向文档写入 HTML 表达式或 JavaScript 代码。<br>可列出多个参数(exp1,exp2,exp3,…) ，它们将按顺序被追加到文档中。</li>
+<li>根据 DOM 标准，该方法只接受单个字符串作为参数。不过根据经验，write() 可接受任何多个参数。</li>
+<li>通常按照两种的方式使用 write() 方法：一是在使用该方在文档中输出 HTML，另一种是在调用该方法的的窗口之外的窗口、框架中产生新文档。在第二种情况中，请务必使用 close() 方法来关闭文档。</li>
+</ul>
+<h2 id="Event-对象"><a href="#Event-对象" class="headerlink" title="Event 对象"></a>Event 对象</h2><ul>
+<li>Event 对象代表事件的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态。</li>
+<li>事件通常与函数结合使用，函数不会在事件发生前被执行</li>
+<li>是事件处理函数中的第0个参数(只需要声明形参，实参在事件调用的时候，浏览器会自己帮我们传,一般为了阅读性参数会声明为 e,ev,event。)</li>
+</ul>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onmouseover</td>
+<td>鼠标移入</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>鼠标移出</td>
+</tr>
+<tr>
+<td>oncontextmenu</td>
+<td>鼠标右键</td>
+</tr>
+<tr>
+<td>onclick</td>
+<td>点击</td>
+</tr>
+<tr>
+<td>onload事件</td>
+<td>加载完成</td>
+</tr>
+<tr>
+<td>onscroll</td>
+<td>当元素滚动条被滚动时运行的脚本</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>鼠标移入</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>鼠标移出</td>
+</tr>
+<tr>
+<td>onclick</td>
+<td>鼠标点击</td>
+</tr>
+<tr>
+<td>onscroll</td>
+<td>滚动条发生滚动</td>
+</tr>
+<tr>
+<td>onmousedown</td>
+<td>鼠标按下</td>
+</tr>
+<tr>
+<td>onmousemove</td>
+<td>鼠标移动</td>
+</tr>
+<tr>
+<td>onmouseup</td>
+<td>鼠标抬起            </td>
+</tr>
+<tr>
+<td>onfocus</td>
+<td>当输入框获得焦点时触发</td>
+</tr>
+<tr>
+<td>onblur</td>
+<td>当输入框失去焦点时触发</td>
+</tr>
+<tr>
+<td>oninput</td>
+<td>当输入框内容发生变化时触发</td>
+</tr>
+<tr>
+<td>onchange</td>
+<td>当表单控件状态发生变化时触发</td>
+</tr>
+<tr>
+<td>onkeydown</td>
+<td>键盘按键按下时触发(按下时一直触发)</td>
+</tr>
+<tr>
+<td>onkeyup</td>
+<td>键盘按键抬起时触发</td>
+</tr>
+<tr>
+<td>onabort</td>
+<td>图像的加载被中断。</td>
+</tr>
+<tr>
+<td><a href="http://www.zhangxinxu.com/wordpress/2013/04/js-mousewheel-dommousescroll-event/" title="onmousewheel与DOMMouseScroll" target="_blank" rel="external">onmousewheel</a></td>
+<td>鼠标滚轮 (chrome 和 IE中的事件，不兼容低版本IE)<br>Event 对象中有 e.wheelDelta这个属性，滚轮滚动产生两个数值，分别代表两个方向<ul><li>向上滚动 120</li><li>向下滚动 -120</li></ul></td>
+</tr>
+<tr>
+<td>DOMMouseScroll(没有onDOMMouseScroll 只能监听，不能绑定)</td>
+<td>鼠标滚轮 (火狐中的事件)<br>Event 对象中有 e.detail 这个属性，滚轮滚动产生两个数值，分别代表两个方向<ul><li>向上滚动 -3</li><li>向下滚动 3</li></ul></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mouseover与mouseenter"><a href="#mouseover与mouseenter" class="headerlink" title="mouseover与mouseenter"></a>mouseover与mouseenter</h4><ul>
+<li>不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。</li>
+<li>只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。</li>
+</ul>
+<h4 id="mouseout与mouseleave"><a href="#mouseout与mouseleave" class="headerlink" title="mouseout与mouseleave"></a>mouseout与mouseleave</h4><ul>
+<li>不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件。</li>
+<li>只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。</li>
+</ul>
+<h4 id="滚轮"><a href="#滚轮" class="headerlink" title="滚轮"></a>滚轮</h4><p>滚轮滚动的一个简单Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;style&gt;
+body {
+    margin: 0;
+}
+div {
+    background: #008080;
+    width: 500px;
+    height: 500px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;script&gt;
+window.onload =function(){
+    var div =document.querySelector(&apos;div&apos;);
+    mScroll(document,function(e) {
+        div.style.width = (div.offsetWidth-10) + &apos;px&apos;;
+        div.style.height = (div.offsetHeight-10) + &apos;px&apos;;
+    },function(e) {
+        div.style.width = (div.offsetWidth+10) + &apos;px&apos;;
+        div.style.height = (div.offsetHeight+10) + &apos;px&apos;;
+    });
+    function mScroll(el,toUp,toDown) {
+        //mousewheel 鼠标滚轮 (chrome 和 IE)
+        el.addEventListener(&apos;mousewheel&apos;,function(e){
+            //e.wheelDelta
+                //向上滚动 120
+                //向下滚动 -120
+            if (e.wheelDelta &gt; 0) {
+                //滚轮上滚，运行
+                toUp(e);
+            }else{
+                //滚轮下滚，运行
+                toDown(e);
+            }
+        });
+        //DOMMouseScroll 火狐滚轮事件
+        el.addEventListener(&apos;DOMMouseScroll&apos;,function(e){
+            //e.detail
+                // 3 向下滚动
+                // -3 向上滚动
+            if (-e.detail &gt; 0) {
+                //滚轮上滚，运行
+                toUp(e);
+            }else{
+                //滚轮下滚，运行
+                toDown(e);
+            }
+        });
+    }
+};
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="鼠标-键盘属性"><a href="#鼠标-键盘属性" class="headerlink" title="鼠标 / 键盘属性"></a>鼠标 / 键盘属性</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">altKey</td>
+<td style="text-align:left">返回当事件被触发时，”ALT” 是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">button</td>
+<td style="text-align:left">返回当事件被触发时，哪个鼠标按钮被点击。<br>0 – 左键<br>1 – 滚轮<br>2 – 右键</td>
+</tr>
+<tr>
+<td style="text-align:center">clientX</td>
+<td style="text-align:left">返回当事件被触发时，鼠标指针的水平坐标。(原点可视区左上角)<br>在PC端，跟随鼠标移动，如果事件加给元素，有可能会发生移动过快元素跟不上的情况</td>
+</tr>
+<tr>
+<td style="text-align:center">clientY</td>
+<td style="text-align:left">返回当事件被触发时，鼠标指针的垂直坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrlKey</td>
+<td style="text-align:left">返回当事件被触发时，”CTRL” 键是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">metaKey</td>
+<td style="text-align:left">返回当事件被触发时，”meta” 键是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">relatedTarget</td>
+<td style="text-align:left">返回与事件的目标节点相关的节点。</td>
+</tr>
+<tr>
+<td style="text-align:center">screenX</td>
+<td style="text-align:left">返回当某个事件被触发时，鼠标指针的水平坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">screenY</td>
+<td style="text-align:left">返回当某个事件被触发时，鼠标指针的垂直坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">shiftKey</td>
+<td style="text-align:left">返回当事件被触发时，”SHIFT” 键是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">key</td>
+<td style="text-align:left">键盘按键名字</td>
+</tr>
+</tbody>
+</table>
+<h3 id="IE-属性"><a href="#IE-属性" class="headerlink" title="IE 属性"></a>IE 属性</h3><ul>
+<li>除了上面的鼠标/事件属性，IE 浏览器还支持下面的属性：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cancelBubble</td>
+<td>如果事件句柄想阻止事件传播到包容对象，必须把该属性设为 true。</td>
+</tr>
+<tr>
+<td>fromElement</td>
+<td>对于 mouseover 和 mouseout 事件，fromElement 引用移出鼠标的元素。</td>
+</tr>
+<tr>
+<td>keyCode</td>
+<td>对于 keypress 事件，该属性声明了被敲击的键生成的 Unicode 字符码。对于 keydown 和 keyup 事件，它指定了被敲击的键的虚拟键盘码。虚拟键盘码可能和使用的键盘的布局相关。</td>
+</tr>
+<tr>
+<td>offsetX,offsetY</td>
+<td>发生事件的地点在事件源元素的坐标系统中的 x 坐标和 y 坐标。</td>
+</tr>
+<tr>
+<td>returnValue</td>
+<td>如果设置了该属性，它的值比事件句柄的返回值优先级高。把这个属性设置为 fasle，可以取消发生事件的源元素的默认动作。</td>
+</tr>
+<tr>
+<td>srcElement</td>
+<td>对于生成事件的 Window 对象、Document 对象或 Element 对象的引用。</td>
+</tr>
+<tr>
+<td>toElement</td>
+<td>对于 mouseover 和 mouseout 事件，该属性引用移入鼠标的元素。</td>
+</tr>
+<tr>
+<td>x,y</td>
+<td>事件发生的位置的 x 坐标和 y 坐标，它们相对于用CSS动态定位的最内层包容元素。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="事件流："><a href="#事件流：" class="headerlink" title="事件流："></a>事件流：</h3><ul>
+<li>事件流指事件在触发时的一个流程，就像for循环一样有一个执行的过程。先进行捕获（从window一直到事件发生的元素），然后再开始冒泡(从事件发生的元素一直在传递会 window)</li>
+<li>捕获:从最外层向触发该事件元素寻找的一个过程。最终找到触发该事件的元素，如果该元素有绑定事件处理函数则执行该函数。在找到触发该事件的元素之后，会进行下一个阶段“冒泡阶段”.</li>
+<li>冒泡:从触发事件的元素开始往外层寻找，直到最外层时结束整个事件流程。<ul>
+<li>e.stopPropagation();阻止冒泡</li>
+<li>e.cancelBubble = true;取消冒泡</li>
+</ul>
+</li>
+<li>不论是捕获阶段还是冒泡阶段，在寻找目标元素的过程和向外返回的过程中，所遇到每一个元素身上如果有相同事件的事件处理函数都会被调用。</li>
+</ul>
+<h3 id="事件委托："><a href="#事件委托：" class="headerlink" title="事件委托："></a>事件委托：</h3><ul>
+<li>把一组子元素的事件处理，利用冒泡的原理，在父级的事件中进行处理，在父级中我们可以通过event.target,获取到事件触发的元素，然后进行相关处理.</li>
+<li>event.target：指的是点击时的元素</li>
+</ul>
+<h3 id="事件绑定和监听"><a href="#事件绑定和监听" class="headerlink" title="事件绑定和监听"></a>事件绑定和监听</h3><ul>
+<li>把函数绑定给对应的事件，当事件触发时，就会执行这些绑定在元素上的事件处理函数<ul>
+<li>取消绑定 事件 = null;</li>
+</ul>
+</li>
+<li><p>传统的事件绑定，会存在前后覆盖的问题，所以当我们需要让一个事件可以执行多个操作的时候，就需要使用事件监听</p>
+<ul>
+<li>事件监听可以执行多个操作</li>
+<li>addEventListener 事件监听</li>
+<li>el.addEventListener(‘event’,fn [,useCapture])</li>
+<li><p>取消事件监听</p>
+<ul>
+<li><p>el.removeEventListener(‘event’,fnName[,useCapture])  </p>
+<p>|参数|介绍<br>|:—:|:—:|<br>|el| 元素<br>|event| 事件名称(click,mouseover…)<br>|fn| 事件执行函数<br>|useCapture(true/false) |true 捕获阶段，false冒泡阶段 (不写默认 false)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="阻止默认事件"><a href="#阻止默认事件" class="headerlink" title="阻止默认事件"></a>阻止默认事件</h3><ul>
+<li><p>事件绑定中用 <code>return false</code></p>
+<pre><code>a.onclick = function(){
+    alert(1);
+    return false; //阻止默认事件
+};
+</code></pre></li>
+<li><p>事件监听用 e.preventDefault()</p>
+<pre><code>a.addEventListener(&apos;click&apos;, function(e) {
+    alert(1);
+    e.preventDefault();//阻止默认事件
+});
+</code></pre></li>
+</ul>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/06/25/hexo建站的简单流程/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
