@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="6月 25, 2017" />
-        <meta property="article:modified_time" content="6月 25, 2017" />
+        <meta property="article:modified_time" content="6月 27, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "hexo建站的一些流程记录",
     "url": "http://yoursite.com/2017/06/25/hexo建站的简单流程/index.html",
     "datePublished": "6月 25, 2017",
-    "dateModified": "6月 25, 2017",
+    "dateModified": "6月 27, 2017",
     "description": "一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -327,7 +327,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hexo的简单介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">hexo的简单介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建hexo"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">创建hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#新建文章"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">新建文章</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Front-Matter"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Front-Matter</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部署"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">部署</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hexo的简单介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">hexo的简单介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建hexo"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">创建hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部署到Github"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">部署到Github</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#新建文章"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">新建文章</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Front-Matter"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Front-Matter</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解析部署文章"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">解析部署文章</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结束"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">结束</span></a></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -489,11 +489,23 @@
 <pre><code>npm install -g hexo-cli
 </code></pre><p>升级hexo:</p>
 <pre><code>npm update hexo -g  
-</code></pre><p>以下的命令可以简写成首字母</p>
+</code></pre><p>有些命令可以简写成首字母，<a href="http://sd" target="_blank" rel="external">可参考</a></p>
 <h2 id="创建hexo"><a href="#创建hexo" class="headerlink" title="创建hexo"></a>创建hexo</h2><ul>
 <li>hexo init 文件夹 #初始化，可以直接在空白文件夹建立</li>
 <li>cd 文件夹</li>
 <li>npm install</li>
+</ul>
+<h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><p>部署到Github前需要配置_config.yml文件，在hexo根目录下，可以看一下hexo文件的介绍，找到下面的内容并配置</p>
+<pre><code># Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+  type: git 
+  repository: https://github.com/Your_Github_Account/yoursite.github.io.git
+  branch: master
+</code></pre><ul>
+<li><p>有的介绍是github，可能会遇到 ERROR Deployer not found: github  的错误，那是因为HEXO更新到3.0之后，deploy的type 的github需要改成Git  或者运行 </p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre></li>
 </ul>
 <h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ul>
 <li>hexo new [layout] <title> #新建文章（md）</title></li>
@@ -520,7 +532,7 @@ permalink    覆盖文章网址 #可以省略 这个我没了解
 </code></pre><ul>
 <li>tags和categories是不一样的，categories会出现在侧边栏形成文件夹，tags只是文章的不同标签 </li>
 </ul>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><ul>
+<h2 id="解析部署文章"><a href="#解析部署文章" class="headerlink" title="解析部署文章"></a>解析部署文章</h2><ul>
 <li>hexo clean #一般先清一下</li>
 <li>hexo generate #生成静态页面至public目录<ul>
 <li>hexo generate –watch #监视文件变动</li>
@@ -536,9 +548,6 @@ permalink    覆盖文章网址 #可以省略 这个我没了解
 <li>电脑端口被占用了。（可能你的电脑安装了福昕阅读器，他占用4000端口，很不幸，我就安装了它）要改下端口   </li>
 </ul>
 </li>
-<li><p>遇到 ERROR Deployer not found: github  的错误，HEXO更新到3.0之后，deploy的type 的github需要改成Git  或者运行 </p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre></li>
 <li><p>想要README.md文件不被渲染，在博客根目录下的配置文件_config.yml中配置一下”skip_render”选项就行了，将不需要渲染的文件名称加入其选项下就行了。</p>
 <pre><code>skip_render: README.md
 </code></pre></li>
@@ -549,6 +558,10 @@ permalink    覆盖文章网址 #可以省略 这个我没了解
 <li>hexo deploy #将.deploy目录部署到GitHub</li>
 <li>hexo help # 查看帮助</li>
 <li>hexo version #查看Hexo的版本</li>
+</ul>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><ul>
+<li>到这里，一个基本的以hexo为模版的网站就建好了，也可以设置一些其他的使网站更加个性化。找一些喜欢的主题，或者自己的Demo都可以放上来，那就要对hexo有更详细的了解了。。。</li>
+<li>想到一点，有时候出现一些错误找不到原因，可能就是_config.yml文件或者其他配置文件出错了，yml文件的格式要求还是很严格的，一不小心就出错。</li>
 </ul>
 
     
