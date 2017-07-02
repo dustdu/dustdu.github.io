@@ -57,9 +57,9 @@
       <category term="软件应用" scheme="http://lkang.me/categories/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8/"/>
     
     
-      <category term="VSCode" scheme="http://lkang.me/tags/VSCode/"/>
-    
       <category term="插件" scheme="http://lkang.me/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="VSCode" scheme="http://lkang.me/tags/VSCode/"/>
     
   </entry>
   
@@ -79,9 +79,9 @@
       <category term="软件应用" scheme="http://lkang.me/categories/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8/"/>
     
     
-      <category term="插件" scheme="http://lkang.me/tags/%E6%8F%92%E4%BB%B6/"/>
-    
       <category term="sublime" scheme="http://lkang.me/tags/sublime/"/>
+    
+      <category term="插件" scheme="http://lkang.me/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
@@ -148,9 +148,9 @@
       <category term="建站" scheme="http://lkang.me/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="建站" scheme="http://lkang.me/tags/%E5%BB%BA%E7%AB%99/"/>
-    
       <category term="hexo" scheme="http://lkang.me/tags/hexo/"/>
+    
+      <category term="建站" scheme="http://lkang.me/tags/%E5%BB%BA%E7%AB%99/"/>
     
       <category term="git" scheme="http://lkang.me/tags/git/"/>
     
