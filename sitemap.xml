@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lkang.me/2017/06/25/hexo%E5%BB%BA%E7%AB%99%E7%9A%84%E7%AE%80%E5%8D%95%E6%B5%81%E7%A8%8B/</loc>
+    
+    <lastmod>2017-07-28T16:56:42.746Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lkang.me/timeline/index.html</loc>
     
     <lastmod>2017-07-28T16:52:04.987Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://lkang.me/gallery/index.html</loc>
     
     <lastmod>2017-07-28T16:43:35.504Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lkang.me/2017/06/25/hexo%E5%BB%BA%E7%AB%99%E7%9A%84%E7%AE%80%E5%8D%95%E6%B5%81%E7%A8%8B/</loc>
-    
-    <lastmod>2017-07-28T16:32:38.341Z</lastmod>
     
   </url>
   
