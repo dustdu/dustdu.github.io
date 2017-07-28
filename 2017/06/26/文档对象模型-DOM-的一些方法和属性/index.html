@@ -74,7 +74,7 @@
 
     
         <meta property="article:published_time" content="6月 26, 2017" />
-        <meta property="article:modified_time" content="6月 28, 2017" />
+        <meta property="article:modified_time" content="7月 07, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -115,7 +115,7 @@
     "headline": "文档对象模型(DOM)的一些方法和属性",
     "url": "http://lkang.me/2017/06/26/文档对象模型-DOM-的一些方法和属性/index.html",
     "datePublished": "6月 26, 2017",
-    "dateModified": "6月 28, 2017",
+    "dateModified": "7月 07, 2017",
     "description": "一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -234,7 +234,7 @@
 
     <style>
       body {
-        background-color: #F5F5F5;
+        background-color: null;
       }
 
       /* blog_info bottom background */
@@ -582,7 +582,7 @@
 </tr>
 <tr>
 <td>onchange</td>
-<td>当表单控件状态发生变化时触发</td>
+<td>当表单控件状态发生变化，并失去焦点时触发</td>
 </tr>
 <tr>
 <td>onkeydown</td>
@@ -607,8 +607,8 @@
 </tbody>
 </table>
 <h4 id="mouseover与mouseenter"><a href="#mouseover与mouseenter" class="headerlink" title="mouseover与mouseenter"></a>mouseover与mouseenter</h4><ul>
-<li>不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。</li>
-<li>只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。</li>
+<li>不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件（子元素在父元素内部，从父元素到子元素会触发）。</li>
+<li>只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件（子元素在父元素内部，从父元素到子元素不会触发）。</li>
 </ul>
 <h4 id="mouseout与mouseleave"><a href="#mouseout与mouseleave" class="headerlink" title="mouseout与mouseleave"></a>mouseout与mouseleave</h4><ul>
 <li>不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件。</li>
