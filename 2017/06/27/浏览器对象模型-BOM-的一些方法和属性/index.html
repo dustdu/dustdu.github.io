@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+            浏览器对象模型(BOM)的一些方法和属性 | 
+        
+        学海拾遗
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+        <link rel="dns-prefetch" href="https://hm.baidu.com"/>
+    
+    
+    
+    
+        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="李康">
+    <meta name="description" itemprop="description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、javascript、html、css">
+    <meta name="keywords" content="websit,web,前端,javascript,html,css,javascript,BOM">
+
+    <!-- Site Verification -->
+    <meta name="google-site-verification" content="v5PicV7YKMH26TAQk-s3SoPZrYivKv5aWk_EbmnneXA" />
+    <meta name="baidu-site-verification" content="BHYVK2e9BE" />
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon1.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon1.png">
+    <link rel="apple-touch-icon" href="/img/favicon1.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="学海拾遗">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://lkang.me">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="浏览器对象模型(BOM)的一些方法和属性 | 学海拾遗">
+    <meta property="og:image" content="/img/favicon1.png" />
+    <meta property="og:description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、javascript、html、css">
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="BOM"> 
+
+    
+        <meta property="article:published_time" content="6月 27, 2017" />
+        <meta property="article:modified_time" content="7月 30, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="浏览器对象模型(BOM)的一些方法和属性 | 学海拾遗">
+    <meta name="twitter:description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、javascript、html、css">
+    <meta name="twitter:image" content="/img/favicon1.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://lkang.me" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "学海拾遗",
+        "logo": "/img/favicon1.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "李康",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon1.png"
+        },
+        "description": "欢迎啊！"
+    },
+    "headline": "浏览器对象模型(BOM)的一些方法和属性",
+    "url": "http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/index.html",
+    "datePublished": "6月 27, 2017",
+    "dateModified": "7月 30, 2017",
+    "description": "一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、javascript、html、css",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://lkang.me"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?5orclITxRDGTPE/om2NxRQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: null;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?ae7cf981f2e1092a6083079e78eeb1ac';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#window对象"><span class="post-toc-number">1.</span> <span class="post-toc-text">window对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Window-对象集合"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Window 对象集合</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Window-对象属性"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Window 对象属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Window-对象方法"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Window 对象方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#window-open-URL-name-features-replace"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">window.open(URL,name,features,replace)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#window-close"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">window.close()</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Navigator-对象"><span class="post-toc-number">2.</span> <span class="post-toc-text">Navigator 对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Navigator对象-属性"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Navigator对象 属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Navigator-对象方法"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Navigator 对象方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Navigator-对象集合"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Navigator 对象集合</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Location-对象"><span class="post-toc-number">3.</span> <span class="post-toc-text">Location 对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Location-对象属性"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Location 对象属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Location-对象方法"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Location 对象方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Screen-对象"><span class="post-toc-number">4.</span> <span class="post-toc-text">Screen 对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Screen-对象属性"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Screen 对象属性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#History-对象"><span class="post-toc-number">5.</span> <span class="post-toc-text">History 对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#History-对象属性"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">History 对象属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#History-对象方法"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">History 对象方法</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                浏览器对象模型(BOM)的一些方法和属性
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar1.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>李康</strong>
+        <span>6月 27, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/">
+    
+</ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/BOM/">BOM</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/javascript/">javascript</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=浏览器对象模型(BOM)的一些方法和属性&url=http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=浏览器对象模型(BOM)的一些方法和属性&url=http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/index.html&via=李康" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/index.html&title=浏览器对象模型(BOM)的一些方法和属性" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=学海拾遗&title=浏览器对象模型(BOM)的一些方法和属性&summary=一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、javascript、html、css&pics=http://lkang.me/img/favicon1.png&url=http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/index.html&text=浏览器对象模型(BOM)的一些方法和属性" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h2><ul>
+<li>表示浏览器中打开的窗口</li>
+<li>如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。</li>
+<li>没有应用于 window 对象的公开标准，不过所有浏览器都支持该对象。</li>
+</ul>
+<h3 id="Window-对象集合"><a href="#Window-对象集合" class="headerlink" title="Window 对象集合"></a>Window 对象集合</h3><table>
+<thead>
+<tr>
+<th>集合</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>frames[]</td>
+<td>返回窗口中所有命名的框架。<br>该集合是 Window 对象的数组，每个 Window 对象在窗口中含有一个框架或 <code>&lt;iframe&gt;</code>。属性 frames.length 存放数组 frames[] 中含有的元素个数。注意，frames[] 数组中引用的框架可能还包括框架，它们自己也具有 frames[] 数组。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Window-对象属性"><a href="#Window-对象属性" class="headerlink" title="Window 对象属性"></a>Window 对象属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>closed</td>
+<td>返回窗口是否已被关闭。</td>
+</tr>
+<tr>
+<td>defaultStatus</td>
+<td>设置或返回窗口状态栏中的默认文本。</td>
+</tr>
+<tr>
+<td>document</td>
+<td>对 Document 对象的只读引用。请参阅 Document 对象。</td>
+</tr>
+<tr>
+<td>history</td>
+<td>对 History 对象的只读引用。请参数 History 对象。</td>
+</tr>
+<tr>
+<td>innerheight</td>
+<td>返回窗口的文档显示区的高度。</td>
+</tr>
+<tr>
+<td>innerwidth</td>
+<td>返回窗口的文档显示区的宽度。</td>
+</tr>
+<tr>
+<td>length</td>
+<td>设置或返回窗口中的框架数量。</td>
+</tr>
+<tr>
+<td>location</td>
+<td>用于窗口或框架的 Location 对象。请参阅 Location 对象。</td>
+</tr>
+<tr>
+<td>name</td>
+<td>设置或返回窗口的名称。</td>
+</tr>
+<tr>
+<td>Navigator</td>
+<td>对 Navigator 对象的只读引用。请参数 Navigator 对象。</td>
+</tr>
+<tr>
+<td>opener</td>
+<td>返回对创建此窗口的窗口的引用。</td>
+</tr>
+<tr>
+<td>outerheight</td>
+<td>返回窗口的外部高度。</td>
+</tr>
+<tr>
+<td>outerwidth</td>
+<td>返回窗口的外部宽度。</td>
+</tr>
+<tr>
+<td>pageXOffset</td>
+<td>设置或返回当前页面相对于窗口显示区左上角的 X 位置。</td>
+</tr>
+<tr>
+<td>pageYOffset</td>
+<td>设置或返回当前页面相对于窗口显示区左上角的 Y 位置。</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>返回父窗口。</td>
+</tr>
+<tr>
+<td>Screen</td>
+<td>对 Screen 对象的只读引用。请参数 Screen 对象。</td>
+</tr>
+<tr>
+<td>self</td>
+<td>返回对当前窗口的引用。等价于 Window 属性。</td>
+</tr>
+<tr>
+<td>status</td>
+<td>设置窗口状态栏的文本。</td>
+</tr>
+<tr>
+<td>top</td>
+<td>返回最顶层的先辈窗口。</td>
+</tr>
+<tr>
+<td>window</td>
+<td>window 属性等价于 self 属性，它包含了对窗口自身的引用。</td>
+</tr>
+<tr>
+<td>screenLeft <br> screenTop <br> screenX <br> screenY</td>
+<td>只读整数。声明了窗口的左上角在屏幕上的的 x 坐标和 y 坐标。IE、Safari 和 Opera 支持 screenLeft 和 screenTop，而 Firefox 和 Safari 支持 screenX 和 screenY。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Window-对象方法"><a href="#Window-对象方法" class="headerlink" title="Window 对象方法"></a>Window 对象方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alert()</td>
+<td>显示带有一段消息和一个确认按钮的警告框。</td>
+</tr>
+<tr>
+<td>blur()</td>
+<td>把键盘焦点从顶层窗口移开。</td>
+</tr>
+<tr>
+<td>clearInterval()</td>
+<td>取消由 setInterval() 设置的 timeout。</td>
+</tr>
+<tr>
+<td>clearTimeout()</td>
+<td>取消由 setTimeout() 方法设置的 timeout。</td>
+</tr>
+<tr>
+<td>close()</td>
+<td>关闭浏览器窗口。</td>
+</tr>
+<tr>
+<td>confirm()</td>
+<td>显示带有一段消息以及确认按钮和取消按钮的对话框。</td>
+</tr>
+<tr>
+<td>createPopup()</td>
+<td>创建一个 pop-up 窗口。</td>
+</tr>
+<tr>
+<td>focus()</td>
+<td>把键盘焦点给予一个窗口。</td>
+</tr>
+<tr>
+<td>moveBy()</td>
+<td>可相对窗口的当前坐标把它移动指定的像素。</td>
+</tr>
+<tr>
+<td>moveTo()</td>
+<td>把窗口的左上角移动到一个指定的坐标。</td>
+</tr>
+<tr>
+<td>open()</td>
+<td>打开一个新的浏览器窗口或查找一个已命名的窗口。</td>
+</tr>
+<tr>
+<td>print()</td>
+<td>打印当前窗口的内容。</td>
+</tr>
+<tr>
+<td>prompt()</td>
+<td>显示可提示用户输入的对话框。</td>
+</tr>
+<tr>
+<td>resizeBy()</td>
+<td>按照指定的像素调整窗口的大小。</td>
+</tr>
+<tr>
+<td>resizeTo()</td>
+<td>把窗口的大小调整到指定的宽度和高度。</td>
+</tr>
+<tr>
+<td>scrollBy()</td>
+<td>按照指定的像素值来滚动内容。</td>
+</tr>
+<tr>
+<td>scrollTo()</td>
+<td>把内容滚动到指定的坐标。</td>
+</tr>
+<tr>
+<td>setInterval()</td>
+<td>按照指定的周期（以毫秒计）来调用函数或计算表达式。</td>
+</tr>
+<tr>
+<td>setTimeout()</td>
+<td>在指定的毫秒数后调用函数或计算表达式。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="window-open-URL-name-features-replace"><a href="#window-open-URL-name-features-replace" class="headerlink" title="window.open(URL,name,features,replace)"></a>window.open(URL,name,features,replace)</h4><table><tr><td>参数</td><td>说明</td></tr><tr><td>URL</td><td>可选。一个可选的字符串，声明了要在新窗口中显示的文档的 URL。如果省略了这个参数，或者它的值是空字符串，那么新窗口就不会显示任何文档。</td></tr><tr><td>name</td><td>可选。一个可选的字符串，该字符串是一个由逗号分隔的特征列表，其中包括数字、字母和下划线，该字符声明了新窗口的名称。这个名称可以用作标记’&lt;’a’&gt;’和’&lt;’form’&gt;’的属性 target 的值。如果该参数指定了一个已经存在的窗口，那么 open() 方法就不再创建一个新窗口，而只是返回对指定窗口的引用。在这种情况下，features 将被忽略。支持以下值：        <ul>            <li>_blank - URL加载到一个新的窗口。这是默认</li>            <li>_parent - URL加载到父框架</li>            <li>_self - URL替换当前页面</li>            <li>_top - URL替换任何可加载的框架集</li>            <li><i>name</i> - 窗口名称</li>        </ul>        </td></tr><tr><td>features</td><td>可选。一个可选的字符串，声明了新窗口要显示的标准浏览器的特征。如果省略该参数，新窗口将具有所有标准特征。在窗口特征这个表格中，我们对该字符串的格式进行了详细的说明。支持以下值：        <table><tr><td>         channelmode=yes|no|1|0</td><td>         是否要在影院模式显示 window。默认是没有的。仅限IE浏览器</td></tr><tr><td>         directories=yes|no|1|0</td><td>         是否添加目录按钮。默认是肯定的。仅限IE浏览器</td></tr><tr><td>         fullscreen=yes|no|1|0</td><td>         浏览器是否显示全屏模式。默认是没有的。在全屏模式下的 window，还必须在影院模式。仅限IE浏览器</td></tr><tr><td>         height=pixels</td><td>         窗口的高度。最小.值为100</td></tr><tr><td>         left=pixels</td><td>         该窗口的左侧位置</td></tr><tr><td>         location=yes|no|1|0</td><td>         是否显示地址字段.默认值是yes</td></tr><tr><td>         menubar=yes|no|1|0</td><td>         是否显示菜单栏.默认值是yes</td></tr><tr><td>         resizable=yes|no|1|0</td><td>         是否可调整窗口大小.默认值是yes</td></tr><tr><td>         scrollbars=yes|no|1|0</td><td>         是否显示滚动条.默认值是yes</td></tr><tr><td>         status=yes|no|1|0</td><td>         是否要添加一个状态栏.默认值是yes</td></tr><tr><td>         titlebar=yes|no|1|0</td><td>         是否显示标题栏.被忽略，除非调用HTML应用程序或一个值得信赖的对话框.默认值是yes</td></tr><tr><td>         toolbar=yes|no|1|0</td><td>         是否显示浏览器工具栏.默认值是yes</td></tr><tr><td>         top=pixels</td><td>         窗口顶部的位置.仅限IE浏览器</td></tr><tr><td>         width=pixels</td><td>         窗口的宽度.最小.值为100</td></tr></table>    </td>    </tr>    <tr>    <td>replace</td>    <td>一个可选的布尔值。规定了装载到窗口的 URL 是在窗口的浏览历史中创建一个新条目，还是替换浏览历史中的当前条目。支持下面的值：        <ul>    <li>true - URL 替换浏览历史中的当前条目。</li>            <li>false - URL 在浏览历史中创建新的条目。</li>    </ul>    </td></tr></table>
+
+<h4 id="window-close"><a href="#window-close" class="headerlink" title="window.close()"></a>window.close()</h4><ul>
+<li>用于关闭浏览器窗口。</li>
+<li>将关闭有 window 指定的顶层浏览器窗口。某个窗口可以通过调用 self.close() 或只调用 close() 来关闭其自身。<br>只有通过 JavaScript 代码打开的窗口才能够由 JavaScript 代码关闭。</li>
+</ul>
+<h2 id="Navigator-对象"><a href="#Navigator-对象" class="headerlink" title="Navigator 对象"></a>Navigator 对象</h2><ul>
+<li>包含有关浏览器的信息。</li>
+<li>没有应用于 navigator 对象的公开标准，不过所有浏览器都支持该对象。</li>
+</ul>
+<h3 id="Navigator对象-属性"><a href="#Navigator对象-属性" class="headerlink" title="Navigator对象 属性"></a>Navigator对象 属性</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">appCodeName</td>
+<td style="text-align:center">返回浏览器的代码名。</td>
+</tr>
+<tr>
+<td style="text-align:center">appMinorVersion</td>
+<td style="text-align:center">返回浏览器的次级版本。</td>
+</tr>
+<tr>
+<td style="text-align:center">appName</td>
+<td style="text-align:center">返回浏览器的名称。</td>
+</tr>
+<tr>
+<td style="text-align:center">appVersion</td>
+<td style="text-align:center">返回浏览器的平台和版本信息。</td>
+</tr>
+<tr>
+<td style="text-align:center">browserLanguage</td>
+<td style="text-align:center">返回当前浏览器的语言。</td>
+</tr>
+<tr>
+<td style="text-align:center">cookieEnabled</td>
+<td style="text-align:center">返回指明浏览器中是否启用 cookie 的布尔值。</td>
+</tr>
+<tr>
+<td style="text-align:center">cpuClass</td>
+<td style="text-align:center">返回浏览器系统的 CPU 等级。</td>
+</tr>
+<tr>
+<td style="text-align:center">onLine</td>
+<td style="text-align:center">返回指明系统是否处于脱机模式的布尔值。</td>
+</tr>
+<tr>
+<td style="text-align:center">platform</td>
+<td style="text-align:center">返回运行浏览器的操作系统平台。</td>
+</tr>
+<tr>
+<td style="text-align:center">systemLanguage</td>
+<td style="text-align:center">返回 OS 使用的默认语言。</td>
+</tr>
+<tr>
+<td style="text-align:center">userAgent</td>
+<td style="text-align:center">返回由客户机发送服务器的 user-agent 头部的值。</td>
+</tr>
+<tr>
+<td style="text-align:center">userLanguage</td>
+<td style="text-align:center">返回 OS 的自然语言设置。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Navigator-对象方法"><a href="#Navigator-对象方法" class="headerlink" title="Navigator 对象方法"></a>Navigator 对象方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>javaEnabled()</td>
+<td>规定浏览器是否启用 Java。</td>
+</tr>
+<tr>
+<td>taintEnabled()</td>
+<td>规定浏览器是否启用数据污点 (data tainting)。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Navigator-对象集合"><a href="#Navigator-对象集合" class="headerlink" title="Navigator 对象集合"></a>Navigator 对象集合</h3><table>
+<thead>
+<tr>
+<th>集合</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plugins[]</td>
+<td>返回对文档中所有嵌入式对象的引用。该集合是一个 Plugin 对象的数组，其中的元素代表浏览器已经安装的插件。Plug-in 对象提供的是有关插件的信息，其中包括它所支持的 MIME 类型的列表。虽然 plugins[] 数组是由 IE 4 定义的，但是在 IE 4 中它却总是空的，因为 IE 4 不支持插件和 Plugin 对象。 </td>
+</tr>
+</tbody>
+</table>
+<h2 id="Location-对象"><a href="#Location-对象" class="headerlink" title="Location 对象"></a>Location 对象</h2><ul>
+<li>包含有关当前 URL 的信息。</li>
+<li>Location 对象是 Window 对象的一个部分，可通过 window.location 属性来访问。</li>
+<li>存储在 Window 对象的 Location 属性中，表示那个窗口中当前显示的文档的 Web 地址。它的 href 属性存放的是文档的完整 URL，其他属性则分别描述了 URL 的各个部分。</li>
+</ul>
+<h3 id="Location-对象属性"><a href="#Location-对象属性" class="headerlink" title="Location 对象属性"></a>Location 对象属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hash</td>
+<td>设置或返回从井号 (#) 开始的 URL（锚）。</td>
+</tr>
+<tr>
+<td>host</td>
+<td>设置或返回主机名和当前 URL 的端口号。</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>设置或返回当前 URL 的主机名。</td>
+</tr>
+<tr>
+<td>href</td>
+<td>设置或返回完整的 URL。</td>
+</tr>
+<tr>
+<td>pathname</td>
+<td>设置或返回当前 URL 的路径部分。</td>
+</tr>
+<tr>
+<td>port</td>
+<td>设置或返回当前 URL 的端口号。</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>设置或返回当前 URL 的协议。</td>
+</tr>
+<tr>
+<td>search</td>
+<td>设置或返回从问号 (?) 开始的 URL（查询部分）。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Location-对象方法"><a href="#Location-对象方法" class="headerlink" title="Location 对象方法"></a>Location 对象方法</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assign()</td>
+<td>加载新的文档。</td>
+</tr>
+<tr>
+<td>reload()</td>
+<td>重新加载当前文档。</td>
+</tr>
+<tr>
+<td>replace()</td>
+<td>用新的文档替换当前文档。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Screen-对象"><a href="#Screen-对象" class="headerlink" title="Screen 对象"></a>Screen 对象</h2><ul>
+<li>Screen 对象包含有关客户端显示屏幕的信息。</li>
+<li>每个 Window 对象的 screen 属性都引用一个 Screen 对象。</li>
+<li>没有应用于 screen 对象的公开标准，不过所有浏览器都支持该对象。</li>
+</ul>
+<h3 id="Screen-对象属性"><a href="#Screen-对象属性" class="headerlink" title="Screen 对象属性"></a>Screen 对象属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>availHeight</td>
+<td>返回显示屏幕的高度 (除 Windows 任务栏之外)。</td>
+</tr>
+<tr>
+<td>availWidth</td>
+<td>返回显示屏幕的宽度 (除 Windows 任务栏之外)。</td>
+</tr>
+<tr>
+<td>bufferDepth</td>
+<td>设置或返回调色板的比特深度。</td>
+</tr>
+<tr>
+<td>colorDepth</td>
+<td>返回目标设备或缓冲器上的调色板的比特深度。</td>
+</tr>
+<tr>
+<td>deviceXDPI</td>
+<td>返回显示屏幕的每英寸水平点数。</td>
+</tr>
+<tr>
+<td>deviceYDPI</td>
+<td>返回显示屏幕的每英寸垂直点数。</td>
+</tr>
+<tr>
+<td>fontSmoothingEnabled</td>
+<td>返回用户是否在显示控制面板中启用了字体平滑。</td>
+</tr>
+<tr>
+<td>logicalXDPI</td>
+<td>返回显示屏幕每英寸的水平方向的常规点数。</td>
+</tr>
+<tr>
+<td>logicalYDPI</td>
+<td>返回显示屏幕每英寸的垂直方向的常规点数。</td>
+</tr>
+<tr>
+<td>pixelDepth</td>
+<td>返回显示屏幕的颜色分辨率（比特每像素）。</td>
+</tr>
+<tr>
+<td>updateInterval</td>
+<td>设置或返回屏幕的刷新率。</td>
+</tr>
+<tr>
+<td>width</td>
+<td>返回显示器屏幕的宽度。</td>
+</tr>
+<tr>
+<td>height</td>
+<td>返回显示屏幕的高度。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="History-对象"><a href="#History-对象" class="headerlink" title="History 对象"></a>History 对象</h2><ul>
+<li>包含用户（在浏览器窗口中）访问过的 URL。</li>
+<li>是 window 对象的一部分，可通过 window.history 属性对其进行访问。</li>
+<li>没有应用于 History 对象的公开标准，不过所有浏览器都支持该对象。</li>
+</ul>
+<h3 id="History-对象属性"><a href="#History-对象属性" class="headerlink" title="History 对象属性"></a>History 对象属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>length</td>
+<td>返回浏览器历史列表中的 URL 数量。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="History-对象方法"><a href="#History-对象方法" class="headerlink" title="History 对象方法"></a>History 对象方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>back()</td>
+<td>加载 history 列表中的前一个 URL。</td>
+</tr>
+<tr>
+<td>forward()</td>
+<td>加载 history 列表中的下一个 URL。</td>
+</tr>
+<tr>
+<td>go()</td>
+<td>加载 history 列表中的某个具体页面。</td>
+</tr>
+</tbody>
+</table>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "f1d638a6c88147d79ec9658aac0f33d6",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/07/01/使用swiftype来实现站内搜索/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/06/27/VSCode插件/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar1.png" alt="李康's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        2677334070@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: lkang@lkang.me" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">6</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/建站/">建站<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/软件应用/">软件应用<span class="sidebar_archives-count">3</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/kugou" title="仿酷狗（无js）">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                仿酷狗（无js）
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">insert_photo</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">access_time</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友情连接">
+                
+                    <i class="material-icons sidebar-material-icons">link</i>
+                
+                友情连接
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">11</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/dustdu" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>学海拾遗
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

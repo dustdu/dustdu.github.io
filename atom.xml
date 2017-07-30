@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>学海拾遗</title>
-  
+  <subtitle>一些笔记</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lkang.me/"/>
-  <updated>2017-06-30T17:43:55.240Z</updated>
+  <updated>2017-07-30T13:46:22.770Z</updated>
   <id>http://lkang.me/</id>
   
   <author>
@@ -14,6 +14,103 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>移动端陀螺仪的使用</title>
+    <link href="http://lkang.me/2017/07/06/%E9%99%80%E8%9E%BA%E4%BB%AA/"/>
+    <id>http://lkang.me/2017/07/06/陀螺仪/</id>
+    <published>2017-07-06T11:41:55.000Z</published>
+    <updated>2017-07-30T13:46:22.770Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;横竖屏判断&quot;&gt;&lt;a href=&quot;#横竖屏判断&quot; class=&quot;headerlink&quot; title=&quot;横竖屏判断&quot;&gt;&lt;/a&gt;横竖屏判断&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;window.orientation 手机横竖屏的状态&lt;ul&gt;
+&lt;li&gt;undefined 设备不支持横
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
+    
+      <category term="陀螺仪" scheme="http://lkang.me/tags/%E9%99%80%E8%9E%BA%E4%BB%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移动端事件的一些知识点</title>
+    <link href="http://lkang.me/2017/07/04/js%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    <id>http://lkang.me/2017/07/04/js移动端/</id>
+    <published>2017-07-04T13:45:36.000Z</published>
+    <updated>2017-07-30T13:43:37.077Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;移动端事件&quot;&gt;&lt;a href=&quot;#移动端事件&quot; class=&quot;headerlink&quot; title=&quot;移动端事件&quot;&gt;&lt;/a&gt;移动端事件&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;在模拟器下，用事件绑定的方式添加touch事件，时好时坏,但是在真机上没有问题,最好用事件监听来添加事件
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
+    
+      <category term="移动端事件" scheme="http://lkang.me/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FileReader的用法</title>
+    <link href="http://lkang.me/2017/07/03/filereder/"/>
+    <id>http://lkang.me/2017/07/03/filereder/</id>
+    <published>2017-07-03T14:18:15.000Z</published>
+    <updated>2017-07-30T12:25:52.598Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;File-API-—-gt-FileReader&quot;&gt;&lt;a href=&quot;#File-API-—-gt-FileReader&quot; class=&quot;headerlink&quot; title=&quot;File API —&amp;gt; FileReader&quot;&gt;&lt;/a&gt;File API —&amp;gt
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
+    
+      <category term="数据上传" scheme="http://lkang.me/tags/%E6%95%B0%E6%8D%AE%E4%B8%8A%E4%BC%A0/"/>
+    
+      <category term="html5" scheme="http://lkang.me/tags/html5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ECMAScript的数据和运算</title>
+    <link href="http://lkang.me/2017/07/01/ECMAScript/"/>
+    <id>http://lkang.me/2017/07/01/ECMAScript/</id>
+    <published>2017-07-01T13:16:21.000Z</published>
+    <updated>2017-07-30T12:03:36.567Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;标准划分&lt;ul&gt;
+&lt;li&gt;基本类型: number/string/boolean/undefined/null&lt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://lkang.me/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://lkang.me/tags/JavaScript/"/>
+    
+      <category term="ECMAScript" scheme="http://lkang.me/tags/ECMAScript/"/>
+    
+      <category term="js数据类型" scheme="http://lkang.me/tags/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>使用swiftype来实现站内搜索</title>
@@ -38,6 +135,30 @@
       <category term="Material" scheme="http://lkang.me/tags/Material/"/>
     
       <category term="网站模块" scheme="http://lkang.me/tags/%E7%BD%91%E7%AB%99%E6%A8%A1%E5%9D%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器对象模型(BOM)的一些方法和属性</title>
+    <link href="http://lkang.me/2017/06/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-BOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/"/>
+    <id>http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/</id>
+    <published>2017-06-27T02:03:21.000Z</published>
+    <updated>2017-07-30T10:58:25.859Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;window对象&quot;&gt;&lt;a href=&quot;#window对象&quot; class=&quot;headerlink&quot; title=&quot;window对象&quot;&gt;&lt;/a&gt;window对象&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;表示浏览器中打开的窗口&lt;/li&gt;
+&lt;li&gt;如果文档包含框架（frame 或 if
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
+    
+      <category term="BOM" scheme="http://lkang.me/tags/BOM/"/>
     
   </entry>
   
@@ -112,7 +233,7 @@
     <link href="http://lkang.me/2017/06/26/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-DOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/"/>
     <id>http://lkang.me/2017/06/26/文档对象模型-DOM-的一些方法和属性/</id>
     <published>2017-06-26T02:20:34.000Z</published>
-    <updated>2017-07-07T02:27:32.057Z</updated>
+    <updated>2017-07-30T12:05:54.241Z</updated>
     
     <summary type="html">
     
@@ -153,30 +274,6 @@
       <category term="hexo" scheme="http://lkang.me/tags/hexo/"/>
     
       <category term="git" scheme="http://lkang.me/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浏览器对象模型(BOM)的一些方法和属性</title>
-    <link href="http://lkang.me/2017/06/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-BOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/"/>
-    <id>http://lkang.me/2017/06/25/浏览器对象模型-BOM-的一些方法和属性/</id>
-    <published>2017-06-24T18:03:21.000Z</published>
-    <updated>2017-06-26T09:15:07.109Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;window对象&quot;&gt;&lt;a href=&quot;#window对象&quot; class=&quot;headerlink&quot; title=&quot;window对象&quot;&gt;&lt;/a&gt;window对象&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;表示浏览器中打开的窗口&lt;/li&gt;
-&lt;li&gt;如果文档包含框架（frame 或 if
-    
-    </summary>
-    
-      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
-    
-    
-      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
-    
-      <category term="BOM" scheme="http://lkang.me/tags/BOM/"/>
     
   </entry>
   

@@ -1,91 +1,1963 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[使用swiftype来实现站内搜索]]></title>
-    <url>%2F2017%2F07%2F01%2F%E4%BD%BF%E7%94%A8swiftype%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2%2F</url>
-    <content type="text"><![CDATA[网站内部搜索我使用的是Material主题，已经内置了google,swiftype,local三种搜索系统。根据自己的需要配置就行了。但有点要注意，三种设置并不是在同一配置文件中进行设置（小心了） Google如果调用 Google 搜索引擎进行搜索。在 主题配置文件 中找到 search: use: 将它的值改为 google 即可。可能还有一项，不必管它 本地搜索如果使用本地搜索，就需要安装 hexo-generator-search 插件: $ npm install hexo-generator-search --save 然后在 站点配置文件 中添加 search: path: search.xml field: all Swiftype使用Swiftype的话，需要注册Swiftype，然后在 主题配置文件 中找到 search: use: 将它的值改为swiftype,并填入注册配置时得到的swiftype_key。在你 Swiftype Install Code 时，会生成一些代码，有一行代码 _st(‘install’,’*‘,’2.0.0’)，其中 * 即为 swiftype_key。 Swiftype可以设置在其他位置，可以自己看一些官方文档和博客，有兴趣自己找吧 其中，我在部署swiftype时误以为要和本地搜索一起配置，所以就出现了一些错误： FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html ReferenceError: ejs:16 14| &lt;/categories&gt; 15| &lt;% } -%&gt; &gt;&gt; 16| &lt;% if(post.tags&amp;&amp;post.tags.length&gt;0){ -%&gt; 17| &lt;tags&gt; 18| &lt;% post.tags.each(function (tag) { -%&gt; 19| &lt;tag&gt;&lt;%= tag.name %&gt;&lt;/tag&gt; post is not defined at eval (eval at &lt;anonymous&gt; (F:\web\node_modules\ejs\lib\ejs.js:242:14), &lt;anonymous&gt;:30:1443) at Query.forEach (F:\web\node_modules\warehouse\lib\query.js:42:5) at eval (eval at &lt;anonymous&gt; (F:\web\node_modules\ejs\lib\ejs.js:242:14), &lt;anonymous&gt;:30:1257) at eval (eval at &lt;anonymous&gt; (F:\web\node_modules\ejs\lib\ejs.js:242:14), &lt;anonymous&gt;:30:1677) at F:\web\node_modules\ejs\lib\ejs.js:255:15 at Hexo.module.exports (F:\web\node_modules\hexo-generator-searchdb\lib\xml_generator.js:40:13) at Hexo.tryCatcher (F:\web\node_modules\bluebird\js\release\util.js:16:23) at Hexo.&lt;anonymous&gt; (F:\web\node_modules\bluebird\js\release\method.js:15:34) at F:\web\node_modules\hexo\lib\hexo\index.js:340:24 at tryCatcher (F:\web\node_modules\bluebird\js\release\util.js:16:23) at MappingPromiseArray._promiseFulfilled (F:\web\node_modules\bluebird\js\release\map.js:61:38) at MappingPromiseArray.PromiseArray._iterate (F:\web\node_modules\bluebird\js\release\promise_array.js:114:31) at MappingPromiseArray.init (F:\web\node_modules\bluebird\js\release\promise_array.js:78:10) at MappingPromiseArray._asyncInit (F:\web\node_modules\bluebird\js\release\map.js:30:10) at Async._drainQueue (F:\web\node_modules\bluebird\js\release\async.js:138:12) at Async._drainQueues (F:\web\node_modules\bluebird\js\release\async.js:143:10) at Immediate.Async.drainQueues (F:\web\node_modules\bluebird\js\release\async.js:17:14) at runCallback (timers.js:672:20) at tryOnImmediate (timers.js:645:5) at processImmediate [as _immediateCallback] (timers.js:617:5) 似乎是引用错误（这里有文档），可能就是两个文件的搜索设置有问题，我重新清理，二者分别解析后是没问题的，所以，我又重新看主题文档，才弄清楚。。。。。其实，我开始认为本地搜索，不是在本地页面搜索吗？所以，我把这两个设置搞在了一起，才有了这么蠢的错误。]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>swiftype</tag>
-        <tag>Material</tag>
-        <tag>网站模块</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[VSCode插件]]></title>
-    <url>%2F2017%2F06%2F27%2FVSCode%E6%8F%92%E4%BB%B6%2F</url>
-    <content type="text"><![CDATA[VSCode插件Open in Browser （在浏览器中查看）vscode-icons （图标）Seti-theme （主题）HTML CSS Support 让HTML标签上写class智能提示当前项目所支持的样式 HTML Snippets 超级使用且初级的H5代码片段以及提示 Debugger for Chrome 让vscode映射chrome的debug功能，静态页面都可以用vscode来打断点调试、配饰稍微复杂一点 Auto Rename Tag 修改html标签，自动帮你完成尾部闭合标签的同步修改，和webstorm一样。 beautify 这款类似于vscode里格式化代码的功能 HTMLHint html代码检测 Bracket Pair Colorizer 让括号拥有独立的颜色，易于区分。可以配合任意主题使用。 vetur 语法高亮、智能感知、Emmet等 AutoFileName 这个插件使得开发者在 require 本地文件时支持基于输入的文件路径的智能补全。 Path Intellisence 智能路径提示。当你想引入一个js文件、css文件时，它会帮你智能提示路径。 VS Color Picker 调色板 FileNameComplete]]></content>
-      <categories>
-        <category>软件应用</category>
-      </categories>
-      <tags>
-        <tag>VSCode</tag>
-        <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[感觉用着不错的sublime插件]]></title>
-    <url>%2F2017%2F06%2F27%2F%E6%84%9F%E8%A7%89%E7%94%A8%E7%9D%80%E4%B8%8D%E9%94%99%E7%9A%84sublime%E6%8F%92%E4%BB%B6%2F</url>
-    <content type="text"><![CDATA[sublime插件Alignment 代码对齐，写几个变量，选中这几行，Ctrl+Alt+A BracketHighlighter 类似于代码匹配，可以匹配括号，引号等符号内的范围。 使用方法：系统默认为白色高亮，可以使用链接所述方法进行自定义配置http://www.360doc.com/content/14/1111/15/15077656_424301780.shtml SideBarEnhancements 侧栏右键功能增强 使用方法(参考链接内容)：http://www.w3cfuns.com/notes/13810/d9b9ed2fb80785dae88a5344ef0f30d4.html EmmetSublimeCodeIntelAutoFileName 功能：快捷输入文件名 简介：自动完成文件名的输入，如图片选取 使用：输入”/”即可看到相对于本项目文件夹的其他文件 IMESupport 功能：sublime中文输入法 简介：还在纠结 Sublime Text 中文输入法不能跟随光标吗？试试「IMESupport 」这个插件吧！目前只支持 Windows，在搜索等界面不能很好的跟随光标。 使用：Ctrl + Shift + P →输入pci →输入IMESupport →回车 Trailing spaces 功能：检测并一键去除代码中多余的空格 简介：还在纠结代码中有多余的空格而显得代码不规范？或是有处女座情节？次插件帮你实现发现多余空格、一键删除空格、保存时自动删除多余空格，让你的代码规范清爽起来 使用：安装插件并重启，即可自动提示多余空格。一键删除多余空格：CTRL+SHITF+T（需配置），更多配置请点击标题。快捷键配置：在Preferences / Key Bindings – User加上代码（数组内） ConvertToUTF8 支持GB2312和GBK编码CSS Format CSS Format可以将任意的 CSS、SASS、SCSS、LESS 代码格式化为展开、紧凑、压缩的形式，选中需要格式化的样式代码，右键选中CSS Format，选择需要形成的格式即可。 JSFormat 功能：Javascript的代码格式化插件 简介：很多网站的JS代码都进行了压缩，一行式的甚至混淆压缩，这让我们看起来很吃力。而这个插件能帮我们把原始代码进行格式的整理，包括换行和缩进等等，是代码一目了然，更快读懂~ 使用：在已压缩的JS文件中，右键选择jsFormat或者使用默认快捷键（Ctrl+Alt+F） Color​Picker 功能：调色板 简介：需要输入颜色时，可直接选取颜色 使用：快捷键Windows: ctrl+shift+c FileDiffs 功能：强大的比较代码不同工具 简介：比较当前文件与选中的代码、剪切板中代码、另一文件、未保存文件之间的差别。可配置为显示差别在外部比较工具，精确到行。 使用：右键标签页，出现FileDiffs Menu或者Diff with Tab…选择对应文件比较即可 GBK Encoding Support 功能：中文识别 简介：Sublime Text 2可识别UTF-8格式的中文，不识别GBK和ANSI，因此打开很多含中文的文档都会出现乱码。可以通过安装插件GBK Support,来识别GBK和ANSI。 使用： Open a GBK File Save file with GBK encoding Change file encoding from utf8 to GBK or GBK to utf8 Git​Gutter 简介：指示代码中插入、修改、删除的地方 Ctags 函数跳转，我的电脑上是Alt+点击 函数名称，会跳转到相应的函数 localizationlesssublimeLinterhtml5A File Icon 图标包 Boxy ThemeJavaScript Completions js最基本的api快查片段 https://packagecontrol.io/packages/JavaScript%20Completions Clipboard History 功能：粘贴板历史记录 简介：方便使用复制/剪切的内容 使用： Ctrl+alt+v：显示历史记录 Ctrl+alt+d：清空历史记录 Ctrl+shift+v：粘贴上一条记录（最旧） Ctrl+shift+alt+v：粘贴下一条记录（最新）]]></content>
-      <categories>
-        <category>软件应用</category>
-      </categories>
-      <tags>
-        <tag>插件</tag>
-        <tag>sublime</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[平时用到的一些软件的注册码以及匹配的版本]]></title>
-    <url>%2F2017%2F06%2F27%2F%E5%B9%B3%E6%97%B6%E7%94%A8%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%B3%A8%E5%86%8C%E7%A0%81%E4%BB%A5%E5%8F%8A%E5%8C%B9%E9%85%8D%E7%9A%84%E7%89%88%E6%9C%AC%2F</url>
-    <content type="text"><![CDATA[BenVista PhotoZoom Pro 7.0.6 (64-bit) 解锁代码：7YRN2-WTM7J-YAXVW-6859Q-77HG6 名 称：www.dayanzai.me 电子邮件：www.dayanzai.me@xu.com 解锁代码：CMC62-3RJDT-NV2M6-WYRR7-KGEMJ 名 称：www.dayanzai.me 电子邮件：www.dayanzai.me@xu.com 解锁代码：8VBKH-QX4YE-Y3W88-GSCJ4-VG3PX 名 称：www.dayanzai.me 电子邮件：www.dayanzai.me@xu.com MarkdownPad2.5 Soar360@live.com GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==]]></content>
-      <categories>
-        <category>软件应用</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-        <tag>注册码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[文档对象模型(DOM)的一些方法和属性]]></title>
-    <url>%2F2017%2F06%2F26%2F%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-DOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7%2F</url>
-    <content type="text"><![CDATA[document 对象 Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。document.write（） 方法可向文档写入 HTML 表达式或 JavaScript 代码。可列出多个参数(exp1,exp2,exp3,…) ，它们将按顺序被追加到文档中。 根据 DOM 标准，该方法只接受单个字符串作为参数。不过根据经验，write() 可接受任何多个参数。 通常按照两种的方式使用 write() 方法：一是在使用该方在文档中输出 HTML，另一种是在调用该方法的的窗口之外的窗口、框架中产生新文档。在第二种情况中，请务必使用 close() 方法来关闭文档。 Event 对象 Event 对象代表事件的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态。 事件通常与函数结合使用，函数不会在事件发生前被执行 是事件处理函数中的第0个参数(只需要声明形参，实参在事件调用的时候，浏览器会自己帮我们传,一般为了阅读性参数会声明为 e,ev,event。) 事件 事件 作用 onresize 窗口大小变化 onmouseover 鼠标移入 onmouseout 鼠标移出 oncontextmenu 鼠标右键 onclick 点击 onload事件 加载完成 onscroll 当元素滚动条被滚动时运行的脚本 onmouseover 鼠标移入 onmouseout 鼠标移出 onclick 鼠标点击 onscroll 滚动条发生滚动 onmousedown 鼠标按下 onmousemove 鼠标移动 onmouseup 鼠标抬起 onfocus 当输入框获得焦点时触发 onblur 当输入框失去焦点时触发 oninput 当输入框内容发生变化时触发 onchange 当表单控件状态发生变化，并失去焦点时触发 onkeydown 键盘按键按下时触发(按下时一直触发) onkeyup 键盘按键抬起时触发 onabort 图像的加载被中断。 onmousewheel 鼠标滚轮 (chrome 和 IE中的事件，不兼容低版本IE)Event 对象中有 e.wheelDelta这个属性，滚轮滚动产生两个数值，分别代表两个方向向上滚动 120向下滚动 -120 DOMMouseScroll(没有onDOMMouseScroll 只能监听，不能绑定) 鼠标滚轮 (火狐中的事件)Event 对象中有 e.detail 这个属性，滚轮滚动产生两个数值，分别代表两个方向向上滚动 -3向下滚动 3 mouseover与mouseenter 不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件（子元素在父元素内部，从父元素到子元素会触发）。 只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件（子元素在父元素内部，从父元素到子元素不会触发）。 mouseout与mouseleave 不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件。 只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。 滚轮滚轮滚动的一个简单Demo &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;Document&lt;/title&gt; &lt;style&gt; body { margin: 0; } div { background: #008080; width: 500px; height: 500px; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div&gt;&lt;/div&gt; &lt;script&gt; window.onload =function(){ var div =document.querySelector(&apos;div&apos;); mScroll(document,function(e) { div.style.width = (div.offsetWidth-10) + &apos;px&apos;; div.style.height = (div.offsetHeight-10) + &apos;px&apos;; },function(e) { div.style.width = (div.offsetWidth+10) + &apos;px&apos;; div.style.height = (div.offsetHeight+10) + &apos;px&apos;; }); function mScroll(el,toUp,toDown) { //mousewheel 鼠标滚轮 (chrome 和 IE) el.addEventListener(&apos;mousewheel&apos;,function(e){ //e.wheelDelta //向上滚动 120 //向下滚动 -120 if (e.wheelDelta &gt; 0) { //滚轮上滚，运行 toUp(e); }else{ //滚轮下滚，运行 toDown(e); } }); //DOMMouseScroll 火狐滚轮事件 el.addEventListener(&apos;DOMMouseScroll&apos;,function(e){ //e.detail // 3 向下滚动 // -3 向上滚动 if (-e.detail &gt; 0) { //滚轮上滚，运行 toUp(e); }else{ //滚轮下滚，运行 toDown(e); } }); } }; &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 鼠标 / 键盘属性 属性 描述 altKey 返回当事件被触发时，”ALT” 是否被按下。 button 返回当事件被触发时，哪个鼠标按钮被点击。0 – 左键1 – 滚轮2 – 右键 clientX 返回当事件被触发时，鼠标指针的水平坐标。(原点可视区左上角)在PC端，跟随鼠标移动，如果事件加给元素，有可能会发生移动过快元素跟不上的情况 clientY 返回当事件被触发时，鼠标指针的垂直坐标。 ctrlKey 返回当事件被触发时，”CTRL” 键是否被按下。 metaKey 返回当事件被触发时，”meta” 键是否被按下。 relatedTarget 返回与事件的目标节点相关的节点。 screenX 返回当某个事件被触发时，鼠标指针的水平坐标。 screenY 返回当某个事件被触发时，鼠标指针的垂直坐标。 shiftKey 返回当事件被触发时，”SHIFT” 键是否被按下。 key 键盘按键名字 IE 属性 除了上面的鼠标/事件属性，IE 浏览器还支持下面的属性： 属性 描述 cancelBubble 如果事件句柄想阻止事件传播到包容对象，必须把该属性设为 true。 fromElement 对于 mouseover 和 mouseout 事件，fromElement 引用移出鼠标的元素。 keyCode 对于 keypress 事件，该属性声明了被敲击的键生成的 Unicode 字符码。对于 keydown 和 keyup 事件，它指定了被敲击的键的虚拟键盘码。虚拟键盘码可能和使用的键盘的布局相关。 offsetX,offsetY 发生事件的地点在事件源元素的坐标系统中的 x 坐标和 y 坐标。 returnValue 如果设置了该属性，它的值比事件句柄的返回值优先级高。把这个属性设置为 fasle，可以取消发生事件的源元素的默认动作。 srcElement 对于生成事件的 Window 对象、Document 对象或 Element 对象的引用。 toElement 对于 mouseover 和 mouseout 事件，该属性引用移入鼠标的元素。 x,y 事件发生的位置的 x 坐标和 y 坐标，它们相对于用CSS动态定位的最内层包容元素。 事件流： 事件流指事件在触发时的一个流程，就像for循环一样有一个执行的过程。先进行捕获（从window一直到事件发生的元素），然后再开始冒泡(从事件发生的元素一直在传递会 window) 捕获:从最外层向触发该事件元素寻找的一个过程。最终找到触发该事件的元素，如果该元素有绑定事件处理函数则执行该函数。在找到触发该事件的元素之后，会进行下一个阶段“冒泡阶段”. 冒泡:从触发事件的元素开始往外层寻找，直到最外层时结束整个事件流程。 e.stopPropagation();阻止冒泡 e.cancelBubble = true;取消冒泡 不论是捕获阶段还是冒泡阶段，在寻找目标元素的过程和向外返回的过程中，所遇到每一个元素身上如果有相同事件的事件处理函数都会被调用。 事件委托： 把一组子元素的事件处理，利用冒泡的原理，在父级的事件中进行处理，在父级中我们可以通过event.target,获取到事件触发的元素，然后进行相关处理. event.target：指的是点击时的元素 事件绑定和监听 把函数绑定给对应的事件，当事件触发时，就会执行这些绑定在元素上的事件处理函数 取消绑定 事件 = null; 传统的事件绑定，会存在前后覆盖的问题，所以当我们需要让一个事件可以执行多个操作的时候，就需要使用事件监听 事件监听可以执行多个操作 addEventListener 事件监听 el.addEventListener(‘event’,fn [,useCapture]) 取消事件监听 el.removeEventListener(‘event’,fnName[,useCapture]) |参数|介绍|:—:|:—:||el| 元素|event| 事件名称(click,mouseover…)|fn| 事件执行函数|useCapture(true/false) |true 捕获阶段，false冒泡阶段 (不写默认 false) 阻止默认事件 事件绑定中用 return false a.onclick = function(){ alert(1); return false; //阻止默认事件 }; 事件监听用 e.preventDefault() a.addEventListener(&apos;click&apos;, function(e) { alert(1); e.preventDefault();//阻止默认事件 });]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-        <tag>DOM</tag>
-        <tag>js事件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[hexo建站的一些流程记录]]></title>
-    <url>%2F2017%2F06%2F25%2Fhexo%E5%BB%BA%E7%AB%99%E7%9A%84%E7%AE%80%E5%8D%95%E6%B5%81%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[hexo的简单介绍Hexo 使用 Markdown（或其他渲染引擎）解析文章，配合上github和coding或其他类似产品建立网站，在安装前，电脑中要安装下列应用程序： Node.js Git 之后使用使用 npm安装hexo: npm install -g hexo-cli 升级hexo: npm update hexo -g 有些命令可以简写成首字母，可参考 创建hexo hexo init 文件夹 #初始化，可以直接在空白文件夹建立 cd 文件夹 npm install 部署到Github部署到Github前需要配置_config.yml文件，在hexo根目录下，可以看一下hexo文件的介绍，找到下面的内容并配置 # Deployment ## Docs: http://hexo.io/docs/deployment.html deploy: type: git repository: https://github.com/Your_Github_Account/yoursite.github.io.git branch: master 有的介绍是github，可能会遇到 ERROR Deployer not found: github 的错误，那是因为HEXO更新到3.0之后，deploy的type 的github需要改成Git 或者运行 npm install hexo-deployer-git --save 新建文章 hexo new [layout] #新建文章（md） hexo new page”pageName” #新建页面（html） 如果不想文章被处理，可以将 Front-Matter(文章头部）中的layout: 设为 false 。 将储存到 source/_posts 文件夹。 布局（layout），有 post、page 和 draft，默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。 Front-Matter--- layout 布局 #可以省略 title: title #文章标题（新建文章时标题和文件名一样，在这可以改） date: 2013/7/13 20:46:25 #新建文章时间 updated: 更新日期 #可以省略 comments: true #开启文章的评论功能 可以省略 默认true categories: 建站 #文章目录 可以省略 tags: #文章标签 可以省略 - 标签1 - 标签2 description: #文章描述 可以省略 permalink 覆盖文章网址 #可以省略 这个我没了解 thumbnail: 图片地址 #我用的主题用于设置文章缩略图，主题文档中有关于缩略图设置描述 （官网案例中的代码在图片地址后有!blogthumbnail这段代码，不知道有何用，我加上去有BUG） --- tags和categories是不一样的，categories会出现在侧边栏形成文件夹，tags只是文章的不同标签 解析部署文章 hexo clean #一般先清一下 hexo generate #生成静态页面至public目录 hexo generate –watch #监视文件变动 hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server） hexo server -i 192.168.1.1 #自定义 IP hexo server -s #静态模式 hexo s -p 端口 hexo安装没错，也能成功运行，启动也没错，但不能访问页面。 电脑端口被占用了。（可能你的电脑安装了福昕阅读器，他占用4000端口，很不幸，我就安装了它）要改下端口 想要README.md文件不被渲染，在博客根目录下的配置文件_config.yml中配置一下”skip_render”选项就行了，将不需要渲染的文件名称加入其选项下就行了。 skip_render: README.md hexo deploy #将.deploy目录部署到GitHub hexo help # 查看帮助 hexo version #查看Hexo的版本 结束 到这里，一个基本的以hexo为模版的网站就建好了，也可以设置一些其他的使网站更加个性化。找一些喜欢的主题，或者自己的Demo都可以放上来，那就要对hexo有更详细的了解了。。。 想到一点，有时候出现一些错误找不到原因，可能就是_config.yml文件或者其他配置文件出错了，yml文件的格式要求还是很严格的，一不小心就出错。]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>建站</tag>
-        <tag>hexo</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[浏览器对象模型(BOM)的一些方法和属性]]></title>
-    <url>%2F2017%2F06%2F25%2F%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-BOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7%2F</url>
-    <content type="text"><![CDATA[window对象 表示浏览器中打开的窗口 如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。 没有应用于 window 对象的公开标准，不过所有浏览器都支持该对象。 Window 对象集合 集合 描述 frames[] 返回窗口中所有命名的框架。该集合是 Window 对象的数组，每个 Window 对象在窗口中含有一个框架或 &lt;iframe&gt;。属性 frames.length 存放数组 frames[] 中含有的元素个数。注意，frames[] 数组中引用的框架可能还包括框架，它们自己也具有 frames[] 数组。 Window 对象属性 属性 描述 closed 返回窗口是否已被关闭。 defaultStatus 设置或返回窗口状态栏中的默认文本。 document 对 Document 对象的只读引用。请参阅 Document 对象。 history 对 History 对象的只读引用。请参数 History 对象。 innerheight 返回窗口的文档显示区的高度。 innerwidth 返回窗口的文档显示区的宽度。 length 设置或返回窗口中的框架数量。 location 用于窗口或框架的 Location 对象。请参阅 Location 对象。 name 设置或返回窗口的名称。 Navigator 对 Navigator 对象的只读引用。请参数 Navigator 对象。 opener 返回对创建此窗口的窗口的引用。 outerheight 返回窗口的外部高度。 outerwidth 返回窗口的外部宽度。 pageXOffset 设置或返回当前页面相对于窗口显示区左上角的 X 位置。 pageYOffset 设置或返回当前页面相对于窗口显示区左上角的 Y 位置。 parent 返回父窗口。 Screen 对 Screen 对象的只读引用。请参数 Screen 对象。 self 返回对当前窗口的引用。等价于 Window 属性。 status 设置窗口状态栏的文本。 top 返回最顶层的先辈窗口。 window window 属性等价于 self 属性，它包含了对窗口自身的引用。 screenLeft screenTop screenX screenY 只读整数。声明了窗口的左上角在屏幕上的的 x 坐标和 y 坐标。IE、Safari 和 Opera 支持 screenLeft 和 screenTop，而 Firefox 和 Safari 支持 screenX 和 screenY。 Window 对象方法 方法 描述 alert() 显示带有一段消息和一个确认按钮的警告框。 blur() 把键盘焦点从顶层窗口移开。 clearInterval() 取消由 setInterval() 设置的 timeout。 clearTimeout() 取消由 setTimeout() 方法设置的 timeout。 close() 关闭浏览器窗口。 confirm() 显示带有一段消息以及确认按钮和取消按钮的对话框。 createPopup() 创建一个 pop-up 窗口。 focus() 把键盘焦点给予一个窗口。 moveBy() 可相对窗口的当前坐标把它移动指定的像素。 moveTo() 把窗口的左上角移动到一个指定的坐标。 open() 打开一个新的浏览器窗口或查找一个已命名的窗口。 print() 打印当前窗口的内容。 prompt() 显示可提示用户输入的对话框。 resizeBy() 按照指定的像素调整窗口的大小。 resizeTo() 把窗口的大小调整到指定的宽度和高度。 scrollBy() 按照指定的像素值来滚动内容。 scrollTo() 把内容滚动到指定的坐标。 setInterval() 按照指定的周期（以毫秒计）来调用函数或计算表达式。 setTimeout() 在指定的毫秒数后调用函数或计算表达式。 window.open(URL,name,features,replace)参数说明URL可选。一个可选的字符串，声明了要在新窗口中显示的文档的 URL。如果省略了这个参数，或者它的值是空字符串，那么新窗口就不会显示任何文档。name可选。一个可选的字符串，该字符串是一个由逗号分隔的特征列表，其中包括数字、字母和下划线，该字符声明了新窗口的名称。这个名称可以用作标记’&lt;’a’&gt;’和’&lt;’form’&gt;’的属性 target 的值。如果该参数指定了一个已经存在的窗口，那么 open() 方法就不再创建一个新窗口，而只是返回对指定窗口的引用。在这种情况下，features 将被忽略。支持以下值： _blank - URL加载到一个新的窗口。这是默认 _parent - URL加载到父框架 _self - URL替换当前页面 _top - URL替换任何可加载的框架集 name - 窗口名称 features可选。一个可选的字符串，声明了新窗口要显示的标准浏览器的特征。如果省略该参数，新窗口将具有所有标准特征。在窗口特征这个表格中，我们对该字符串的格式进行了详细的说明。支持以下值： channelmode=yes|no|1|0 是否要在影院模式显示 window。默认是没有的。仅限IE浏览器 directories=yes|no|1|0 是否添加目录按钮。默认是肯定的。仅限IE浏览器 fullscreen=yes|no|1|0 浏览器是否显示全屏模式。默认是没有的。在全屏模式下的 window，还必须在影院模式。仅限IE浏览器 height=pixels 窗口的高度。最小.值为100 left=pixels 该窗口的左侧位置 location=yes|no|1|0 是否显示地址字段.默认值是yes menubar=yes|no|1|0 是否显示菜单栏.默认值是yes resizable=yes|no|1|0 是否可调整窗口大小.默认值是yes scrollbars=yes|no|1|0 是否显示滚动条.默认值是yes status=yes|no|1|0 是否要添加一个状态栏.默认值是yes titlebar=yes|no|1|0 是否显示标题栏.被忽略，除非调用HTML应用程序或一个值得信赖的对话框.默认值是yes toolbar=yes|no|1|0 是否显示浏览器工具栏.默认值是yes top=pixels 窗口顶部的位置.仅限IE浏览器 width=pixels 窗口的宽度.最小.值为100 replace 一个可选的布尔值。规定了装载到窗口的 URL 是在窗口的浏览历史中创建一个新条目，还是替换浏览历史中的当前条目。支持下面的值： true - URL 替换浏览历史中的当前条目。 false - URL 在浏览历史中创建新的条目。 window.close() 用于关闭浏览器窗口。 将关闭有 window 指定的顶层浏览器窗口。某个窗口可以通过调用 self.close() 或只调用 close() 来关闭其自身。只有通过 JavaScript 代码打开的窗口才能够由 JavaScript 代码关闭。 Navigator 对象 包含有关浏览器的信息。 没有应用于 navigator 对象的公开标准，不过所有浏览器都支持该对象。 Navigator对象 属性 属性 描述 appCodeName 返回浏览器的代码名。 appMinorVersion 返回浏览器的次级版本。 appName 返回浏览器的名称。 appVersion 返回浏览器的平台和版本信息。 browserLanguage 返回当前浏览器的语言。 cookieEnabled 返回指明浏览器中是否启用 cookie 的布尔值。 cpuClass 返回浏览器系统的 CPU 等级。 onLine 返回指明系统是否处于脱机模式的布尔值。 platform 返回运行浏览器的操作系统平台。 systemLanguage 返回 OS 使用的默认语言。 userAgent 返回由客户机发送服务器的 user-agent 头部的值。 userLanguage 返回 OS 的自然语言设置。 Navigator 对象方法 方法 描述 javaEnabled() 规定浏览器是否启用 Java。 taintEnabled() 规定浏览器是否启用数据污点 (data tainting)。 Navigator 对象集合 集合 描述 plugins[] 返回对文档中所有嵌入式对象的引用。该集合是一个 Plugin 对象的数组，其中的元素代表浏览器已经安装的插件。Plug-in 对象提供的是有关插件的信息，其中包括它所支持的 MIME 类型的列表。虽然 plugins[] 数组是由 IE 4 定义的，但是在 IE 4 中它却总是空的，因为 IE 4 不支持插件和 Plugin 对象。 Location 对象 包含有关当前 URL 的信息。 Location 对象是 Window 对象的一个部分，可通过 window.location 属性来访问。 存储在 Window 对象的 Location 属性中，表示那个窗口中当前显示的文档的 Web 地址。它的 href 属性存放的是文档的完整 URL，其他属性则分别描述了 URL 的各个部分。 Location 对象属性 属性 描述 hash 设置或返回从井号 (#) 开始的 URL（锚）。 host 设置或返回主机名和当前 URL 的端口号。 hostname 设置或返回当前 URL 的主机名。 href 设置或返回完整的 URL。 pathname 设置或返回当前 URL 的路径部分。 port 设置或返回当前 URL 的端口号。 protocol 设置或返回当前 URL 的协议。 search 设置或返回从问号 (?) 开始的 URL（查询部分）。 Location 对象方法 属性 描述 assign() 加载新的文档。 reload() 重新加载当前文档。 replace() 用新的文档替换当前文档。 Screen 对象 Screen 对象包含有关客户端显示屏幕的信息。 每个 Window 对象的 screen 属性都引用一个 Screen 对象。 没有应用于 screen 对象的公开标准，不过所有浏览器都支持该对象。 Screen 对象属性 属性 描述 availHeight 返回显示屏幕的高度 (除 Windows 任务栏之外)。 availWidth 返回显示屏幕的宽度 (除 Windows 任务栏之外)。 bufferDepth 设置或返回调色板的比特深度。 colorDepth 返回目标设备或缓冲器上的调色板的比特深度。 deviceXDPI 返回显示屏幕的每英寸水平点数。 deviceYDPI 返回显示屏幕的每英寸垂直点数。 fontSmoothingEnabled 返回用户是否在显示控制面板中启用了字体平滑。 logicalXDPI 返回显示屏幕每英寸的水平方向的常规点数。 logicalYDPI 返回显示屏幕每英寸的垂直方向的常规点数。 pixelDepth 返回显示屏幕的颜色分辨率（比特每像素）。 updateInterval 设置或返回屏幕的刷新率。 width 返回显示器屏幕的宽度。 height 返回显示屏幕的高度。 History 对象 包含用户（在浏览器窗口中）访问过的 URL。 是 window 对象的一部分，可通过 window.history 属性对其进行访问。 没有应用于 History 对象的公开标准，不过所有浏览器都支持该对象。 History 对象属性 属性 描述 length 返回浏览器历史列表中的 URL 数量。 History 对象方法 方法 描述 back() 加载 history 列表中的前一个 URL。 forward() 加载 history 列表中的下一个 URL。 go() 加载 history 列表中的某个具体页面。]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-        <tag>BOM</tag>
-      </tags>
-  </entry>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[移动端陀螺仪的使用]]></title>
+      <url>/2017/07/06/%E9%99%80%E8%9E%BA%E4%BB%AA/</url>
+      <content type="html"><![CDATA[<h2 id="横竖屏判断"><a href="#横竖屏判断" class="headerlink" title="横竖屏判断"></a>横竖屏判断</h2><ul>
+<li>window.orientation 手机横竖屏的状态<ul>
+<li>undefined 设备不支持横竖屏切换</li>
+<li>90 -90 横屏</li>
+<li>0  180 竖屏</li>
+</ul>
+</li>
+<li>orientationchange 事件检测横竖屏切换</li>
+<li><p>但是如果不支持横竖屏切换，要兼容</p>
+<pre><code>window.addEventListener(&quot;orientation&quot; in window ?&apos;orientationchange&apos;:&quot;resize&quot;, function(e) {
+
+});
+</code></pre></li>
+<li><p>在切换横竖屏时，要重新计算rem。</p>
+<pre><code>window.addEventListener(&quot;orientation&quot; in window ?&apos;orientationchange&apos;:&quot;resize&quot;, function(e) {
+    setSize();
+    //部分手机带有动画，延迟再执行一次
+    setTimeout(function(){
+        setSize();
+    },500);
+</code></pre><p>  在切换横竖屏时，部分手机带有动画，可能会让重新计算的rem出现错误，所以延迟再执行一次</p>
+</li>
+</ul>
+<h2 id="重力加速度"><a href="#重力加速度" class="headerlink" title="重力加速度"></a>重力加速度</h2><ul>
+<li>devicemotion 检测重力加速度事件</li>
+<li>安卓下和IOS下，数值相反</li>
+<li>很灵敏，变化比较快，有时候判断重力加速度属否出现是有一个阀值，需要处理一下。</li>
+<li><p>制作摇一摇<br>  Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,user-scalable=no&quot; /&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+#box {
+    width: 200px;
+    height: 200px;
+    background: red;
+    font-size: 20px;
+    color: #fff;
+}    
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+toShake(function(){
+    alert(&quot;您进行了摇一摇&quot;);
+});
+function toShake(callBack){
+    var RANGE = 60;//当用户摇晃的幅度超过这个值，我们认定用户在摇一摇
+    var isShake = false;//是否进行了摇一摇
+    var lastX,lastY,lastZ;
+    var lastTime = Date.now();
+    window.addEventListener(&apos;devicemotion&apos;, function(e) {
+        var nowTime = Date.now();
+        //拉开执行的间隔，让iso和安卓的执行频率接近一致
+        if(nowTime - lastTime &lt; 100){
+            return;
+        }
+        lastTime = nowTime;
+        var motion = e.accelerationIncludingGravity;
+        var x = motion.x;
+        var y = motion.y;
+        var z = motion.z;
+        if(typeof lastX == &quot;undefined&quot;){//第一次进来还没有上一次的值
+            lastX = x;
+            lastY = y;
+            lastZ = z;
+            return;
+        }
+        var nowRange = Math.abs(x - lastX) + Math.abs(y - lastY) + Math.abs(z - lastZ);
+        if(nowRange &gt; RANGE){
+            isShake = true;
+        } 
+        //当用户进行了剧烈的摇动，我们就认定用户进行了摇一摇，然后摇晃幅度慢下来之后，执行摇一摇函数
+        if(isShake&amp;&amp;nowRange &lt; 20){
+            callBack&amp;&amp;callBack();
+            isShake = false;
+        }
+        lastX = x;
+        lastY = y;
+        lastZ = z;
+    });
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><ul>
+<li>android和ios检测的间隔时间不同，需要判断一下间隔，让两者趋于相同</li>
+</ul>
+</li>
+</ul>
+<h2 id="旋转角度"><a href="#旋转角度" class="headerlink" title="旋转角度"></a>旋转角度</h2><ul>
+<li>deviceorientation 检测手机旋转角度变换</li>
+<li>e有默认属性<ul>
+<li>e.beta;围绕着x轴的旋转 (-180 - 180)</li>
+<li>e.gamma;围绕着y轴的旋转 (-90 - 90)</li>
+<li>e.alpha;围绕着z轴的旋转 (0 - 360)</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> javascript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> javascript </tag>
+            
+            <tag> 陀螺仪 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[移动端事件的一些知识点]]></title>
+      <url>/2017/07/04/js%E7%A7%BB%E5%8A%A8%E7%AB%AF/</url>
+      <content type="html"><![CDATA[<h1 id="移动端事件"><a href="#移动端事件" class="headerlink" title="移动端事件"></a>移动端事件</h1><ul>
+<li>在模拟器下，用事件绑定的方式添加touch事件，时好时坏,但是在真机上没有问题,最好用事件监听来添加事件</li>
+</ul>
+<h2 id="阻止默认事件"><a href="#阻止默认事件" class="headerlink" title="阻止默认事件"></a>阻止默认事件</h2><ul>
+<li>在webkit的模拟器下，目前已经不支持直接给document设置阻止默认事件,但是真机没有问题</li>
+<li>阻止默认事件可以解决：<ul>
+<li>在IOS10之后，viewport中的禁止用户缩放和最大缩放比例失效</li>
+<li>鼠标事件，在移动端会有点透问题 </li>
+<li>在ios下会有系统默认的回弹(橡皮筋效果)</li>
+</ul>
+</li>
+<li>阻止默认事件会引起的问题:<ul>
+<li>阻止文字的选中</li>
+<li>阻止所有的系统菜单 <ul>
+<li>比如图片操作</li>
+<li>window.open(this.src);</li>
+</ul>
+</li>
+<li>阻止页面默认的系统滚动条</li>
+<li>阻止页面上所有的链接跳转<ul>
+<li>链接可以在touchend中 自己添加跳转</li>
+<li><code>window.open(this.href);</code></li>
+</ul>
+</li>
+<li>阻止页面上的表单控件获得焦点 <ul>
+<li>input 可以在touchstart，手动让他获得焦点</li>
+</ul>
+</li>
+<li>为了阻止默认事件后不推荐：<strong>给单个控件添加阻止冒泡</strong>    </li>
+</ul>
+</li>
+</ul>
+<h2 id="touch事件"><a href="#touch事件" class="headerlink" title="touch事件:"></a>touch事件:</h2><ul>
+<li>在移动端也支持mouse事件</li>
+</ul>
+<h3 id="touchEvent"><a href="#touchEvent" class="headerlink" title="touchEvent"></a>touchEvent</h3><ul>
+<li>changedTouches 触发当前事件的手指列表，获取时是数组<ul>
+<li>clientX/clientY 相对于可视区的手指坐标</li>
+<li>pageX/pageY 相对于整个文档的手指坐标</li>
+</ul>
+</li>
+<li>targetTouches 当前元素上的手指列表，获取时是数组</li>
+<li>touches 当前屏幕上的手指列表，获取时是数组</li>
+</ul>
+<h3 id="touchstart-手指触碰"><a href="#touchstart-手指触碰" class="headerlink" title="touchstart 手指触碰"></a>touchstart 手指触碰</h3><ul>
+<li>mousedown <ul>
+<li>在元素中按下 </li>
+<li>在移动端也支持mouse事件,但是mouse事件的执行，会有300ms左右的延迟</li>
+<li>事件点透:<ul>
+<li>手指按下之后，会先执行touch事件，然后记录点击的坐标，300ms之后，在该坐标上查找元素，如果元素有鼠标事件就执行.<br>解决办法：preventDefault();</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="touchmove-手指触碰元素之后，在屏幕中移动"><a href="#touchmove-手指触碰元素之后，在屏幕中移动" class="headerlink" title="touchmove 手指触碰元素之后，在屏幕中移动"></a>touchmove 手指触碰元素之后，在屏幕中移动</h3><ul>
+<li>mousemove 在元素中移动</li>
+</ul>
+<h3 id="touchend-手指触碰元素之后-在屏幕中抬起"><a href="#touchend-手指触碰元素之后-在屏幕中抬起" class="headerlink" title="touchend 手指触碰元素之后,在屏幕中抬起"></a>touchend 手指触碰元素之后,在屏幕中抬起</h3><ul>
+<li>mouseup 在元素中抬起 </li>
+</ul>
+<h2 id="gesture-多指事件-只在ios上可用"><a href="#gesture-多指事件-只在ios上可用" class="headerlink" title="gesture 多指事件 只在ios上可用"></a>gesture 多指事件 只在ios上可用</h2><ul>
+<li>gesturestart     当前事件触发时，屏幕上有两根或者两根以上的手指</li>
+<li>gesturechange 触发了gesturestart 之后， 手指坐标发生变化<ul>
+<li>e.scale  当前两根手指之间的距离和start时手指之间的距离的比值</li>
+<li>e.rotation 当前两根手指 和 start时，的选中夹角</li>
+</ul>
+</li>
+<li>gestureend  触发了gesturestart 之后，手指抬起</li>
+</ul>
+<h2 id="两个元素碰撞判定"><a href="#两个元素碰撞判定" class="headerlink" title="两个元素碰撞判定"></a>两个元素碰撞判定</h2><p>Demo</p>
+<pre><code>function getCollide(el,elO) {
+    var elcon = el.getBoundingClientRect();
+    var elOcon = elO.getBoundingClientRect();
+    if (elcon.left &gt; elOcon.right
+    ||elcon.right &lt; elOcon.left
+    ||elcon.top &gt; elOcon.bottom
+    ||elcon.bottom &lt; elOcon.top) {
+        return false;
+    }else{
+        return true;
+    }
+}
+</code></pre><h2 id="利用canvas渲染图片，提高性能"><a href="#利用canvas渲染图片，提高性能" class="headerlink" title="利用canvas渲染图片，提高性能"></a>利用canvas渲染图片，提高性能</h2><p>Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+body {
+    background: #ccc;
+}
+canvas {
+    display: block;
+    background: #fff;    
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;canvas width=&quot;400&quot; height=&quot;400&quot; id=&quot;c&quot;&gt;&lt;/canvas&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+(function(){
+    var c = document.querySelector(&apos;#c&apos;);
+    var cxt = c.getContext(&quot;2d&quot;);
+    //cxt.drawImage(img,x,y,w,h);绘制图片
+    var img = new Image();
+    img.src = &quot;pics/1.jpg&quot;;
+    img.onload = function(){    
+        cxt.drawImage(img,0,-200,200,800);//drawIamge必须在图片加载完之后使用
+    };    
+})();    
+&lt;/script&gt;    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>]]></content>
+      
+        <categories>
+            
+            <category> javascript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> javascript </tag>
+            
+            <tag> 移动端事件 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[FileReader的用法]]></title>
+      <url>/2017/07/03/filereder/</url>
+      <content type="html"><![CDATA[<h1 id="File-API-—-gt-FileReader"><a href="#File-API-—-gt-FileReader" class="headerlink" title="File API —&gt; FileReader"></a>File API —&gt; FileReader</h1><h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><ul>
+<li>change时input加了一个files集合，包含file对象，每个file对象对应着一个文件。并且都有name,size,type,lastModifiedDate只读属性.</li>
+<li>可根据这些属性验证判断文件。</li>
+</ul>
+<h2 id="FileReader对象"><a href="#FileReader对象" class="headerlink" title="FileReader对象"></a>FileReader对象</h2><ul>
+<li>使用的是一种异步文件读取机制，读取的是文件系统</li>
+<li>有四种读取方法，结果存储在FileReader的result属性中<ul>
+<li>readAsText（file,encoding）：有两个参数，中第二个参数是文本的编码方式，默认值为 UTF-8，可省略。将文件以文本方式读取，读取的结果即是这个文本文件中的内容。</li>
+<li>readAsBinaryString（file）：将文件读取为二进制字符串，通常我们将它传送到后端，后端可以通过这段字符串存储文件。</li>
+<li>readAsDataURL（file）：将文件读取为一段以 data: 开头的字符串，字符串的实质就是 Data URL，Data URL是一种将小文件直接嵌入文档的方案。这里的小文件通常是指图像与 html 等格式的文件。</li>
+<li>readAsArrayBuffer(file)：读取文件并将一个包含文件内容的ArrayBuffer保存在result属性中</li>
+<li>abort() 中止该读取操作</li>
+</ul>
+</li>
+<li>result 读取到的文件内容.这个属性只在读取操作完成之后才有效,并且数据的格式取决于读取操作是由哪个方法发起的. 只读.</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> javascript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> javascript </tag>
+            
+            <tag> 数据上传 </tag>
+            
+            <tag> html5 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ECMAScript的数据和运算]]></title>
+      <url>/2017/07/01/ECMAScript/</url>
+      <content type="html"><![CDATA[<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ol>
+<li>标准划分<ul>
+<li>基本类型: number/string/boolean/undefined/null</li>
+<li>对象类型（复合类型）:object(包含Array)</li>
+</ul>
+</li>
+<li>typeof(运算符,查看数据类型)<ul>
+<li>number:<ul>
+<li>Number.POSITIVE_INFINITY 正无穷</li>
+<li>Number.NEGATIVE_INFINITY 负无穷</li>
+<li>从负无穷到正无穷的数字以及NaN</li>
+<li>NaN(not a Number): 非数字 类型number<ol>
+<li>NaN不等于任何东西，并且不等于它自己,不能比较</li>
+<li>检测一个内容是否是NaN的时候，可以使用isNaN();</li>
+<li>数据类型：number</li>
+<li>isNaN() return: true/false, isNaN隐式调用了number<ul>
+<li>isNaN(要检测的内容) 如果转化结果是一个数字就返回false，如果不是一个数字就返回true ，isNaN会进行隐式类型转换，转换所调用的方法是Number</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>string:<ul>
+<li>包含在引号’’中的一串字符</li>
+</ul>
+</li>
+<li>undefine:<ul>
+<li>无定义</li>
+</ul>
+</li>
+<li>boolean:<ul>
+<li>true、false</li>
+</ul>
+</li>
+<li>object:<ul>
+<li>Array、object、Element对象、null<ul>
+<li>null：空对象 （null不能进行属性操作）数据类型: object<ul>
+<li>空数组不等于空对象    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>function     </li>
+</ul>
+</li>
+</ol>
+<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2><h3 id="强制转换为数字（返回值都是一个数字）"><a href="#强制转换为数字（返回值都是一个数字）" class="headerlink" title="强制转换为数字（返回值都是一个数字）"></a>强制转换为数字（返回值都是一个数字）</h3><ul>
+<li>parseInt(要转换的内容)、<ul>
+<li>从左向右一位位转换，碰到一位非数字，就把之前的内容提取出来，如果第0位就是非数字，结果NaN</li>
+</ul>
+</li>
+<li>parseFloat(要转换的内容)<ul>
+<li>从左向右一位位转换，碰到一位非数字（可以匹配一个小数点），就把之前的内容提取出来，如果第0位就是非数字，结果NaN</li>
+</ul>
+</li>
+<li>Number(要转换的内容):<ul>
+<li>先看完整个内容，然后整体去转换数字<ul>
+<li>true 1/false 0；</li>
+<li>空数组 0 ([] 0)</li>
+<li>空数组只有一位的时候，会用这位去转换,并且只转换数字和字符串，其他的都是NaN ([“2”] 转换数组的第0位)</li>
+<li>数组有多位，只会被转换成NaN ([2,3] 转换NaN)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="强制转换为字符串"><a href="#强制转换为字符串" class="headerlink" title="强制转换为字符串"></a>强制转换为字符串</h3><ol>
+<li>要转换的内容.toString()</li>
+<li>String(要转换的内容)</li>
+</ol>
+<h3 id="强制转换为布尔值"><a href="#强制转换为布尔值" class="headerlink" title="强制转换为布尔值"></a>强制转换为布尔值</h3><ul>
+<li>Boolean(要转换的内容);    <ol>
+<li>真: true、非0数字、非空对象、非空字符串</li>
+<li>假: false、NaN、0、null、空字符串、undefined</li>
+</ol>
+</li>
+</ul>
+<h2 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h2><ul>
+<li>浏览器自己进行转换,其他类型转换成数字，主要调去Number</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><pre><code>=、+=(a += b  --- a = a + b)、-=、*=、/=、%=
+</code></pre><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><ul>
+<li>+、++<ul>
+<li>只有加号左右两侧是数字的情况才会执行加法运算,如果有一侧是字符串就会执行字符串连接，连接的结果也是字符串</li>
+</ul>
+</li>
+<li>-、–</li>
+<li>*</li>
+<li>/</li>
+<li>% 取模<ul>
+<li>这些运算符都是只有数字运算的功能，所以在使用的时候，都会去把其他类型转换成数字</li>
+</ul>
+</li>
+</ul>
+<p>Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+// &quot;translateX(100px)&quot;
+window.onload = function() { 
+    var rotateBtn = document.getElementById(&quot;rotateBtn&quot;);
+    var translateBtn = document.getElementById(&quot;translateBtn&quot;);
+    var box = document.getElementById(&quot;box&quot;);
+    var deg = 0;
+    var tX = 0;
+    rotateBtn.onclick = function(){
+        deg += 5;
+        box.style.transform = &quot;rotate(&quot; + deg + &quot;deg) translateX(&quot; + tX + &quot;px)&quot;;
+    };
+    translateBtn.onclick = function(){
+        tX += 50;
+        box.style.transform = &quot;rotate(&quot; + deg + &quot;deg) translateX(&quot; + tX + &quot;px)&quot;;
+    };
+
+}
+&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+#box {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: red;
+    transform: rotate(0deg) translateX(0px);
+    color: #fff;
+    font-size: 30px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type=&quot;button&quot; value=&quot;旋转&quot; id=&quot;rotateBtn&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;位移&quot; id=&quot;translateBtn&quot;&gt;
+    &lt;div id=&quot;box&quot;&gt;上&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h2><pre><code>&lt;、&gt;、&lt;=、&gt;=、==、!=、===、!==
+</code></pre><ul>
+<li>比较后都会返回布尔值</li>
+<li>== 和 ===，以及    !=和!==的区别</li>
+<li>== 和 != 会进行隐式类型转换，把左右两侧的数据类型转换成一样的之后，再去比较</li>
+<li>===和!== 进行比较的时候，也会比较数据类型，数据类型不会进行比较，判定两边不相等</li>
+</ul>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><ul>
+<li>返回的结果都是 true和 false</li>
+<li>&amp;&amp; 与<ul>
+<li>当一个条件返回false，就结束运行直接返回false，如果第一条件返回true，那再来看第二个条件，如果第二个条件返回false，整体也为false，如果两个两条件都返回true则返回true</li>
+</ul>
+</li>
+<li>|| 或 <ul>
+<li>当一个条件返回true，就结束运行，直接返回true，如果第一条件返回false，那再来看第二个条件，如果第二个条件返回true，整体也为true，如果两个两条件都返回false则返回false</li>
+</ul>
+</li>
+<li>! 否  <ul>
+<li>取反</li>
+</ul>
+</li>
+<li>三目运算<br>  判断条件?成立执行的语句:不成立执行的语句<br>  条件成立返回:  成立执行的结果<br>  条件不成立返回:  不成立执行的结果</li>
+</ul>
+<p>Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var a = 10;
+var b = 12;
+var c = a &gt; b ? a : b;
+alert(c);    
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="continue-跳出本次循环"><a href="#continue-跳出本次循环" class="headerlink" title="continue 跳出本次循环"></a>continue 跳出本次循环</h2><p>Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+// continue 跳出本次循环
+for(var i = 0; i &lt; 5; i++){
+    if(i == 3){
+        continue; //跳出本次循环
+    }
+    console.log(i);
+}    
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="break-终止整个循环"><a href="#break-终止整个循环" class="headerlink" title="break 终止整个循环"></a>break 终止整个循环</h2><ul>
+<li>break 默认只会终止，紧邻的这个循环,如果要终止其他循环，需要给循环起名字</li>
+</ul>
+<p>Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+/*
+for (var i = 0; i &lt; 5; i++) {
+    for(var j = 0; j &lt; 5; j++) {
+        if(i == 3&amp;&amp;j==3) {
+            break;
+        }
+        console.log(i,j);
+    }
+}*/
+name:for (var i = 0; i &lt; 5; i++) {
+    for(var j = 0; j &lt; 5; j++) {
+        if(i == 3&amp;&amp;j==3) {
+            break name;
+        }
+        console.log(i,j);
+    }
+} 
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><ul>
+<li>对象存储数据，是存在对象的属性中，<ul>
+<li>obj.key = value</li>
+</ul>
+</li>
+<li><p>对象是一种复杂类型的数据，在对象中我们可以存储任意类型的数据</p>
+<ol>
+<li><p>第一种:属性操作</p>
+<pre><code>读操作  obj.属性名
+写操作  obj.属性名 = 属性值;
+        obj.key = val; //键值对
+</code></pre><ul>
+<li>是写死的一个值，不能使用变量， obj.w 这么写就认为在找 obj的w属性。</li>
+</ul>
+</li>
+<li><p>第二种:属性操作</p>
+<pre><code>读操作  obj[&quot;属性名&quot;]
+写操作  obj[&quot;属性名&quot;] = 属性值;
+        obj[&quot;key&quot;] = val; //键值对
+** 注意第二种操作方法 []写的是一个字符串
+</code></pre><ul>
+<li>接受的是一个字符串，字符串就可以存在变量中，可以直接写obj[变量调用];</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="in运算"><a href="#in运算" class="headerlink" title="in运算"></a>in运算</h2><ul>
+<li>判断对象中是否有这个属性，返回 true 或 false</li>
+<li><code>alert(&quot;name&quot; in obj);</code> obj 有 name属性就返回 true，否则 返回</li>
+</ul>
+<p>Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var obj = {};
+obj[&apos;name&apos;] = &quot;Leo&quot;;
+obj[&apos;age&apos;] = 40;
+obj[&apos;gender&apos;] = &quot;female&quot;;
+obj[&apos;width&apos;] = &quot;180px&quot;;
+obj[&apos;height&apos;] = &quot;180px&quot;;
+obj[&apos;children&apos;] = [&quot;大明&quot;,&quot;小明&quot;,&quot;三明&quot;];
+alert(&quot;name&quot; in obj); // obj 有 name属性就返回 true，否则 返回false
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="for-in"><a href="#for-in" class="headerlink" title="for in"></a>for in</h2><ul>
+<li>for in 可以用来循环 对象和数组,不能用来循环一组元素</li>
+<li>for 只能用来循环 数组和类数组(一组元素)</li>
+<li><code>for (var s in obj)</code> <ul>
+<li>通过 in 方法，每次循环的时候把 循环变量s 变成obj对应属性名字 </li>
+</ul>
+</li>
+</ul>
+<p>Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var obj = {};
+obj[&apos;name&apos;] = &quot;Leo&quot;;
+obj[&apos;age&apos;] = 40;
+obj[&apos;gender&apos;] = &quot;female&quot;;
+obj[&apos;width&apos;] = &quot;180px&quot;;
+obj[&apos;height&apos;] = &quot;180px&quot;;
+obj[&apos;children&apos;] = [&quot;大明&quot;,&quot;小明&quot;,&quot;三明&quot;];
+for (var s in obj) { //通过 in 方法，每次循环的时候把 循环变量s 变成obj对应属性名字 
+    console.log(s,obj[s])// s的类型是字符串;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><pre><code>起始值
+while(判断条件){
+    执行语句;
+    自增;
+}
+</code></pre><p>Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var i = 0;
+while(i &lt; 5){
+    console.log(i);
+    i++;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><pre><code>switch(要判断的内容) {
+
+}
+</code></pre><ul>
+<li>穿刺：<ol>
+<li>case 成立会把他下边所有的代码都执行了，知道遇到break</li>
+<li>如果没有写break的话，就会形成穿刺现象，把下边所有的代码都执行了</li>
+</ol>
+</li>
+</ul>
+<p>Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var a = 15;
+switch(a) {
+    case 10: // 当 a == 10
+        console.log(&quot;我想给大家放天假&quot;);
+        break; //a == 10的语句结束之后 添加break
+    case 15: // 当 a == 15
+        console.log(&quot;当然我就是想想&quot;);
+        break;    
+    case 20: // 当 a == 20
+        console.log(&quot;其实我真正想的是带大家出去玩&quot;);
+        break;
+    default: //以上所有的判断都不成立
+        console.log(&quot;还是写作业吧&quot;);
+}    
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="let"><a href="#let" class="headerlink" title="let"></a>let</h2><ul>
+<li>es6中的，定义变量 可以直接调用i 不兼容</li>
+</ul>
+<h2 id="传值-传址"><a href="#传值-传址" class="headerlink" title="传值 传址"></a>传值 传址</h2><ul>
+<li>传值：传递的是具体的数值(对象类型以外的数据) </li>
+<li>传址：传递的是在内存中的引用地址 (对象类型的数据)</li>
+</ul>
+<h2 id="json-前后端数据交互中，最常用的数据格式"><a href="#json-前后端数据交互中，最常用的数据格式" class="headerlink" title="json 前后端数据交互中，最常用的数据格式"></a>json 前后端数据交互中，最常用的数据格式</h2><ul>
+<li>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式</li>
+<li>一种类似JS中的对象格式的字符串</li>
+<li>数据以{}或者[]作为起始和结束</li>
+<li>‘{}’</li>
+<li>‘[]’</li>
+<li>每个数据使用  键值对形式  key : value</li>
+<li>key必须使用””包含</li>
+<li>多个值之间使用逗号分隔</li>
+<li>object JSON.parse(JSONString)<ul>
+<li>把JSONString转换成JS中对象类型    </li>
+</ul>
+</li>
+<li>string JSON.stringify(object)<ul>
+<li>把object转成JSON格式的字符串</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> JavaScript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> ECMAScript </tag>
+            
+            <tag> js数据类型 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[使用swiftype来实现站内搜索]]></title>
+      <url>/2017/07/01/%E4%BD%BF%E7%94%A8swiftype%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/</url>
+      <content type="html"><![CDATA[<h1 id="网站内部搜索"><a href="#网站内部搜索" class="headerlink" title="网站内部搜索"></a>网站内部搜索</h1><p>我使用的是Material主题，已经内置了google,swiftype,local三种搜索系统。根据自己的需要配置就行了。<strong>但有点要注意，三种设置并不是在同一配置文件中进行设置（小心了）</strong></p>
+<h2 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h2><p>如果调用 Google 搜索引擎进行搜索。在 <strong>主题配置文件</strong> 中找到</p>
+<pre><code>search: 
+    use: 
+</code></pre><p>将它的值改为 google 即可。可能还有一项，不必管它</p>
+<h2 id="本地搜索"><a href="#本地搜索" class="headerlink" title="本地搜索"></a>本地搜索</h2><p>如果使用本地搜索，就需要安装 <em>hexo-generator-search</em> 插件:</p>
+<pre><code>$ npm install hexo-generator-search --save
+</code></pre><p>然后在 <strong>站点配置文件</strong> 中添加</p>
+<pre><code>search:
+    path: search.xml
+    field: all
+</code></pre><h2 id="Swiftype"><a href="#Swiftype" class="headerlink" title="Swiftype"></a>Swiftype</h2><p>使用Swiftype的话，需要<a href="https://swiftype.com/" target="_blank" rel="external">注册Swiftype</a>，然后在 <strong>主题配置文件</strong> 中找到</p>
+<pre><code>search: 
+    use: 
+</code></pre><p>将它的值改为swiftype,并填入注册配置时得到的swiftype_key。在你 Swiftype Install Code 时，会生成一些代码，有一行代码 _st(‘install’,’<strong>*</strong>‘,’2.0.0’)，其中 <strong>*</strong> 即为 swiftype_key。</p>
+<p>Swiftype可以设置在其他位置，可以自己看一些<a href="https://swiftype.com/documentation/" target="_blank" rel="external">官方文档</a>和博客，有兴趣自己找吧</p>
+<blockquote>
+<p>其中，我在部署swiftype时误以为要和本地搜索一起配置，所以就出现了一些错误：</p>
+</blockquote>
+<pre><code>FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+ReferenceError: ejs:16
+    14|       &lt;/categories&gt;
+    15| &lt;% } -%&gt;
+ &gt;&gt; 16| &lt;% if(post.tags&amp;&amp;post.tags.length&gt;0){ -%&gt;
+    17|       &lt;tags&gt;
+    18| &lt;% post.tags.each(function (tag) { -%&gt;
+    19|         &lt;tag&gt;&lt;%= tag.name %&gt;&lt;/tag&gt;
+
+post is not defined
+    at eval (eval at &lt;anonymous&gt; (F:\web\node_modules\ejs\lib\ejs.js:242:14), &lt;anonymous&gt;:30:1443)
+    at Query.forEach (F:\web\node_modules\warehouse\lib\query.js:42:5)
+    at eval (eval at &lt;anonymous&gt; (F:\web\node_modules\ejs\lib\ejs.js:242:14), &lt;anonymous&gt;:30:1257)
+    at eval (eval at &lt;anonymous&gt; (F:\web\node_modules\ejs\lib\ejs.js:242:14), &lt;anonymous&gt;:30:1677)
+    at F:\web\node_modules\ejs\lib\ejs.js:255:15
+    at Hexo.module.exports (F:\web\node_modules\hexo-generator-searchdb\lib\xml_generator.js:40:13)
+    at Hexo.tryCatcher (F:\web\node_modules\bluebird\js\release\util.js:16:23)
+    at Hexo.&lt;anonymous&gt; (F:\web\node_modules\bluebird\js\release\method.js:15:34)
+    at F:\web\node_modules\hexo\lib\hexo\index.js:340:24
+    at tryCatcher (F:\web\node_modules\bluebird\js\release\util.js:16:23)
+    at MappingPromiseArray._promiseFulfilled (F:\web\node_modules\bluebird\js\release\map.js:61:38)
+    at MappingPromiseArray.PromiseArray._iterate (F:\web\node_modules\bluebird\js\release\promise_array.js:114:31)
+    at MappingPromiseArray.init (F:\web\node_modules\bluebird\js\release\promise_array.js:78:10)
+    at MappingPromiseArray._asyncInit (F:\web\node_modules\bluebird\js\release\map.js:30:10)
+    at Async._drainQueue (F:\web\node_modules\bluebird\js\release\async.js:138:12)
+    at Async._drainQueues (F:\web\node_modules\bluebird\js\release\async.js:143:10)
+    at Immediate.Async.drainQueues (F:\web\node_modules\bluebird\js\release\async.js:17:14)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+</code></pre><blockquote>
+<p>似乎是引用错误（<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError" target="_blank" rel="external">这里有文档</a>），可能就是两个文件的搜索设置有问题，我重新清理，二者分别解析后是没问题的，所以，我又重新看主题文档，才弄清楚。。。。。其实，我开始认为本地搜索，不是在本地页面搜索吗？所以，我把这两个设置搞在了一起，才有了这么蠢的错误。</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 建站 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> swiftype </tag>
+            
+            <tag> Material </tag>
+            
+            <tag> 网站模块 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[浏览器对象模型(BOM)的一些方法和属性]]></title>
+      <url>/2017/06/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-BOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/</url>
+      <content type="html"><![CDATA[<h2 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h2><ul>
+<li>表示浏览器中打开的窗口</li>
+<li>如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。</li>
+<li>没有应用于 window 对象的公开标准，不过所有浏览器都支持该对象。</li>
+</ul>
+<h3 id="Window-对象集合"><a href="#Window-对象集合" class="headerlink" title="Window 对象集合"></a>Window 对象集合</h3><table>
+<thead>
+<tr>
+<th>集合</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>frames[]</td>
+<td>返回窗口中所有命名的框架。<br>该集合是 Window 对象的数组，每个 Window 对象在窗口中含有一个框架或 <code>&lt;iframe&gt;</code>。属性 frames.length 存放数组 frames[] 中含有的元素个数。注意，frames[] 数组中引用的框架可能还包括框架，它们自己也具有 frames[] 数组。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Window-对象属性"><a href="#Window-对象属性" class="headerlink" title="Window 对象属性"></a>Window 对象属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>closed</td>
+<td>返回窗口是否已被关闭。</td>
+</tr>
+<tr>
+<td>defaultStatus</td>
+<td>设置或返回窗口状态栏中的默认文本。</td>
+</tr>
+<tr>
+<td>document</td>
+<td>对 Document 对象的只读引用。请参阅 Document 对象。</td>
+</tr>
+<tr>
+<td>history</td>
+<td>对 History 对象的只读引用。请参数 History 对象。</td>
+</tr>
+<tr>
+<td>innerheight</td>
+<td>返回窗口的文档显示区的高度。</td>
+</tr>
+<tr>
+<td>innerwidth</td>
+<td>返回窗口的文档显示区的宽度。</td>
+</tr>
+<tr>
+<td>length</td>
+<td>设置或返回窗口中的框架数量。</td>
+</tr>
+<tr>
+<td>location</td>
+<td>用于窗口或框架的 Location 对象。请参阅 Location 对象。</td>
+</tr>
+<tr>
+<td>name</td>
+<td>设置或返回窗口的名称。</td>
+</tr>
+<tr>
+<td>Navigator</td>
+<td>对 Navigator 对象的只读引用。请参数 Navigator 对象。</td>
+</tr>
+<tr>
+<td>opener</td>
+<td>返回对创建此窗口的窗口的引用。</td>
+</tr>
+<tr>
+<td>outerheight</td>
+<td>返回窗口的外部高度。</td>
+</tr>
+<tr>
+<td>outerwidth</td>
+<td>返回窗口的外部宽度。</td>
+</tr>
+<tr>
+<td>pageXOffset</td>
+<td>设置或返回当前页面相对于窗口显示区左上角的 X 位置。</td>
+</tr>
+<tr>
+<td>pageYOffset</td>
+<td>设置或返回当前页面相对于窗口显示区左上角的 Y 位置。</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>返回父窗口。</td>
+</tr>
+<tr>
+<td>Screen</td>
+<td>对 Screen 对象的只读引用。请参数 Screen 对象。</td>
+</tr>
+<tr>
+<td>self</td>
+<td>返回对当前窗口的引用。等价于 Window 属性。</td>
+</tr>
+<tr>
+<td>status</td>
+<td>设置窗口状态栏的文本。</td>
+</tr>
+<tr>
+<td>top</td>
+<td>返回最顶层的先辈窗口。</td>
+</tr>
+<tr>
+<td>window</td>
+<td>window 属性等价于 self 属性，它包含了对窗口自身的引用。</td>
+</tr>
+<tr>
+<td>screenLeft <br> screenTop <br> screenX <br> screenY</td>
+<td>只读整数。声明了窗口的左上角在屏幕上的的 x 坐标和 y 坐标。IE、Safari 和 Opera 支持 screenLeft 和 screenTop，而 Firefox 和 Safari 支持 screenX 和 screenY。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Window-对象方法"><a href="#Window-对象方法" class="headerlink" title="Window 对象方法"></a>Window 对象方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alert()</td>
+<td>显示带有一段消息和一个确认按钮的警告框。</td>
+</tr>
+<tr>
+<td>blur()</td>
+<td>把键盘焦点从顶层窗口移开。</td>
+</tr>
+<tr>
+<td>clearInterval()</td>
+<td>取消由 setInterval() 设置的 timeout。</td>
+</tr>
+<tr>
+<td>clearTimeout()</td>
+<td>取消由 setTimeout() 方法设置的 timeout。</td>
+</tr>
+<tr>
+<td>close()</td>
+<td>关闭浏览器窗口。</td>
+</tr>
+<tr>
+<td>confirm()</td>
+<td>显示带有一段消息以及确认按钮和取消按钮的对话框。</td>
+</tr>
+<tr>
+<td>createPopup()</td>
+<td>创建一个 pop-up 窗口。</td>
+</tr>
+<tr>
+<td>focus()</td>
+<td>把键盘焦点给予一个窗口。</td>
+</tr>
+<tr>
+<td>moveBy()</td>
+<td>可相对窗口的当前坐标把它移动指定的像素。</td>
+</tr>
+<tr>
+<td>moveTo()</td>
+<td>把窗口的左上角移动到一个指定的坐标。</td>
+</tr>
+<tr>
+<td>open()</td>
+<td>打开一个新的浏览器窗口或查找一个已命名的窗口。</td>
+</tr>
+<tr>
+<td>print()</td>
+<td>打印当前窗口的内容。</td>
+</tr>
+<tr>
+<td>prompt()</td>
+<td>显示可提示用户输入的对话框。</td>
+</tr>
+<tr>
+<td>resizeBy()</td>
+<td>按照指定的像素调整窗口的大小。</td>
+</tr>
+<tr>
+<td>resizeTo()</td>
+<td>把窗口的大小调整到指定的宽度和高度。</td>
+</tr>
+<tr>
+<td>scrollBy()</td>
+<td>按照指定的像素值来滚动内容。</td>
+</tr>
+<tr>
+<td>scrollTo()</td>
+<td>把内容滚动到指定的坐标。</td>
+</tr>
+<tr>
+<td>setInterval()</td>
+<td>按照指定的周期（以毫秒计）来调用函数或计算表达式。</td>
+</tr>
+<tr>
+<td>setTimeout()</td>
+<td>在指定的毫秒数后调用函数或计算表达式。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="window-open-URL-name-features-replace"><a href="#window-open-URL-name-features-replace" class="headerlink" title="window.open(URL,name,features,replace)"></a>window.open(URL,name,features,replace)</h4><table><tr><td>参数</td><td>说明</td></tr><tr><td>URL</td><td>可选。一个可选的字符串，声明了要在新窗口中显示的文档的 URL。如果省略了这个参数，或者它的值是空字符串，那么新窗口就不会显示任何文档。</td></tr><tr><td>name</td><td>可选。一个可选的字符串，该字符串是一个由逗号分隔的特征列表，其中包括数字、字母和下划线，该字符声明了新窗口的名称。这个名称可以用作标记’&lt;’a’&gt;’和’&lt;’form’&gt;’的属性 target 的值。如果该参数指定了一个已经存在的窗口，那么 open() 方法就不再创建一个新窗口，而只是返回对指定窗口的引用。在这种情况下，features 将被忽略。支持以下值：        <ul>            <li>_blank - URL加载到一个新的窗口。这是默认</li>            <li>_parent - URL加载到父框架</li>            <li>_self - URL替换当前页面</li>            <li>_top - URL替换任何可加载的框架集</li>            <li><i>name</i> - 窗口名称</li>        </ul>        </td></tr><tr><td>features</td><td>可选。一个可选的字符串，声明了新窗口要显示的标准浏览器的特征。如果省略该参数，新窗口将具有所有标准特征。在窗口特征这个表格中，我们对该字符串的格式进行了详细的说明。支持以下值：        <table><tr><td>         channelmode=yes|no|1|0</td><td>         是否要在影院模式显示 window。默认是没有的。仅限IE浏览器</td></tr><tr><td>         directories=yes|no|1|0</td><td>         是否添加目录按钮。默认是肯定的。仅限IE浏览器</td></tr><tr><td>         fullscreen=yes|no|1|0</td><td>         浏览器是否显示全屏模式。默认是没有的。在全屏模式下的 window，还必须在影院模式。仅限IE浏览器</td></tr><tr><td>         height=pixels</td><td>         窗口的高度。最小.值为100</td></tr><tr><td>         left=pixels</td><td>         该窗口的左侧位置</td></tr><tr><td>         location=yes|no|1|0</td><td>         是否显示地址字段.默认值是yes</td></tr><tr><td>         menubar=yes|no|1|0</td><td>         是否显示菜单栏.默认值是yes</td></tr><tr><td>         resizable=yes|no|1|0</td><td>         是否可调整窗口大小.默认值是yes</td></tr><tr><td>         scrollbars=yes|no|1|0</td><td>         是否显示滚动条.默认值是yes</td></tr><tr><td>         status=yes|no|1|0</td><td>         是否要添加一个状态栏.默认值是yes</td></tr><tr><td>         titlebar=yes|no|1|0</td><td>         是否显示标题栏.被忽略，除非调用HTML应用程序或一个值得信赖的对话框.默认值是yes</td></tr><tr><td>         toolbar=yes|no|1|0</td><td>         是否显示浏览器工具栏.默认值是yes</td></tr><tr><td>         top=pixels</td><td>         窗口顶部的位置.仅限IE浏览器</td></tr><tr><td>         width=pixels</td><td>         窗口的宽度.最小.值为100</td></tr></table>    </td>    </tr>    <tr>    <td>replace</td>    <td>一个可选的布尔值。规定了装载到窗口的 URL 是在窗口的浏览历史中创建一个新条目，还是替换浏览历史中的当前条目。支持下面的值：        <ul>    <li>true - URL 替换浏览历史中的当前条目。</li>            <li>false - URL 在浏览历史中创建新的条目。</li>    </ul>    </td></tr></table>
+
+<h4 id="window-close"><a href="#window-close" class="headerlink" title="window.close()"></a>window.close()</h4><ul>
+<li>用于关闭浏览器窗口。</li>
+<li>将关闭有 window 指定的顶层浏览器窗口。某个窗口可以通过调用 self.close() 或只调用 close() 来关闭其自身。<br>只有通过 JavaScript 代码打开的窗口才能够由 JavaScript 代码关闭。</li>
+</ul>
+<h2 id="Navigator-对象"><a href="#Navigator-对象" class="headerlink" title="Navigator 对象"></a>Navigator 对象</h2><ul>
+<li>包含有关浏览器的信息。</li>
+<li>没有应用于 navigator 对象的公开标准，不过所有浏览器都支持该对象。</li>
+</ul>
+<h3 id="Navigator对象-属性"><a href="#Navigator对象-属性" class="headerlink" title="Navigator对象 属性"></a>Navigator对象 属性</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">appCodeName</td>
+<td style="text-align:center">返回浏览器的代码名。</td>
+</tr>
+<tr>
+<td style="text-align:center">appMinorVersion</td>
+<td style="text-align:center">返回浏览器的次级版本。</td>
+</tr>
+<tr>
+<td style="text-align:center">appName</td>
+<td style="text-align:center">返回浏览器的名称。</td>
+</tr>
+<tr>
+<td style="text-align:center">appVersion</td>
+<td style="text-align:center">返回浏览器的平台和版本信息。</td>
+</tr>
+<tr>
+<td style="text-align:center">browserLanguage</td>
+<td style="text-align:center">返回当前浏览器的语言。</td>
+</tr>
+<tr>
+<td style="text-align:center">cookieEnabled</td>
+<td style="text-align:center">返回指明浏览器中是否启用 cookie 的布尔值。</td>
+</tr>
+<tr>
+<td style="text-align:center">cpuClass</td>
+<td style="text-align:center">返回浏览器系统的 CPU 等级。</td>
+</tr>
+<tr>
+<td style="text-align:center">onLine</td>
+<td style="text-align:center">返回指明系统是否处于脱机模式的布尔值。</td>
+</tr>
+<tr>
+<td style="text-align:center">platform</td>
+<td style="text-align:center">返回运行浏览器的操作系统平台。</td>
+</tr>
+<tr>
+<td style="text-align:center">systemLanguage</td>
+<td style="text-align:center">返回 OS 使用的默认语言。</td>
+</tr>
+<tr>
+<td style="text-align:center">userAgent</td>
+<td style="text-align:center">返回由客户机发送服务器的 user-agent 头部的值。</td>
+</tr>
+<tr>
+<td style="text-align:center">userLanguage</td>
+<td style="text-align:center">返回 OS 的自然语言设置。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Navigator-对象方法"><a href="#Navigator-对象方法" class="headerlink" title="Navigator 对象方法"></a>Navigator 对象方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>javaEnabled()</td>
+<td>规定浏览器是否启用 Java。</td>
+</tr>
+<tr>
+<td>taintEnabled()</td>
+<td>规定浏览器是否启用数据污点 (data tainting)。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Navigator-对象集合"><a href="#Navigator-对象集合" class="headerlink" title="Navigator 对象集合"></a>Navigator 对象集合</h3><table>
+<thead>
+<tr>
+<th>集合</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plugins[]</td>
+<td>返回对文档中所有嵌入式对象的引用。该集合是一个 Plugin 对象的数组，其中的元素代表浏览器已经安装的插件。Plug-in 对象提供的是有关插件的信息，其中包括它所支持的 MIME 类型的列表。虽然 plugins[] 数组是由 IE 4 定义的，但是在 IE 4 中它却总是空的，因为 IE 4 不支持插件和 Plugin 对象。 </td>
+</tr>
+</tbody>
+</table>
+<h2 id="Location-对象"><a href="#Location-对象" class="headerlink" title="Location 对象"></a>Location 对象</h2><ul>
+<li>包含有关当前 URL 的信息。</li>
+<li>Location 对象是 Window 对象的一个部分，可通过 window.location 属性来访问。</li>
+<li>存储在 Window 对象的 Location 属性中，表示那个窗口中当前显示的文档的 Web 地址。它的 href 属性存放的是文档的完整 URL，其他属性则分别描述了 URL 的各个部分。</li>
+</ul>
+<h3 id="Location-对象属性"><a href="#Location-对象属性" class="headerlink" title="Location 对象属性"></a>Location 对象属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hash</td>
+<td>设置或返回从井号 (#) 开始的 URL（锚）。</td>
+</tr>
+<tr>
+<td>host</td>
+<td>设置或返回主机名和当前 URL 的端口号。</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>设置或返回当前 URL 的主机名。</td>
+</tr>
+<tr>
+<td>href</td>
+<td>设置或返回完整的 URL。</td>
+</tr>
+<tr>
+<td>pathname</td>
+<td>设置或返回当前 URL 的路径部分。</td>
+</tr>
+<tr>
+<td>port</td>
+<td>设置或返回当前 URL 的端口号。</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>设置或返回当前 URL 的协议。</td>
+</tr>
+<tr>
+<td>search</td>
+<td>设置或返回从问号 (?) 开始的 URL（查询部分）。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Location-对象方法"><a href="#Location-对象方法" class="headerlink" title="Location 对象方法"></a>Location 对象方法</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assign()</td>
+<td>加载新的文档。</td>
+</tr>
+<tr>
+<td>reload()</td>
+<td>重新加载当前文档。</td>
+</tr>
+<tr>
+<td>replace()</td>
+<td>用新的文档替换当前文档。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Screen-对象"><a href="#Screen-对象" class="headerlink" title="Screen 对象"></a>Screen 对象</h2><ul>
+<li>Screen 对象包含有关客户端显示屏幕的信息。</li>
+<li>每个 Window 对象的 screen 属性都引用一个 Screen 对象。</li>
+<li>没有应用于 screen 对象的公开标准，不过所有浏览器都支持该对象。</li>
+</ul>
+<h3 id="Screen-对象属性"><a href="#Screen-对象属性" class="headerlink" title="Screen 对象属性"></a>Screen 对象属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>availHeight</td>
+<td>返回显示屏幕的高度 (除 Windows 任务栏之外)。</td>
+</tr>
+<tr>
+<td>availWidth</td>
+<td>返回显示屏幕的宽度 (除 Windows 任务栏之外)。</td>
+</tr>
+<tr>
+<td>bufferDepth</td>
+<td>设置或返回调色板的比特深度。</td>
+</tr>
+<tr>
+<td>colorDepth</td>
+<td>返回目标设备或缓冲器上的调色板的比特深度。</td>
+</tr>
+<tr>
+<td>deviceXDPI</td>
+<td>返回显示屏幕的每英寸水平点数。</td>
+</tr>
+<tr>
+<td>deviceYDPI</td>
+<td>返回显示屏幕的每英寸垂直点数。</td>
+</tr>
+<tr>
+<td>fontSmoothingEnabled</td>
+<td>返回用户是否在显示控制面板中启用了字体平滑。</td>
+</tr>
+<tr>
+<td>logicalXDPI</td>
+<td>返回显示屏幕每英寸的水平方向的常规点数。</td>
+</tr>
+<tr>
+<td>logicalYDPI</td>
+<td>返回显示屏幕每英寸的垂直方向的常规点数。</td>
+</tr>
+<tr>
+<td>pixelDepth</td>
+<td>返回显示屏幕的颜色分辨率（比特每像素）。</td>
+</tr>
+<tr>
+<td>updateInterval</td>
+<td>设置或返回屏幕的刷新率。</td>
+</tr>
+<tr>
+<td>width</td>
+<td>返回显示器屏幕的宽度。</td>
+</tr>
+<tr>
+<td>height</td>
+<td>返回显示屏幕的高度。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="History-对象"><a href="#History-对象" class="headerlink" title="History 对象"></a>History 对象</h2><ul>
+<li>包含用户（在浏览器窗口中）访问过的 URL。</li>
+<li>是 window 对象的一部分，可通过 window.history 属性对其进行访问。</li>
+<li>没有应用于 History 对象的公开标准，不过所有浏览器都支持该对象。</li>
+</ul>
+<h3 id="History-对象属性"><a href="#History-对象属性" class="headerlink" title="History 对象属性"></a>History 对象属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>length</td>
+<td>返回浏览器历史列表中的 URL 数量。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="History-对象方法"><a href="#History-对象方法" class="headerlink" title="History 对象方法"></a>History 对象方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>back()</td>
+<td>加载 history 列表中的前一个 URL。</td>
+</tr>
+<tr>
+<td>forward()</td>
+<td>加载 history 列表中的下一个 URL。</td>
+</tr>
+<tr>
+<td>go()</td>
+<td>加载 history 列表中的某个具体页面。</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      
+        <categories>
+            
+            <category> javascript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> javascript </tag>
+            
+            <tag> BOM </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[VSCode插件]]></title>
+      <url>/2017/06/27/VSCode%E6%8F%92%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<h2 id="VSCode插件"><a href="#VSCode插件" class="headerlink" title="VSCode插件"></a>VSCode插件</h2><h3 id="Open-in-Browser-（在浏览器中查看）"><a href="#Open-in-Browser-（在浏览器中查看）" class="headerlink" title="Open in Browser （在浏览器中查看）"></a>Open in Browser （在浏览器中查看）</h3><h3 id="vscode-icons-（图标）"><a href="#vscode-icons-（图标）" class="headerlink" title="vscode-icons （图标）"></a>vscode-icons （图标）</h3><h3 id="Seti-theme-（主题）"><a href="#Seti-theme-（主题）" class="headerlink" title="Seti-theme （主题）"></a>Seti-theme （主题）</h3><h3 id="HTML-CSS-Support"><a href="#HTML-CSS-Support" class="headerlink" title="HTML CSS Support"></a>HTML CSS Support</h3><ul>
+<li>让HTML标签上写class智能提示当前项目所支持的样式</li>
+</ul>
+<h3 id="HTML-Snippets"><a href="#HTML-Snippets" class="headerlink" title="HTML Snippets"></a>HTML Snippets</h3><ul>
+<li>超级使用且初级的H5代码片段以及提示</li>
+</ul>
+<h3 id="Debugger-for-Chrome"><a href="#Debugger-for-Chrome" class="headerlink" title="Debugger for Chrome"></a>Debugger for Chrome</h3><ul>
+<li>让vscode映射chrome的debug功能，静态页面都可以用vscode来打断点调试、配饰稍微复杂一点</li>
+</ul>
+<h3 id="Auto-Rename-Tag"><a href="#Auto-Rename-Tag" class="headerlink" title="Auto Rename Tag"></a>Auto Rename Tag</h3><ul>
+<li>修改html标签，自动帮你完成尾部闭合标签的同步修改，和webstorm一样。</li>
+</ul>
+<h3 id="beautify"><a href="#beautify" class="headerlink" title="beautify"></a>beautify</h3><ul>
+<li>这款类似于vscode里格式化代码的功能</li>
+</ul>
+<h3 id="HTMLHint"><a href="#HTMLHint" class="headerlink" title="HTMLHint"></a>HTMLHint</h3><ul>
+<li>html代码检测</li>
+</ul>
+<h3 id="Bracket-Pair-Colorizer"><a href="#Bracket-Pair-Colorizer" class="headerlink" title="Bracket Pair Colorizer"></a>Bracket Pair Colorizer</h3><ul>
+<li>让括号拥有独立的颜色，易于区分。可以配合任意主题使用。</li>
+</ul>
+<h3 id="vetur"><a href="#vetur" class="headerlink" title="vetur"></a>vetur</h3><ul>
+<li>语法高亮、智能感知、Emmet等</li>
+</ul>
+<h3 id="AutoFileName"><a href="#AutoFileName" class="headerlink" title="AutoFileName"></a>AutoFileName</h3><ul>
+<li>这个插件使得开发者在 require 本地文件时支持基于输入的文件路径的智能补全。</li>
+</ul>
+<h3 id="Path-Intellisence"><a href="#Path-Intellisence" class="headerlink" title="Path Intellisence"></a>Path Intellisence</h3><ul>
+<li>智能路径提示。当你想引入一个js文件、css文件时，它会帮你智能提示路径。</li>
+</ul>
+<h3 id="VS-Color-Picker"><a href="#VS-Color-Picker" class="headerlink" title="VS Color Picker"></a>VS Color Picker</h3><ul>
+<li>调色板</li>
+</ul>
+<h3 id="FileNameComplete"><a href="#FileNameComplete" class="headerlink" title="FileNameComplete"></a>FileNameComplete</h3>]]></content>
+      
+        <categories>
+            
+            <category> 软件应用 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> VSCode </tag>
+            
+            <tag> 插件 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[感觉用着不错的sublime插件]]></title>
+      <url>/2017/06/27/%E6%84%9F%E8%A7%89%E7%94%A8%E7%9D%80%E4%B8%8D%E9%94%99%E7%9A%84sublime%E6%8F%92%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<h2 id="sublime插件"><a href="#sublime插件" class="headerlink" title="sublime插件"></a>sublime插件</h2><h3 id="Alignment"><a href="#Alignment" class="headerlink" title="Alignment"></a>Alignment</h3><ul>
+<li>代码对齐，写几个变量，选中这几行，Ctrl+Alt+A</li>
+</ul>
+<h3 id="BracketHighlighter"><a href="#BracketHighlighter" class="headerlink" title="BracketHighlighter"></a>BracketHighlighter</h3><ul>
+<li>类似于代码匹配，可以匹配括号，引号等符号内的范围。</li>
+<li>使用方法：系统默认为白色高亮，可以使用链接所述方法进行自定义配置<a href="http://www.360doc.com/content/14/1111/15/15077656_424301780.shtml" target="_blank" rel="external">http://www.360doc.com/content/14/1111/15/15077656_424301780.shtml</a></li>
+</ul>
+<h3 id="SideBarEnhancements-侧栏右键功能增强"><a href="#SideBarEnhancements-侧栏右键功能增强" class="headerlink" title="SideBarEnhancements 侧栏右键功能增强"></a>SideBarEnhancements 侧栏右键功能增强</h3><ul>
+<li>使用方法(参考链接内容)：<a href="http://www.w3cfuns.com/notes/13810/d9b9ed2fb80785dae88a5344ef0f30d4.html" target="_blank" rel="external">http://www.w3cfuns.com/notes/13810/d9b9ed2fb80785dae88a5344ef0f30d4.html</a></li>
+</ul>
+<h3 id="Emmet"><a href="#Emmet" class="headerlink" title="Emmet"></a>Emmet</h3><h3 id="SublimeCodeIntel"><a href="#SublimeCodeIntel" class="headerlink" title="SublimeCodeIntel"></a>SublimeCodeIntel</h3><h3 id="AutoFileName"><a href="#AutoFileName" class="headerlink" title="AutoFileName"></a>AutoFileName</h3><ul>
+<li>功能：快捷输入文件名</li>
+<li>简介：自动完成文件名的输入，如图片选取</li>
+<li>使用：输入”/”即可看到相对于本项目文件夹的其他文件</li>
+</ul>
+<h3 id="IMESupport"><a href="#IMESupport" class="headerlink" title="IMESupport"></a>IMESupport</h3><ul>
+<li>功能：sublime中文输入法</li>
+<li>简介：还在纠结 Sublime Text 中文输入法不能跟随光标吗？试试「IMESupport 」这个插件吧！目前只支持 Windows，在搜索等界面不能很好的跟随光标。</li>
+<li>使用：Ctrl + Shift + P →输入pci →输入IMESupport →回车</li>
+</ul>
+<h3 id="Trailing-spaces"><a href="#Trailing-spaces" class="headerlink" title="Trailing spaces"></a>Trailing spaces</h3><ul>
+<li>功能：检测并一键去除代码中多余的空格</li>
+<li>简介：还在纠结代码中有多余的空格而显得代码不规范？或是有处女座情节？次插件帮你实现发现多余空格、一键删除空格、保存时自动删除多余空格，让你的代码规范清爽起来</li>
+<li>使用：安装插件并重启，即可自动提示多余空格。一键删除多余空格：CTRL+SHITF+T（需配置），更多配置请点击标题。快捷键配置：在Preferences / Key Bindings – User加上代码（数组内）</li>
+</ul>
+<h3 id="ConvertToUTF8-支持GB2312和GBK编码"><a href="#ConvertToUTF8-支持GB2312和GBK编码" class="headerlink" title="ConvertToUTF8 支持GB2312和GBK编码"></a>ConvertToUTF8 支持GB2312和GBK编码</h3><h3 id="CSS-Format"><a href="#CSS-Format" class="headerlink" title="CSS Format"></a>CSS Format</h3><ul>
+<li>CSS Format可以将任意的 CSS、SASS、SCSS、LESS 代码格式化为展开、紧凑、压缩的形式，选中需要格式化的样式代码，右键选中CSS Format，选择需要形成的格式即可。</li>
+</ul>
+<h3 id="JSFormat"><a href="#JSFormat" class="headerlink" title="JSFormat"></a>JSFormat</h3><ul>
+<li>功能：Javascript的代码格式化插件</li>
+<li>简介：很多网站的JS代码都进行了压缩，一行式的甚至混淆压缩，这让我们看起来很吃力。而这个插件能帮我们把原始代码进行格式的整理，包括换行和缩进等等，是代码一目了然，更快读懂~</li>
+<li>使用：在已压缩的JS文件中，右键选择jsFormat或者使用默认快捷键（Ctrl+Alt+F）</li>
+</ul>
+<h3 id="Color​Picker"><a href="#Color​Picker" class="headerlink" title="Color​Picker"></a>Color​Picker</h3><ul>
+<li>功能：调色板</li>
+<li>简介：需要输入颜色时，可直接选取颜色</li>
+<li>使用：快捷键Windows: ctrl+shift+c</li>
+</ul>
+<h3 id="FileDiffs"><a href="#FileDiffs" class="headerlink" title="FileDiffs"></a>FileDiffs</h3><ul>
+<li>功能：强大的比较代码不同工具</li>
+<li>简介：比较当前文件与选中的代码、剪切板中代码、另一文件、未保存文件之间的差别。可配置为显示差别在外部比较工具，精确到行。</li>
+<li>使用：右键标签页，出现FileDiffs Menu或者Diff with Tab…选择对应文件比较即可</li>
+</ul>
+<h3 id="GBK-Encoding-Support"><a href="#GBK-Encoding-Support" class="headerlink" title="GBK Encoding Support"></a>GBK Encoding Support</h3><ul>
+<li>功能：中文识别</li>
+<li>简介：Sublime Text 2可识别UTF-8格式的中文，不识别GBK和ANSI，因此打开很多含中文的文档都会出现乱码。可以通过安装插件GBK Support,来识别GBK和ANSI。</li>
+<li>使用：<ul>
+<li>Open a GBK File</li>
+<li>Save file with GBK encoding</li>
+<li>Change file encoding from utf8 to GBK or GBK to utf8</li>
+</ul>
+</li>
+</ul>
+<h3 id="Git​Gutter"><a href="#Git​Gutter" class="headerlink" title="Git​Gutter"></a>Git​Gutter</h3><ul>
+<li>简介：指示代码中插入、修改、删除的地方</li>
+</ul>
+<h3 id="Ctags"><a href="#Ctags" class="headerlink" title="Ctags"></a>Ctags</h3><ul>
+<li>函数跳转，我的电脑上是Alt+点击 函数名称，会跳转到相应的函数</li>
+</ul>
+<h3 id="localization"><a href="#localization" class="headerlink" title="localization"></a>localization</h3><h3 id="less"><a href="#less" class="headerlink" title="less"></a>less</h3><h3 id="sublimeLinter"><a href="#sublimeLinter" class="headerlink" title="sublimeLinter"></a>sublimeLinter</h3><h3 id="html5"><a href="#html5" class="headerlink" title="html5"></a>html5</h3><h3 id="A-File-Icon"><a href="#A-File-Icon" class="headerlink" title="A File Icon"></a>A File Icon</h3><ul>
+<li>图标包</li>
+</ul>
+<h3 id="Boxy-Theme"><a href="#Boxy-Theme" class="headerlink" title="Boxy Theme"></a>Boxy Theme</h3><h3 id="JavaScript-Completions"><a href="#JavaScript-Completions" class="headerlink" title="JavaScript Completions"></a>JavaScript Completions</h3><ul>
+<li>js最基本的api快查片段</li>
+<li><a href="https://packagecontrol.io/packages/JavaScript%20Completions" target="_blank" rel="external">https://packagecontrol.io/packages/JavaScript%20Completions</a></li>
+</ul>
+<h3 id="Clipboard-History"><a href="#Clipboard-History" class="headerlink" title="Clipboard History"></a>Clipboard History</h3><ul>
+<li>功能：粘贴板历史记录</li>
+<li>简介：方便使用复制/剪切的内容</li>
+<li>使用：</li>
+<li>Ctrl+alt+v：显示历史记录</li>
+<li>Ctrl+alt+d：清空历史记录</li>
+<li>Ctrl+shift+v：粘贴上一条记录（最旧）</li>
+<li>Ctrl+shift+alt+v：粘贴下一条记录（最新）</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 软件应用 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 插件 </tag>
+            
+            <tag> sublime </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[平时用到的一些软件的注册码以及匹配的版本]]></title>
+      <url>/2017/06/27/%E5%B9%B3%E6%97%B6%E7%94%A8%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%B3%A8%E5%86%8C%E7%A0%81%E4%BB%A5%E5%8F%8A%E5%8C%B9%E9%85%8D%E7%9A%84%E7%89%88%E6%9C%AC/</url>
+      <content type="html"><![CDATA[<h2 id="BenVista-PhotoZoom-Pro-7-0-6-64-bit"><a href="#BenVista-PhotoZoom-Pro-7-0-6-64-bit" class="headerlink" title="BenVista PhotoZoom Pro 7.0.6 (64-bit)"></a>BenVista PhotoZoom Pro 7.0.6 (64-bit)</h2><ul>
+<li>解锁代码：7YRN2-WTM7J-YAXVW-6859Q-77HG6</li>
+<li>名        称：www.dayanzai.me</li>
+<li>电子邮件：www.dayanzai.me@xu.com</li>
+<li>解锁代码：CMC62-3RJDT-NV2M6-WYRR7-KGEMJ</li>
+<li>名        称：www.dayanzai.me</li>
+<li>电子邮件：www.dayanzai.me@xu.com</li>
+<li>解锁代码：8VBKH-QX4YE-Y3W88-GSCJ4-VG3PX</li>
+<li>名        称：www.dayanzai.me</li>
+<li>电子邮件：www.dayanzai.me@xu.com</li>
+</ul>
+<h2 id="MarkdownPad2-5"><a href="#MarkdownPad2-5" class="headerlink" title="MarkdownPad2.5"></a>MarkdownPad2.5</h2><ul>
+<li>Soar360@live.com</li>
+<li>GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 软件应用 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 软件 </tag>
+            
+            <tag> 注册码 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[文档对象模型(DOM)的一些方法和属性]]></title>
+      <url>/2017/06/26/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-DOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/</url>
+      <content type="html"><![CDATA[<h2 id="document-对象"><a href="#document-对象" class="headerlink" title="document 对象"></a>document 对象</h2><ul>
+<li>Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。<h3 id="document-write（）"><a href="#document-write（）" class="headerlink" title="document.write（）"></a>document.write（）</h3></li>
+<li>方法可向文档写入 HTML 表达式或 JavaScript 代码。<br>可列出多个参数(exp1,exp2,exp3,…) ，它们将按顺序被追加到文档中。</li>
+<li>根据 DOM 标准，该方法只接受单个字符串作为参数。不过根据经验，write() 可接受任何多个参数。</li>
+<li>通常按照两种的方式使用 write() 方法：一是在使用该方在文档中输出 HTML，另一种是在调用该方法的的窗口之外的窗口、框架中产生新文档。在第二种情况中，请务必使用 close() 方法来关闭文档。</li>
+</ul>
+<h2 id="Event-对象"><a href="#Event-对象" class="headerlink" title="Event 对象"></a>Event 对象</h2><ul>
+<li>Event 对象代表事件的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态。</li>
+<li>事件通常与函数结合使用，函数不会在事件发生前被执行</li>
+<li>是事件处理函数中的第0个参数(只需要声明形参，实参在事件调用的时候，浏览器会自己帮我们传,一般为了阅读性参数会声明为 e,ev,event。)</li>
+</ul>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onresize</td>
+<td>窗口大小变化</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>鼠标移入</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>鼠标移出</td>
+</tr>
+<tr>
+<td>oncontextmenu</td>
+<td>鼠标右键</td>
+</tr>
+<tr>
+<td>onclick</td>
+<td>点击</td>
+</tr>
+<tr>
+<td>onload事件</td>
+<td>加载完成</td>
+</tr>
+<tr>
+<td>onscroll</td>
+<td>当元素滚动条被滚动时运行的脚本</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>鼠标移入</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>鼠标移出</td>
+</tr>
+<tr>
+<td>onclick</td>
+<td>鼠标点击</td>
+</tr>
+<tr>
+<td>onscroll</td>
+<td>滚动条发生滚动</td>
+</tr>
+<tr>
+<td>onmousedown</td>
+<td>鼠标按下</td>
+</tr>
+<tr>
+<td>onmousemove</td>
+<td>鼠标移动</td>
+</tr>
+<tr>
+<td>onmouseup</td>
+<td>鼠标抬起            </td>
+</tr>
+<tr>
+<td>onfocus</td>
+<td>当输入框获得焦点时触发</td>
+</tr>
+<tr>
+<td>onblur</td>
+<td>当输入框失去焦点时触发</td>
+</tr>
+<tr>
+<td>oninput</td>
+<td>当输入框内容发生变化时触发</td>
+</tr>
+<tr>
+<td>onchange</td>
+<td>当表单控件状态发生变化，并失去焦点时触发</td>
+</tr>
+<tr>
+<td>onkeydown</td>
+<td>键盘按键按下时触发(按下时一直触发)</td>
+</tr>
+<tr>
+<td>onkeyup</td>
+<td>键盘按键抬起时触发</td>
+</tr>
+<tr>
+<td>onabort</td>
+<td>图像的加载被中断。</td>
+</tr>
+<tr>
+<td><a href="http://www.zhangxinxu.com/wordpress/2013/04/js-mousewheel-dommousescroll-event/" title="onmousewheel与DOMMouseScroll" target="_blank" rel="external">onmousewheel</a></td>
+<td>鼠标滚轮 (chrome 和 IE中的事件，不兼容低版本IE)<br>Event 对象中有 e.wheelDelta这个属性，滚轮滚动产生两个数值，分别代表两个方向<ul><li>向上滚动 120</li><li>向下滚动 -120</li></ul></td>
+</tr>
+<tr>
+<td>DOMMouseScroll(没有onDOMMouseScroll 只能监听，不能绑定)</td>
+<td>鼠标滚轮 (火狐中的事件)<br>Event 对象中有 e.detail 这个属性，滚轮滚动产生两个数值，分别代表两个方向<ul><li>向上滚动 -3</li><li>向下滚动 3</li></ul></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mouseover与mouseenter"><a href="#mouseover与mouseenter" class="headerlink" title="mouseover与mouseenter"></a>mouseover与mouseenter</h4><ul>
+<li>不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件（子元素在父元素内部，从父元素到子元素会触发）。</li>
+<li>只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件（子元素在父元素内部，从父元素到子元素不会触发）。</li>
+</ul>
+<h4 id="mouseout与mouseleave"><a href="#mouseout与mouseleave" class="headerlink" title="mouseout与mouseleave"></a>mouseout与mouseleave</h4><ul>
+<li>不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件。</li>
+<li>只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。</li>
+</ul>
+<h4 id="滚轮"><a href="#滚轮" class="headerlink" title="滚轮"></a>滚轮</h4><p>滚轮滚动的一个简单Demo</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;style&gt;
+body {
+    margin: 0;
+}
+div {
+    background: #008080;
+    width: 500px;
+    height: 500px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;script&gt;
+window.onload =function(){
+    var div =document.querySelector(&apos;div&apos;);
+    mScroll(document,function(e) {
+        div.style.width = (div.offsetWidth-10) + &apos;px&apos;;
+        div.style.height = (div.offsetHeight-10) + &apos;px&apos;;
+    },function(e) {
+        div.style.width = (div.offsetWidth+10) + &apos;px&apos;;
+        div.style.height = (div.offsetHeight+10) + &apos;px&apos;;
+    });
+    function mScroll(el,toUp,toDown) {
+        //mousewheel 鼠标滚轮 (chrome 和 IE)
+        el.addEventListener(&apos;mousewheel&apos;,function(e){
+            //e.wheelDelta
+                //向上滚动 120
+                //向下滚动 -120
+            if (e.wheelDelta &gt; 0) {
+                //滚轮上滚，运行
+                toUp(e);
+            }else{
+                //滚轮下滚，运行
+                toDown(e);
+            }
+        });
+        //DOMMouseScroll 火狐滚轮事件
+        el.addEventListener(&apos;DOMMouseScroll&apos;,function(e){
+            //e.detail
+                // 3 向下滚动
+                // -3 向上滚动
+            if (-e.detail &gt; 0) {
+                //滚轮上滚，运行
+                toUp(e);
+            }else{
+                //滚轮下滚，运行
+                toDown(e);
+            }
+        });
+    }
+};
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="鼠标-键盘属性"><a href="#鼠标-键盘属性" class="headerlink" title="鼠标 / 键盘属性"></a>鼠标 / 键盘属性</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">altKey</td>
+<td style="text-align:left">返回当事件被触发时，”ALT” 是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">button</td>
+<td style="text-align:left">返回当事件被触发时，哪个鼠标按钮被点击。<br>0 – 左键<br>1 – 滚轮<br>2 – 右键</td>
+</tr>
+<tr>
+<td style="text-align:center">clientX</td>
+<td style="text-align:left">返回当事件被触发时，鼠标指针的水平坐标。(原点可视区左上角)<br>在PC端，跟随鼠标移动，如果事件加给元素，有可能会发生移动过快元素跟不上的情况</td>
+</tr>
+<tr>
+<td style="text-align:center">clientY</td>
+<td style="text-align:left">返回当事件被触发时，鼠标指针的垂直坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrlKey</td>
+<td style="text-align:left">返回当事件被触发时，”CTRL” 键是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">metaKey</td>
+<td style="text-align:left">返回当事件被触发时，”meta” 键是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">relatedTarget</td>
+<td style="text-align:left">返回与事件的目标节点相关的节点。</td>
+</tr>
+<tr>
+<td style="text-align:center">screenX</td>
+<td style="text-align:left">返回当某个事件被触发时，鼠标指针的水平坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">screenY</td>
+<td style="text-align:left">返回当某个事件被触发时，鼠标指针的垂直坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">shiftKey</td>
+<td style="text-align:left">返回当事件被触发时，”SHIFT” 键是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">key</td>
+<td style="text-align:left">键盘按键名字</td>
+</tr>
+</tbody>
+</table>
+<h3 id="IE-属性"><a href="#IE-属性" class="headerlink" title="IE 属性"></a>IE 属性</h3><ul>
+<li>除了上面的鼠标/事件属性，IE 浏览器还支持下面的属性：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cancelBubble</td>
+<td>如果事件句柄想阻止事件传播到包容对象，必须把该属性设为 true。</td>
+</tr>
+<tr>
+<td>fromElement</td>
+<td>对于 mouseover 和 mouseout 事件，fromElement 引用移出鼠标的元素。</td>
+</tr>
+<tr>
+<td>keyCode</td>
+<td>对于 keypress 事件，该属性声明了被敲击的键生成的 Unicode 字符码。对于 keydown 和 keyup 事件，它指定了被敲击的键的虚拟键盘码。虚拟键盘码可能和使用的键盘的布局相关。</td>
+</tr>
+<tr>
+<td>offsetX,offsetY</td>
+<td>发生事件的地点在事件源元素的坐标系统中的 x 坐标和 y 坐标。</td>
+</tr>
+<tr>
+<td>returnValue</td>
+<td>如果设置了该属性，它的值比事件句柄的返回值优先级高。把这个属性设置为 fasle，可以取消发生事件的源元素的默认动作。</td>
+</tr>
+<tr>
+<td>srcElement</td>
+<td>对于生成事件的 Window 对象、Document 对象或 Element 对象的引用。</td>
+</tr>
+<tr>
+<td>toElement</td>
+<td>对于 mouseover 和 mouseout 事件，该属性引用移入鼠标的元素。</td>
+</tr>
+<tr>
+<td>x,y</td>
+<td>事件发生的位置的 x 坐标和 y 坐标，它们相对于用CSS动态定位的最内层包容元素。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="事件流："><a href="#事件流：" class="headerlink" title="事件流："></a>事件流：</h3><ul>
+<li>事件流指事件在触发时的一个流程，就像for循环一样有一个执行的过程。先进行捕获（从window一直到事件发生的元素），然后再开始冒泡(从事件发生的元素一直在传递会 window)</li>
+<li>捕获:从最外层向触发该事件元素寻找的一个过程。最终找到触发该事件的元素，如果该元素有绑定事件处理函数则执行该函数。在找到触发该事件的元素之后，会进行下一个阶段“冒泡阶段”.</li>
+<li>冒泡:从触发事件的元素开始往外层寻找，直到最外层时结束整个事件流程。<ul>
+<li>e.stopPropagation();阻止冒泡</li>
+<li>e.cancelBubble = true;取消冒泡</li>
+</ul>
+</li>
+<li>不论是捕获阶段还是冒泡阶段，在寻找目标元素的过程和向外返回的过程中，所遇到每一个元素身上如果有相同事件的事件处理函数都会被调用。</li>
+</ul>
+<h3 id="事件委托："><a href="#事件委托：" class="headerlink" title="事件委托："></a>事件委托：</h3><ul>
+<li>把一组子元素的事件处理，利用冒泡的原理，在父级的事件中进行处理，在父级中我们可以通过event.target,获取到事件触发的元素，然后进行相关处理.</li>
+<li>event.target：指的是点击时的元素</li>
+</ul>
+<h3 id="事件绑定和监听"><a href="#事件绑定和监听" class="headerlink" title="事件绑定和监听"></a>事件绑定和监听</h3><ul>
+<li>把函数绑定给对应的事件，当事件触发时，就会执行这些绑定在元素上的事件处理函数<ul>
+<li>取消绑定 事件 = null;</li>
+</ul>
+</li>
+<li><p>传统的事件绑定，会存在前后覆盖的问题，所以当我们需要让一个事件可以执行多个操作的时候，就需要使用事件监听</p>
+<ul>
+<li>事件监听可以执行多个操作</li>
+<li>addEventListener 事件监听</li>
+<li>el.addEventListener(‘event’,fn [,useCapture])</li>
+<li><p>取消事件监听</p>
+<ul>
+<li><p>el.removeEventListener(‘event’,fnName[,useCapture])  </p>
+<p>|参数|介绍<br>|:—:|:—:|<br>|el| 元素<br>|event| 事件名称(click,mouseover…)<br>|fn| 事件执行函数<br>|useCapture(true/false) |true 捕获阶段，false冒泡阶段 (不写默认 false)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="阻止默认事件"><a href="#阻止默认事件" class="headerlink" title="阻止默认事件"></a>阻止默认事件</h3><ul>
+<li><p>事件绑定中用 <code>return false</code></p>
+<pre><code>a.onclick = function(){
+    alert(1);
+    return false; //阻止默认事件
+};
+</code></pre></li>
+<li><p>事件监听用 e.preventDefault()</p>
+<pre><code>a.addEventListener(&apos;click&apos;, function(e) {
+    alert(1);
+    e.preventDefault();//阻止默认事件
+});
+</code></pre></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> javascript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> javascript </tag>
+            
+            <tag> DOM </tag>
+            
+            <tag> js事件 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[hexo建站的一些流程记录]]></title>
+      <url>/2017/06/25/hexo%E5%BB%BA%E7%AB%99%E7%9A%84%E7%AE%80%E5%8D%95%E6%B5%81%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<h1 id="hexo的简单介绍"><a href="#hexo的简单介绍" class="headerlink" title="hexo的简单介绍"></a>hexo的简单介绍</h1><p>Hexo 使用 Markdown（或其他渲染引擎）解析文章，配合上github和coding或其他类似产品建立网站，在安装前，电脑中要安装下列应用程序：</p>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+</ul>
+<p>之后使用使用 npm安装hexo:</p>
+<pre><code>npm install -g hexo-cli
+</code></pre><p>升级hexo:</p>
+<pre><code>npm update hexo -g  
+</code></pre><p>有些命令可以简写成首字母，<a href="http://sd" target="_blank" rel="external">可参考</a></p>
+<h2 id="创建hexo"><a href="#创建hexo" class="headerlink" title="创建hexo"></a>创建hexo</h2><ul>
+<li>hexo init 文件夹 #初始化，可以直接在空白文件夹建立</li>
+<li>cd 文件夹</li>
+<li>npm install</li>
+</ul>
+<h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><p>部署到Github前需要配置_config.yml文件，在hexo根目录下，可以看一下hexo文件的介绍，找到下面的内容并配置</p>
+<pre><code># Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+  type: git 
+  repository: https://github.com/Your_Github_Account/yoursite.github.io.git
+  branch: master
+</code></pre><ul>
+<li><p>有的介绍是github，可能会遇到 ERROR Deployer not found: github  的错误，那是因为HEXO更新到3.0之后，deploy的type 的github需要改成Git  或者运行 </p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre></li>
+</ul>
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ul>
+<li>hexo new [layout] <title> #新建文章（md）</title></li>
+<li>hexo new page”pageName” #新建页面（html）<ul>
+<li>如果不想文章被处理，可以将 Front-Matter(文章头部）中的layout: 设为 false 。</li>
+<li>将储存到 source/_posts 文件夹。</li>
+<li>布局（layout），有 post、page 和 draft，默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。</li>
+</ul>
+</li>
+</ul>
+<h3 id="Front-Matter"><a href="#Front-Matter" class="headerlink" title="Front-Matter"></a>Front-Matter</h3><pre><code>---
+layout    布局 #可以省略
+title: title #文章标题（新建文章时标题和文件名一样，在这可以改）
+date: 2013/7/13 20:46:25 #新建文章时间
+updated: 更新日期    #可以省略
+comments: true    #开启文章的评论功能    可以省略 默认true
+categories: 建站 #文章目录 可以省略
+tags: #文章标签 可以省略
+     - 标签1
+     - 标签2
+description: #文章描述 可以省略
+permalink    覆盖文章网址 #可以省略 这个我没了解
+thumbnail: 图片地址 #我用的主题用于设置文章缩略图，主题文档中有关于缩略图设置描述 （官网案例中的代码在图片地址后有!blogthumbnail这段代码，不知道有何用，我加上去有BUG）
+---
+</code></pre><ul>
+<li>tags和categories是不一样的，categories会出现在侧边栏形成文件夹，tags只是文章的不同标签 </li>
+</ul>
+<h2 id="解析部署文章"><a href="#解析部署文章" class="headerlink" title="解析部署文章"></a>解析部署文章</h2><ul>
+<li>hexo clean #一般先清一下</li>
+<li>hexo generate #生成静态页面至public目录<ul>
+<li>hexo generate –watch #监视文件变动</li>
+</ul>
+</li>
+<li><p>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</p>
+<ul>
+<li>hexo server -i 192.168.1.1 #自定义 IP</li>
+<li>hexo server -s #静态模式</li>
+<li><p>hexo s -p 端口</p>
+<ul>
+<li>hexo安装没错，也能成功运行，启动也没错，但不能访问页面。<ul>
+<li>电脑端口被占用了。（可能你的电脑安装了福昕阅读器，他占用4000端口，很不幸，我就安装了它）要改下端口   </li>
+</ul>
+</li>
+<li><p>想要README.md文件不被渲染，在博客根目录下的配置文件_config.yml中配置一下”skip_render”选项就行了，将不需要渲染的文件名称加入其选项下就行了。</p>
+<pre><code>skip_render: README.md
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>hexo deploy #将.deploy目录部署到GitHub</li>
+<li>hexo help # 查看帮助</li>
+<li>hexo version #查看Hexo的版本</li>
+</ul>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><ul>
+<li>到这里，一个基本的以hexo为模版的网站就建好了，也可以设置一些其他的使网站更加个性化。找一些喜欢的主题，或者自己的Demo都可以放上来，那就要对hexo有更详细的了解了。。。</li>
+<li>想到一点，有时候出现一些错误找不到原因，可能就是_config.yml文件或者其他配置文件出错了，yml文件的格式要求还是很严格的，一不小心就出错。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 建站 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 建站 </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> git </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
 </search>
