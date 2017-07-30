@@ -4,14 +4,36 @@
 
     
   <url>
+    <loc>http://lkang.me/2017/06/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-BOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/</loc>
+    <lastmod>2017-07-30T14:12:48.214Z</lastmod>
+    <data>
+        <display>
+        <title>浏览器对象模型(BOM)的一些方法和属性</title>
+        <pubTime>2017-06-27T02:03:21.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>BOM</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="http://lkang.me/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://lkang.me/2017/07/03/filereder/</loc>
-    <lastmod>2017-07-30T14:03:43.050Z</lastmod>
+    <lastmod>2017-07-30T14:12:44.583Z</lastmod>
     <data>
         <display>
         <title>FileReader的用法</title>
         <pubTime>2017-07-03T14:18:15.000Z</pubTime>
         
-        <tag>javascript</tag>
+        <tag>JavaScript</tag>
          
         <tag>数据上传</tag>
          
@@ -20,53 +42,7 @@
          
            
              
-              <breadCrumb title="javaScript" url="http://lkang.me/categories/javaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lkang.me/2017/06/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-BOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/</loc>
-    <lastmod>2017-07-30T14:00:23.677Z</lastmod>
-    <data>
-        <display>
-        <title>浏览器对象模型(BOM)的一些方法和属性</title>
-        <pubTime>2017-06-27T02:03:21.000Z</pubTime>
-        
-        <tag>javaScript</tag>
-         
-        <tag>BOM</tag>
-         
-         
-           
-             
-              <breadCrumb title="javascript" url="http://lkang.me/categories/javascript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lkang.me/2017/06/26/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-DOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/</loc>
-    <lastmod>2017-07-30T14:00:01.364Z</lastmod>
-    <data>
-        <display>
-        <title>文档对象模型(DOM)的一些方法和属性</title>
-        <pubTime>2017-06-26T02:20:34.000Z</pubTime>
-        
-        <tag>javascript</tag>
-         
-        <tag>DOM</tag>
-         
-        <tag>js事件</tag>
-         
-         
-           
-             
-              <breadCrumb title="javaScript" url="http://lkang.me/categories/javaScript/"/>
+              <breadCrumb title="JavaScript" url="http://lkang.me/categories/JavaScript/"/>
           
         </display>
     </data>
@@ -75,20 +51,20 @@
     
   <url>
     <loc>http://lkang.me/2017/07/04/js%E7%A7%BB%E5%8A%A8%E7%AB%AF/</loc>
-    <lastmod>2017-07-30T13:58:13.793Z</lastmod>
+    <lastmod>2017-07-30T14:12:41.055Z</lastmod>
     <data>
         <display>
         <title>移动端事件的一些知识点</title>
         <pubTime>2017-07-04T13:45:36.000Z</pubTime>
         
-        <tag>javascript</tag>
+        <tag>JavaScript</tag>
          
         <tag>移动端事件</tag>
          
          
            
              
-              <breadCrumb title="javaScript" url="http://lkang.me/categories/javaScript/"/>
+              <breadCrumb title="JavaScript" url="http://lkang.me/categories/JavaScript/"/>
           
         </display>
     </data>
@@ -97,20 +73,44 @@
     
   <url>
     <loc>http://lkang.me/2017/07/06/%E9%99%80%E8%9E%BA%E4%BB%AA/</loc>
-    <lastmod>2017-07-30T13:58:04.335Z</lastmod>
+    <lastmod>2017-07-30T14:12:34.955Z</lastmod>
     <data>
         <display>
         <title>移动端陀螺仪的使用</title>
         <pubTime>2017-07-06T11:41:55.000Z</pubTime>
         
-        <tag>javascript</tag>
+        <tag>JavaScript</tag>
          
         <tag>陀螺仪</tag>
          
          
            
              
-              <breadCrumb title="javaScript" url="http://lkang.me/categories/javaScript/"/>
+              <breadCrumb title="JavaScript" url="http://lkang.me/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lkang.me/2017/06/26/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-DOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/</loc>
+    <lastmod>2017-07-30T14:12:23.049Z</lastmod>
+    <data>
+        <display>
+        <title>文档对象模型(DOM)的一些方法和属性</title>
+        <pubTime>2017-06-26T02:20:34.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>DOM</tag>
+         
+        <tag>js事件</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="http://lkang.me/categories/JavaScript/"/>
           
         </display>
     </data>

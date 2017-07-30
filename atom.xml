@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lkang.me/"/>
-  <updated>2017-07-30T13:58:04.335Z</updated>
+  <updated>2017-07-30T14:12:34.955Z</updated>
   <id>http://lkang.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://lkang.me/2017/07/06/%E9%99%80%E8%9E%BA%E4%BB%AA/"/>
     <id>http://lkang.me/2017/07/06/陀螺仪/</id>
     <published>2017-07-06T11:41:55.000Z</published>
-    <updated>2017-07-30T13:58:04.335Z</updated>
+    <updated>2017-07-30T14:12:34.955Z</updated>
     
     <summary type="html">
     
@@ -30,10 +30,10 @@
     
     </summary>
     
-      <category term="javaScript" scheme="http://lkang.me/categories/javaScript/"/>
+      <category term="JavaScript" scheme="http://lkang.me/categories/JavaScript/"/>
     
     
-      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
+      <category term="JavaScript" scheme="http://lkang.me/tags/JavaScript/"/>
     
       <category term="陀螺仪" scheme="http://lkang.me/tags/%E9%99%80%E8%9E%BA%E4%BB%AA/"/>
     
@@ -44,7 +44,7 @@
     <link href="http://lkang.me/2017/07/04/js%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
     <id>http://lkang.me/2017/07/04/js移动端/</id>
     <published>2017-07-04T13:45:36.000Z</published>
-    <updated>2017-07-30T13:58:13.793Z</updated>
+    <updated>2017-07-30T14:12:41.055Z</updated>
     
     <summary type="html">
     
@@ -53,10 +53,10 @@
     
     </summary>
     
-      <category term="javaScript" scheme="http://lkang.me/categories/javaScript/"/>
+      <category term="JavaScript" scheme="http://lkang.me/categories/JavaScript/"/>
     
     
-      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
+      <category term="JavaScript" scheme="http://lkang.me/tags/JavaScript/"/>
     
       <category term="移动端事件" scheme="http://lkang.me/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%BA%8B%E4%BB%B6/"/>
     
@@ -67,7 +67,7 @@
     <link href="http://lkang.me/2017/07/03/filereder/"/>
     <id>http://lkang.me/2017/07/03/filereder/</id>
     <published>2017-07-03T14:18:15.000Z</published>
-    <updated>2017-07-30T14:03:43.050Z</updated>
+    <updated>2017-07-30T14:12:44.583Z</updated>
     
     <summary type="html">
     
@@ -75,10 +75,10 @@
     
     </summary>
     
-      <category term="javaScript" scheme="http://lkang.me/categories/javaScript/"/>
+      <category term="JavaScript" scheme="http://lkang.me/categories/JavaScript/"/>
     
     
-      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
+      <category term="JavaScript" scheme="http://lkang.me/tags/JavaScript/"/>
     
       <category term="数据上传" scheme="http://lkang.me/tags/%E6%95%B0%E6%8D%AE%E4%B8%8A%E4%BC%A0/"/>
     
@@ -143,7 +143,7 @@
     <link href="http://lkang.me/2017/06/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-BOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/"/>
     <id>http://lkang.me/2017/06/27/浏览器对象模型-BOM-的一些方法和属性/</id>
     <published>2017-06-27T02:03:21.000Z</published>
-    <updated>2017-07-30T14:00:23.677Z</updated>
+    <updated>2017-07-30T14:12:48.214Z</updated>
     
     <summary type="html">
     
@@ -153,10 +153,10 @@
     
     </summary>
     
-      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+      <category term="JavaScript" scheme="http://lkang.me/categories/JavaScript/"/>
     
     
-      <category term="javaScript" scheme="http://lkang.me/tags/javaScript/"/>
+      <category term="JavaScript" scheme="http://lkang.me/tags/JavaScript/"/>
     
       <category term="BOM" scheme="http://lkang.me/tags/BOM/"/>
     
@@ -233,7 +233,7 @@
     <link href="http://lkang.me/2017/06/26/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-DOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/"/>
     <id>http://lkang.me/2017/06/26/文档对象模型-DOM-的一些方法和属性/</id>
     <published>2017-06-26T02:20:34.000Z</published>
-    <updated>2017-07-30T14:00:01.364Z</updated>
+    <updated>2017-07-30T14:12:23.049Z</updated>
     
     <summary type="html">
     
@@ -242,10 +242,10 @@
     
     </summary>
     
-      <category term="javaScript" scheme="http://lkang.me/categories/javaScript/"/>
+      <category term="JavaScript" scheme="http://lkang.me/categories/JavaScript/"/>
     
     
-      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
+      <category term="JavaScript" scheme="http://lkang.me/tags/JavaScript/"/>
     
       <category term="DOM" scheme="http://lkang.me/tags/DOM/"/>
     
