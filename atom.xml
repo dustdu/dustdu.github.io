@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lkang.me/"/>
-  <updated>2017-07-30T14:38:10.214Z</updated>
+  <updated>2017-08-02T12:11:29.764Z</updated>
   <id>http://lkang.me/</id>
   
   <author>
@@ -14,6 +14,184 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javascript面向对象以及事件的原理</title>
+    <link href="http://lkang.me/2017/08/02/javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8A%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%8E%9F%E7%90%86/"/>
+    <id>http://lkang.me/2017/08/02/javascript面向对象以及事件的原理/</id>
+    <published>2017-08-02T12:10:21.000Z</published>
+    <updated>2017-08-02T12:11:29.764Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h2&gt;&lt;p&gt;关注的是特征（具有的特性）。面向对象不是没有过程，而是不关注过程。&lt;/p&gt;
+&lt;h3 id=&quot;创建对象&quot;&gt;&lt;a href=&quot;#
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
+    
+      <category term="js面向对象" scheme="http://lkang.me/tags/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+      <category term="事件原理" scheme="http://lkang.me/tags/%E4%BA%8B%E4%BB%B6%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间对象</title>
+    <link href="http://lkang.me/2017/08/02/%E6%97%B6%E9%97%B4%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://lkang.me/2017/08/02/时间对象/</id>
+    <published>2017-08-02T09:28:56.000Z</published>
+    <updated>2017-08-02T11:11:51.946Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;时间对象&quot;&gt;&lt;a href=&quot;#时间对象&quot; class=&quot;headerlink&quot; title=&quot;时间对象&quot;&gt;&lt;/a&gt;时间对象&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Date() 日期对象,获取当前系统的时间&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;var date = new Date(
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="Data - javascript - ECMAScript" scheme="http://lkang.me/tags/Data-javascript-ECMAScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Math以及其方法</title>
+    <link href="http://lkang.me/2017/08/02/Math%E4%BB%A5%E5%8F%8A%E5%85%B6%E6%96%B9%E6%B3%95/"/>
+    <id>http://lkang.me/2017/08/02/Math以及其方法/</id>
+    <published>2017-08-02T09:26:07.000Z</published>
+    <updated>2017-08-02T09:28:12.078Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;math对象&quot;&gt;&lt;a href=&quot;#math对象&quot; class=&quot;headerlink&quot; title=&quot;math对象&quot;&gt;&lt;/a&gt;math对象&lt;/h2&gt;&lt;h3 id=&quot;Math-PI-圆周率&quot;&gt;&lt;a href=&quot;#Math-PI-圆周率&quot; class=&quot;header
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="Math - javascript - ECMAScript" scheme="http://lkang.me/tags/Math-javascript-ECMAScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字符串以及其方法</title>
+    <link href="http://lkang.me/2017/08/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BB%A5%E5%8F%8A%E5%85%B6%E6%96%B9%E6%B3%95/"/>
+    <id>http://lkang.me/2017/08/02/字符串以及其方法/</id>
+    <published>2017-08-02T09:15:52.000Z</published>
+    <updated>2017-08-02T09:22:11.142Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;字符串&quot;&gt;&lt;a href=&quot;#字符串&quot; class=&quot;headerlink&quot; title=&quot;字符串&quot;&gt;&lt;/a&gt;字符串&lt;/h2&gt;&lt;p&gt;由0个多个字符组成，被成对英文的单引号或双引号包含起来&lt;br&gt;字符串还可以是用 \u unicode 编码来描述一个字符  &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="string - javascript - ECMAScript" scheme="http://lkang.me/tags/string-javascript-ECMAScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node的文件加载</title>
+    <link href="http://lkang.me/2017/08/01/node%E7%9A%84%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/"/>
+    <id>http://lkang.me/2017/08/01/node的文件加载/</id>
+    <published>2017-08-01T10:49:53.000Z</published>
+    <updated>2017-08-01T11:12:38.238Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Node文件的执行&quot;&gt;&lt;a href=&quot;#Node文件的执行&quot; class=&quot;headerlink&quot; title=&quot;Node文件的执行&quot;&gt;&lt;/a&gt;Node文件的执行&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;node 要执行的node文件
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果
+    
+    </summary>
+    
+      <category term="node.js" scheme="http://lkang.me/categories/node-js/"/>
+    
+    
+      <category term="node.js" scheme="http://lkang.me/tags/node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cmd常用命令</title>
+    <link href="http://lkang.me/2017/08/01/cmd%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://lkang.me/2017/08/01/cmd常用命令/</id>
+    <published>2017-08-01T03:29:44.000Z</published>
+    <updated>2017-08-01T09:13:49.300Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;进入命令行界面以后，默认会在当前用户的家目录&lt;/li&gt;
+&lt;li&gt;括号里的是Mac上的命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;##命令&lt;
+    
+    </summary>
+    
+      <category term="杂项" scheme="http://lkang.me/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="cmd" scheme="http://lkang.me/tags/cmd/"/>
+    
+      <category term="命令" scheme="http://lkang.me/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6的总结</title>
+    <link href="http://lkang.me/2017/07/25/ES6%E7%9A%84%E6%80%BB%E7%BB%93/"/>
+    <id>http://lkang.me/2017/07/25/ES6的总结/</id>
+    <published>2017-07-25T11:22:39.000Z</published>
+    <updated>2017-08-01T11:53:08.240Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;let&quot;&gt;&lt;a href=&quot;#let&quot; class=&quot;headerlink&quot; title=&quot;let&quot;&gt;&lt;/a&gt;let&lt;/h2&gt;&lt;p&gt;es6新增的用于变量申明的关键字  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同一作用域，通过let申明的变量，不允许重复申明&lt;/li&gt;
+&lt;li&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="javascript - ECMAScript - ES6" scheme="http://lkang.me/tags/javascript-ECMAScript-ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数组以及她的方法</title>
+    <link href="http://lkang.me/2017/07/07/%E6%95%B0%E7%BB%84%E4%BB%A5%E5%8F%8A%E5%A5%B9%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>http://lkang.me/2017/07/07/数组以及她的方法/</id>
+    <published>2017-07-07T09:10:31.000Z</published>
+    <updated>2017-08-02T09:24:43.056Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;数组：一组有序的数据的集合&quot;&gt;&lt;a href=&quot;#数组：一组有序的数据的集合&quot; class=&quot;headerlink&quot; title=&quot;数组：一组有序的数据的集合&quot;&gt;&lt;/a&gt;数组：一组有序的数据的集合&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;存储一组数据，在js中，数组本质其实就是
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="Array - javascript - ECMAScript" scheme="http://lkang.me/tags/Array-javascript-ECMAScript/"/>
+    
+  </entry>
   
   <entry>
     <title>移动端陀螺仪的使用</title>
@@ -36,6 +214,28 @@
       <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
     
       <category term="陀螺仪" scheme="http://lkang.me/tags/%E9%99%80%E8%9E%BA%E4%BB%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js中正则表达式的规则</title>
+    <link href="http://lkang.me/2017/07/06/js%E4%B8%AD%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E8%A7%84%E5%88%99/"/>
+    <id>http://lkang.me/2017/07/06/js中正则表达式的规则/</id>
+    <published>2017-07-06T07:22:43.000Z</published>
+    <updated>2017-08-01T04:30:12.046Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;正则表达式（Regular-Expression）&quot;&gt;&lt;a href=&quot;#正则表达式（Regular-Expression）&quot; class=&quot;headerlink&quot; title=&quot;正则表达式（Regular Expression）&quot;&gt;&lt;/a&gt;正则表达式（Regul
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
+    
+      <category term="正则表达式" scheme="http://lkang.me/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
@@ -63,6 +263,31 @@
   </entry>
   
   <entry>
+    <title>function</title>
+    <link href="http://lkang.me/2017/07/04/function/"/>
+    <id>http://lkang.me/2017/07/04/function/</id>
+    <published>2017-07-04T10:15:53.000Z</published>
+    <updated>2017-08-02T11:17:06.568Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;function 功能方法 把一个个零散的代码和数据，组合成一个完整的方法.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;函数声明&quot;&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
+    
+      <category term="function" scheme="http://lkang.me/tags/function/"/>
+    
+  </entry>
+  
+  <entry>
     <title>FileReader的用法</title>
     <link href="http://lkang.me/2017/07/03/filereder/"/>
     <id>http://lkang.me/2017/07/03/filereder/</id>
@@ -83,6 +308,29 @@
       <category term="数据上传" scheme="http://lkang.me/tags/%E6%95%B0%E6%8D%AE%E4%B8%8A%E4%BC%A0/"/>
     
       <category term="html5" scheme="http://lkang.me/tags/html5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript基础，需要注意的问题</title>
+    <link href="http://lkang.me/2017/07/03/JavaScript/"/>
+    <id>http://lkang.me/2017/07/03/JavaScript/</id>
+    <published>2017-07-03T06:38:26.000Z</published>
+    <updated>2017-08-02T11:12:40.298Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;JS本身严格区分大小写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;javascript-JS-的组成&quot;&gt;&lt;a href=&quot;#java
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://lkang.me/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://lkang.me/tags/javascript/"/>
     
   </entry>
   
@@ -229,16 +477,16 @@
   </entry>
   
   <entry>
-    <title>文档对象模型(DOM)的一些方法和属性</title>
-    <link href="http://lkang.me/2017/06/26/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-DOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/"/>
-    <id>http://lkang.me/2017/06/26/文档对象模型-DOM-的一些方法和属性/</id>
+    <title>DOM中的事件对象</title>
+    <link href="http://lkang.me/2017/06/26/%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://lkang.me/2017/06/26/事件对象/</id>
     <published>2017-06-26T02:20:34.000Z</published>
-    <updated>2017-07-30T14:38:01.150Z</updated>
+    <updated>2017-08-02T08:39:23.484Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;document-对象&quot;&gt;&lt;a href=&quot;#document-对象&quot; class=&quot;headerlink&quot; title=&quot;document 对象&quot;&gt;&lt;/a&gt;document 对象&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Document 对象是 Window 对象的一部分，可
+      &lt;h2 id=&quot;Event-对象&quot;&gt;&lt;a href=&quot;#Event-对象&quot; class=&quot;headerlink&quot; title=&quot;Event 对象&quot;&gt;&lt;/a&gt;Event 对象&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Event 对象代表事件的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的
     
     </summary>
     
