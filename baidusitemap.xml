@@ -4,6 +4,134 @@
 
     
   <url>
+    <loc>http://lkang.me/2017/07/25/ES6%E7%9A%84%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2017-08-20T17:17:48.442Z</lastmod>
+    <data>
+        <display>
+        <title>ES6的学习和总结</title>
+        <pubTime>2017-07-25T11:22:39.000Z</pubTime>
+        
+        <tag>javascript - ECMAScript - ES6</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="http://lkang.me/categories/javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lkang.me/2017/07/19/sass/</loc>
+    <lastmod>2017-08-20T16:27:09.133Z</lastmod>
+    <data>
+        <display>
+        <title>sass的安装与使用</title>
+        <pubTime>2017-07-19T14:25:25.000Z</pubTime>
+        
+        <tag>sass - css</tag>
+         
+         
+           
+             
+              <breadCrumb title="css" url="http://lkang.me/categories/css/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lkang.me/2017/06/27/VSCode/</loc>
+    <lastmod>2017-08-19T19:52:50.797Z</lastmod>
+    <data>
+        <display>
+        <title>VSCode使用以及遇到的问题</title>
+        <pubTime>2017-06-26T18:06:16.000Z</pubTime>
+        
+        <tag>VSCode</tag>
+         
+        <tag>插件</tag>
+         
+         
+           
+             
+              <breadCrumb title="软件应用" url="http://lkang.me/categories/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lkang.me/2017/08/18/%E5%AD%A6%E4%B9%A0vue%E7%9A%84%E5%BC%80%E5%A7%8B/</loc>
+    <lastmod>2017-08-19T02:54:53.363Z</lastmod>
+    <data>
+        <display>
+        <title>学习Vue2.0的开始</title>
+        <pubTime>2017-08-18T15:37:19.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+        <tag>Vue原理</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="http://lkang.me/categories/Vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lkang.me/2017/08/19/%E5%AF%B9Object-defineProperty%E6%96%B9%E6%B3%95%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%90%86%E8%A7%A3/</loc>
+    <lastmod>2017-08-18T17:46:11.083Z</lastmod>
+    <data>
+        <display>
+        <title>对Object.defineProperty方法的学习和理解</title>
+        <pubTime>2017-08-18T16:48:50.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>ECMAScript</tag>
+         
+        <tag>Object</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="http://lkang.me/categories/javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lkang.me/2017/08/09/%E5%AF%B9ajax%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%92%8C%E8%AE%A4%E8%AF%86/</loc>
+    <lastmod>2017-08-10T03:12:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>对ajax的学习和认识</title>
+        <pubTime>2017-08-09T07:48:34.000Z</pubTime>
+        
+        <tag>ajax - javascript - XML</tag>
+         
+         
+           
+             
+              <breadCrumb title="js数据处理" url="http://lkang.me/categories/js%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://lkang.me/2017/08/02/javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8A%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%8E%9F%E7%90%86/</loc>
     <lastmod>2017-08-02T12:11:29.764Z</lastmod>
     <data>
@@ -162,26 +290,6 @@
         <tag>DOM</tag>
          
         <tag>js事件</tag>
-         
-         
-           
-             
-              <breadCrumb title="javascript" url="http://lkang.me/categories/javascript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lkang.me/2017/07/25/ES6%E7%9A%84%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2017-08-01T11:53:08.240Z</lastmod>
-    <data>
-        <display>
-        <title>ES6的总结</title>
-        <pubTime>2017-07-25T11:22:39.000Z</pubTime>
-        
-        <tag>javascript - ECMAScript - ES6</tag>
          
          
            
@@ -397,28 +505,6 @@
 
     
     
-    
-  <url>
-    <loc>http://lkang.me/2017/06/27/VSCode%E6%8F%92%E4%BB%B6/</loc>
-    <lastmod>2017-07-24T12:16:03.666Z</lastmod>
-    <data>
-        <display>
-        <title>VSCode插件</title>
-        <pubTime>2017-06-26T18:06:16.000Z</pubTime>
-        
-        <tag>VSCode</tag>
-         
-        <tag>插件</tag>
-         
-         
-           
-             
-              <breadCrumb title="软件应用" url="http://lkang.me/categories/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://lkang.me/2017/07/01/%E4%BD%BF%E7%94%A8swiftype%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/</loc>
