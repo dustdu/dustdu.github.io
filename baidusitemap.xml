@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://lkang.me/2017/07/03/filereder/</loc>
+    <lastmod>2017-10-09T17:55:57.455Z</lastmod>
+    <data>
+        <display>
+        <title>FileReader的用法</title>
+        <pubTime>2017-07-03T14:18:15.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>数据上传</tag>
+         
+        <tag>html5</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="http://lkang.me/categories/javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://lkang.me/2017/08/19/%E5%AF%B9Object-defineProperty%E6%96%B9%E6%B3%95%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%90%86%E8%A7%A3/</loc>
     <lastmod>2017-10-09T17:28:42.048Z</lastmod>
     <data>
@@ -464,30 +488,6 @@
         <tag>ECMAScript</tag>
          
         <tag>js数据类型</tag>
-         
-         
-           
-             
-              <breadCrumb title="javascript" url="http://lkang.me/categories/javascript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lkang.me/2017/07/03/filereder/</loc>
-    <lastmod>2017-07-30T14:38:46.787Z</lastmod>
-    <data>
-        <display>
-        <title>FileReader的用法</title>
-        <pubTime>2017-07-03T14:18:15.000Z</pubTime>
-        
-        <tag>javascript</tag>
-         
-        <tag>数据上传</tag>
-         
-        <tag>html5</tag>
          
          
            
