@@ -76,7 +76,7 @@
 
     
         <meta property="article:published_time" content="8月 01, 2017" />
-        <meta property="article:modified_time" content="8月 01, 2017" />
+        <meta property="article:modified_time" content="10月 10, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -117,7 +117,7 @@
     "headline": "cmd常用命令",
     "url": "http://lkang.me/2017/08/01/cmd常用命令/index.html",
     "datePublished": "8月 01, 2017",
-    "dateModified": "8月 01, 2017",
+    "dateModified": "10月 10, 2017",
     "description": "一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、JavaScript、html、css",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -338,7 +338,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#注意"><span class="post-toc-number">1.</span> <span class="post-toc-text">注意</span></a></li></ol>
+        
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -517,22 +517,35 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>进入命令行界面以后，默认会在当前用户的家目录</li>
-<li>括号里的是Mac上的命令</li>
-</ul>
-<p>##命令</p>
-<pre><code>windows + r =&gt; 输入cmd =&gt; 回车
-</code></pre><p>打开cmd</p>
-<pre><code>cls(clear)  
-</code></pre><p>清空屏幕</p>
-<pre><code>cd 路径
-</code></pre><p>切换目录</p>
-<pre><code>盘符: 
-</code></pre><p>切换盘符</p>
-<pre><code>dir(ls)
-</code></pre><p>显示当前目录（一级）下的所有文件和文件夹</p>
-
+        <script src=/js/crypto-js.js></script><script>
+function doDecrypt(pwd, onError) {
+	console.log("in doDecrypt");
+	var txt = document.getElementById("enc_content").innerHTML;
+	var plantext;
+	try {
+	  	var bytes = CryptoJS.AES.decrypt(txt, pwd);
+		plaintext = bytes.toString(CryptoJS.enc.Utf8);
+	} catch(err) {
+		if(onError) {onError(err);}
+		return;
+	}
+	document.getElementById("enc_content").innerHTML = plaintext;
+	document.getElementById("enc_content").style.display = "block";
+   document.getElementById("enc_passwd").style.display = "none";
+}
+</script>
+<div id="enc_content" style="display:none">U2FsdGVkX19arfgeSJDF86qx0KTcFzZZzQilnaJq6V9s1TiLclEQB4Sp0SqPE4+OV0FSO9B0ovJi5yLpImy6O1goEsYus/PMP3A6xBnpKh1oeN7y1771/ArRIknnCZoAT+JkKWji4snT7kfVxjhBI4J4OBR6/gZ2Fa7Mlycq4TwRR2/S/fPy3FN2FjNOMUcHvI6G0ayXmTthSKX5Ryp8hRm0Y3xWk5yTWBD9pBYrwgc76T5bEoD4SY0VmzJiNjzmD2VCcLAYsqqztBbegQIVvzo/+vr4UDPKcJ5IcyQJ9a1AnuisD0/f3zEUvnsAhV2I8WwKZf5hYf8gqvbECtu1PlkLexruWAgaPgDxfzhLzfbMK3puK1N3Un58FR6Act3nxcdW+aU+6zAVK9Z2r3DB3+/zAv/Nf+dlWMFmt2ksEAWbgi8jA5z+fpsWcb/n80dDjK6EH/+s4ymv41ms8E7Yedyp5JiUYCmhUvsXDA8rgd6CRB7pBZvers9z98sJEb9S2gCd2LQyWEfzjum/s6hSR5qXrlJWfXKD5LUkyW9igcjA70UBJsn+/OIQtzl1luapBZDxG3oPekFK3flYOK9c5M8JZ7IH/6rwczJZwTSf0LI3d3rGG+0HDNqraz0PeuMqnc5dz4ATxkDdtqiPuYEaGeSPCwx/TV3A8Kz8/QPekFM7BEWDrUFDk9uxsJeqTpqQZ2H3Runom7LKaJeBPXDBTfJM0wQnbHjhLrNEmOGg5bTg4yLGy+WWiHvO78QiLem1Lw+01u8VYRpeH2n1V2xeug==</div><div id="enc_passwd"> <input id="enc_pwd_input" type="text" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
+<script>
+var onError = function(error) {
+	document.getElementById("enc_error").innerHTML = "password error!"
+};
+function decrypt() {
+var passwd = document.getElementById("enc_pwd_input").value;
+console.log(passwd);
+doDecrypt(passwd, onError);
+}
+</script>
+</div>
     
 
     
