@@ -43,14 +43,12 @@ function doDecrypt(pwd, onError) {
     <link href="http://lkang.me/2017/08/23/Promise%E5%AF%B9%E8%B1%A1/"/>
     <id>http://lkang.me/2017/08/23/Promise对象/</id>
     <published>2017-08-23T14:23:53.000Z</published>
-    <updated>2018-03-02T14:51:04.316Z</updated>
+    <updated>2018-03-02T17:14:03.003Z</updated>
     
     <summary type="html">
     
-      &lt;script src=/js/crypto-js.js&gt;&lt;/script&gt;&lt;script&gt;
-function doDecrypt(pwd, onError) {
-	console.log(&quot;in doDecrypt&quot;);
-	var txt = document.getEleme
+      &lt;h2 id=&quot;Promise：承诺&quot;&gt;&lt;a href=&quot;#Promise：承诺&quot; class=&quot;headerlink&quot; title=&quot;Promise：承诺&quot;&gt;&lt;/a&gt;Promise：承诺&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;new Promise(
+    /* executor *
     
     </summary>
     

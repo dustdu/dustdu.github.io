@@ -4,28 +4,8 @@
 
     
   <url>
-    <loc>http://lkang.me/2018/03/03/1/</loc>
-    <lastmod>2018-03-02T17:04:21.907Z</lastmod>
-    <data>
-        <display>
-        <title>1</title>
-        <pubTime>2018-03-02T16:29:44.000Z</pubTime>
-        
-        <tag>动漫</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活" url="http://lkang.me/categories/%E7%94%9F%E6%B4%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://lkang.me/2017/08/23/Promise%E5%AF%B9%E8%B1%A1/</loc>
-    <lastmod>2018-03-02T14:51:04.316Z</lastmod>
+    <lastmod>2018-03-02T17:14:03.003Z</lastmod>
     <data>
         <display>
         <title>Promise对象</title>
@@ -39,6 +19,26 @@
            
              
               <breadCrumb title="ES6" url="http://lkang.me/categories/ES6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lkang.me/2018/03/03/1/</loc>
+    <lastmod>2018-03-02T17:04:21.907Z</lastmod>
+    <data>
+        <display>
+        <title>1</title>
+        <pubTime>2018-03-02T16:29:44.000Z</pubTime>
+        
+        <tag>动漫</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="http://lkang.me/categories/%E7%94%9F%E6%B4%BB/"/>
           
         </display>
     </data>
