@@ -26,8 +26,30 @@
 
     
   <url>
+    <loc>http://lkang.me/2017/06/27/VSCode/</loc>
+    <lastmod>2017-11-12T20:09:50.122Z</lastmod>
+    <data>
+        <display>
+        <title>VSCode使用以及遇到的问题</title>
+        <pubTime>2017-06-26T18:06:16.000Z</pubTime>
+        
+        <tag>VSCode</tag>
+         
+        <tag>插件</tag>
+         
+         
+           
+             
+              <breadCrumb title="软件应用" url="http://lkang.me/categories/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://lkang.me/2017/08/01/cmd%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2017-10-10T01:02:49.821Z</lastmod>
+    <lastmod>2017-10-10T01:02:49.822Z</lastmod>
     <data>
         <display>
         <title>cmd常用命令</title>
@@ -49,7 +71,7 @@
     
   <url>
     <loc>http://lkang.me/2017/07/03/filereder/</loc>
-    <lastmod>2017-10-10T00:55:00.411Z</lastmod>
+    <lastmod>2017-10-10T00:55:00.412Z</lastmod>
     <data>
         <display>
         <title>FileReader的用法</title>
@@ -119,7 +141,7 @@
     
   <url>
     <loc>http://lkang.me/2017/07/06/%E9%99%80%E8%9E%BA%E4%BB%AA/</loc>
-    <lastmod>2017-09-02T02:46:03.130Z</lastmod>
+    <lastmod>2017-09-02T02:46:03.131Z</lastmod>
     <data>
         <display>
         <title>移动端陀螺仪的使用</title>
@@ -140,30 +162,8 @@
 
     
   <url>
-    <loc>http://lkang.me/2017/06/27/VSCode/</loc>
-    <lastmod>2017-08-27T10:16:53.574Z</lastmod>
-    <data>
-        <display>
-        <title>VSCode使用以及遇到的问题</title>
-        <pubTime>2017-06-26T18:06:16.000Z</pubTime>
-        
-        <tag>VSCode</tag>
-         
-        <tag>插件</tag>
-         
-         
-           
-             
-              <breadCrumb title="软件应用" url="http://lkang.me/categories/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://lkang.me/2017/07/19/sass/</loc>
-    <lastmod>2017-08-24T08:38:18.119Z</lastmod>
+    <lastmod>2017-08-24T08:38:18.120Z</lastmod>
     <data>
         <display>
         <title>sass的安装</title>
@@ -223,7 +223,7 @@
     
   <url>
     <loc>http://lkang.me/2017/08/18/%E5%AD%A6%E4%B9%A0vue%E7%9A%84%E5%BC%80%E5%A7%8B/</loc>
-    <lastmod>2017-08-19T02:54:53.363Z</lastmod>
+    <lastmod>2017-08-19T02:54:53.364Z</lastmod>
     <data>
         <display>
         <title>学习Vue2.0的开始</title>
@@ -311,7 +311,7 @@
     
   <url>
     <loc>http://lkang.me/2017/07/03/JavaScript/</loc>
-    <lastmod>2017-08-02T11:12:40.298Z</lastmod>
+    <lastmod>2017-08-02T11:12:40.299Z</lastmod>
     <data>
         <display>
         <title>javascript基础，需要注意的问题</title>
@@ -371,7 +371,7 @@
     
   <url>
     <loc>http://lkang.me/2017/07/07/%E6%95%B0%E7%BB%84%E4%BB%A5%E5%8F%8A%E5%A5%B9%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2017-08-02T09:24:43.056Z</lastmod>
+    <lastmod>2017-08-02T09:24:43.057Z</lastmod>
     <data>
         <display>
         <title>数组以及她的方法</title>
@@ -391,7 +391,7 @@
     
   <url>
     <loc>http://lkang.me/2017/08/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BB%A5%E5%8F%8A%E5%85%B6%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2017-08-02T09:22:11.142Z</lastmod>
+    <lastmod>2017-08-02T09:22:11.143Z</lastmod>
     <data>
         <display>
         <title>字符串以及其方法</title>
@@ -477,7 +477,7 @@
     
   <url>
     <loc>http://lkang.me/2017/07/01/ECMAScript/</loc>
-    <lastmod>2017-07-30T14:38:59.150Z</lastmod>
+    <lastmod>2017-07-30T14:38:59.151Z</lastmod>
     <data>
         <display>
         <title>ECMAScript的数据和运算</title>
@@ -501,7 +501,7 @@
     
   <url>
     <loc>http://lkang.me/2017/06/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B-BOM-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7/</loc>
-    <lastmod>2017-07-30T14:38:21.850Z</lastmod>
+    <lastmod>2017-07-30T14:38:21.851Z</lastmod>
     <data>
         <display>
         <title>浏览器对象模型(BOM)的一些方法和属性</title>
@@ -598,7 +598,7 @@
     
   <url>
     <loc>http://lkang.me/2017/06/27/%E5%B9%B3%E6%97%B6%E7%94%A8%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%B3%A8%E5%86%8C%E7%A0%81%E4%BB%A5%E5%8F%8A%E5%8C%B9%E9%85%8D%E7%9A%84%E7%89%88%E6%9C%AC/</loc>
-    <lastmod>2017-06-26T18:14:06.424Z</lastmod>
+    <lastmod>2017-06-26T18:14:06.425Z</lastmod>
     <data>
         <display>
         <title>平时用到的一些软件的注册码以及匹配的版本</title>
