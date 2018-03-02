@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://lkang.me/2017/08/23/Promise%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2018-03-02T14:51:04.316Z</lastmod>
+    <data>
+        <display>
+        <title>Promise对象</title>
+        <pubTime>2017-08-23T14:23:53.000Z</pubTime>
+        
+        <tag>js异步</tag>
+         
+        <tag>ES6</tag>
+         
+         
+           
+             
+              <breadCrumb title="ES6" url="http://lkang.me/categories/ES6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://lkang.me/2017/08/01/cmd%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2017-10-10T01:02:49.821Z</lastmod>
     <data>
@@ -153,28 +175,6 @@
            
              
               <breadCrumb title="css" url="http://lkang.me/categories/css/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lkang.me/2017/08/23/Promise%E5%AF%B9%E8%B1%A1/</loc>
-    <lastmod>2017-08-23T18:09:17.450Z</lastmod>
-    <data>
-        <display>
-        <title>Promise对象</title>
-        <pubTime>2017-08-23T14:23:53.000Z</pubTime>
-        
-        <tag>js异步</tag>
-         
-        <tag>ES6</tag>
-         
-         
-           
-             
-              <breadCrumb title="ES6" url="http://lkang.me/categories/ES6/"/>
           
         </display>
     </data>

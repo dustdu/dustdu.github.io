@@ -76,7 +76,7 @@
 
     
         <meta property="article:published_time" content="8月 23, 2017" />
-        <meta property="article:modified_time" content="8月 24, 2017" />
+        <meta property="article:modified_time" content="3月 02, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -117,7 +117,7 @@
     "headline": "Promise对象",
     "url": "http://lkang.me/2017/08/23/Promise对象/index.html",
     "datePublished": "8月 23, 2017",
-    "dateModified": "8月 24, 2017",
+    "dateModified": "3月 02, 2018",
     "description": "一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、JavaScript、html、css",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -338,7 +338,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Promise：承诺"><span class="post-toc-number">1.</span> <span class="post-toc-text">Promise：承诺</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用Promise"><span class="post-toc-number">2.</span> <span class="post-toc-text">使用Promise</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Promise-prototype-then"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Promise.prototype.then()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Promise-prototype-catch（）"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Promise.prototype.catch（）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Promise-all-iterable"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Promise.all(iterable)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Promise-race"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Promise.race()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Promise-resolve"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">Promise.resolve()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Promise-reject"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">Promise.reject()</span></a></li></ol></li></ol>
+        
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -526,158 +526,35 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="Promise：承诺"><a href="#Promise：承诺" class="headerlink" title="Promise：承诺"></a>Promise：承诺</h2><pre><code>new Promise(
-    /* executor */
-    function(resolve, reject) {...}
-);
-</code></pre><ul>
-<li>解决js中异步编程的问题</li>
-<li>Promise对象（executor）代表一个异步操作，会维护一个状态。有三种状态：Pending（进行中）、Fulfilled（已成功）和Rejected（已失败）。此状态不受外界影响。</li>
-<li>Promise对象的状态改变，只有两种可能：从Pending变为Fulfiled和从Pending变为Rejected。这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果。</li>
-<li>新建之后就会立即执行，无法取消Promise，无法中途取消。如果不设置回调函数，Promise内部抛出的错误，不会反应到外部。当处于Pending状态时，无法得知目前进展到哪一个阶段。</li>
-</ul>
-<h2 id="使用Promise"><a href="#使用Promise" class="headerlink" title="使用Promise"></a>使用Promise</h2><ul>
-<li><p>Promise对象是一个构造函数，如下使用：</p>
-<pre><code>var pro = new Promise(function(resolve, reject) {
-      // ... 
-    // ...
-      if (/* 异步操作成功 */){
-        resolve(value);
-      } else {
-        reject(error);
-      }
-});
-</code></pre></li>
-<li><p>构造函数的参数是一个带有resolve和reject两个参数的函数。</p>
-<ul>
-<li>此参数在生成Promise实例时同步执行（此参数在Promise构造函数返回新建对象前被调用，所以实例对象状态在对象返回时就确定了），被传递resolve和reject函数作为参数。</li>
-<li>异步操作成功时调用resolve 函数，将promise的状态改为fulfilled(完成)，将异步操作的结果，作为参数传递出去。异步操作失败时调用reject 函数，将promise的状态改为rejected（失败），将异步操作报出的错误，作为参数传递出去。。</li>
-<li>如果此参数抛出一个错误，那么该promise 状态为rejected。参数的返回值被忽略。</li>
-<li>一个异步操作的结果是返回另一个异步操作，状态就会传递给传递者</li>
-</ul>
-</li>
-</ul>
-<h3 id="Promise-prototype-then"><a href="#Promise-prototype-then" class="headerlink" title="Promise.prototype.then()"></a>Promise.prototype.then()</h3><ul>
-<li><p>Promise对象有一个then方法，当前置任务（Promise对象）完成的时候，会调用该方法，then方法接收两个参数，都是函数。第一个参数是当状态为Fulfilled时候执行；第二个参数是当状态为rejected时候执行。</p>
-<ul>
-<li>then方法的第一个参数是Resolved状态的回调函数，第二个参数（可选）是Rejected状态的回调函数。</li>
-<li>then方法返回的是一个新的Promise实例（不是原来那个Promise实例）。因此可以采用链式写法</li>
-<li><p>后续的then方法中如果有多个不同的函数，并且也有异步操作，这时可以返回一个Promise对象，保证同步</p>
-<p>Demo</p>
-<p>  &lt;!DOCTYPE html&gt;</p>
-  <html lang="en"><br>  <head><br>      <meta charset="UTF-8"><br>      <title>Title</title><br>  </head><br><br>  <body><br>      <script><br><br>          var b = 10;<br>          new Promise((resolve, reject) =&gt; {<br><br>              setTimeout(() =&gt; {<br>                  b += 10;<br>                  resolve();<br>  //                reject();<br>              }, 1000);<br><br>          }).then(function() {<br>              console.log(b);<br>              return new Promise((resolve, reject) =&gt; {<br>                  setTimeout(() =&gt; {<br>                      b <em>= 2;<br>                      resolve();<br>                  }, 1000);<br>              });<br>          }).then(function() {<br>              console.log(b);<br>              return new Promise((resolve, reject) =&gt; {<br>                  setTimeout(() =&gt; {<br>                      b </em>= b;<br>                      resolve();<br>                  }, 1000);<br>              });<br>          }).then(function() {<br>              console.log(b);<br>          },function() {<br>              console.log(‘失败了’);<br>          });<br>      </script><br>  </body><br>  </html></li>
-<li>在调用resolve，reject两个函数的时候，把需要传递给后续的then方法的数据作为其参数就可以</li>
-</ul>
-</li>
-</ul>
-<h3 id="Promise-prototype-catch（）"><a href="#Promise-prototype-catch（）" class="headerlink" title="Promise.prototype.catch（）"></a>Promise.prototype.catch（）</h3><ul>
-<li>与Promise.prototype.then(null, rejection)作用一样，只处理拒绝的情况。</li>
-<li>只要有一个Promise的状态变成了rejected，那么就会被catch方法捕获，执行catch，返回失败结果，否则，它将显示为成功。</li>
-<li>一般，不在then方法里面定义Reject状态的回调函数（即then的第二个参数），总是使用catch方法。</li>
-<li>在调用resolve，reject两个函数的时候，把需要传递给后续的catch方法的数据作为其参数就可以</li>
-</ul>
-<p>Demo</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Title&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-    &lt;script&gt;
-        var b = 10;
-        new Promise((resolve, reject) =&gt; {
-
-            setTimeout(() =&gt; {
-                b += 10;
-                resolve();
-//                reject();
-            }, 1000);
-
-        }).then(function() {
-            console.log(b);
-            return new Promise((resolve, reject) =&gt; {
-                setTimeout(() =&gt; {
-                    b *= 2;
-                    resolve();
-                }, 1000);
-            });
-        }).then(function() {
-            console.log(b);
-            return new Promise((resolve, reject) =&gt; {
-                setTimeout(() =&gt; {
-                    b *= b;
-//                    resolve();
-                    reject();
-                }, 1000);
-            });
-        }).then(function() {
-            console.log(b);
-        }).catch(function() {
-            console.log(1);
-        });
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h3 id="Promise-all-iterable"><a href="#Promise-all-iterable" class="headerlink" title="Promise.all(iterable)"></a>Promise.all(iterable)</h3><ul>
-<li>在一个Promise任务中需要处理多个异步任务，但是执行时间有是不确定的。后续的任务需要这几个异步任务全部完成以后再执行，那么就需要用到Promise中提供的all方法来实现</li>
-<li>把两个不同的异步任务分别包装在一个Promise对象中，如果不是，会调用Promise.resolve方法，将参数转为 Promise 实例，再进一步处理。然后调用Promise对象静态方法all，把上面多个不同异步Promise作为数组传递给all方法的参数。 这个时候Promise.all方法中会维护一个状态，这个状态是根据传入的多个异步任务的状态共同决定的。当多个异步任务的状态都变成了fulfilled，那么all的状态才是fulfilled，但是只要有一个异步任务的状态变成了rejected，那么all的状态就会变成rejected</li>
-<li>Promise.all方法的参数可以不是数组，是一个可迭代对象。</li>
-</ul>
-<p>Demo</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Title&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-    &lt;script&gt;
-        var p1 = new Promise((resolve, reject) =&gt; {
-            let a = 1;
-            setTimeout(() =&gt; {
-                a++;
-//                reject(&apos;one&apos;);
-                resolve(a);
-            }, Math.random() * 1000);
-        });
-
-        var p2 = new Promise((resolve, reject) =&gt; {
-            let b = 2;
-            setTimeout(() =&gt; {
-                b++;
-                resolve(b);
-            }, Math.random() * 1000);
-        });
-        Promise.all([p1, p2]).then(([a, b]) =&gt; {
-            console.log(a, b);
-        }).catch((err) =&gt; {
-            console.log(err);
-        })
-
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h3 id="Promise-race"><a href="#Promise-race" class="headerlink" title="Promise.race()"></a>Promise.race()</h3><ul>
-<li>参数和Promise.all(iterable)一样，一个可迭代对象。</li>
-<li>把几个不同的异步任务分别包装在一个Promise对象中，如果不是，会调用Promise.resolve方法，将参数转为 Promise 实例，再进一步处理。然后调用Promise对象静态方法race，把上面多个不同异步Promise作为数组传递给all方法的参数。Promise.race方法中会维护一个状态，有一个实例率先改变状态，p的状态就跟着改变。</li>
-</ul>
-<h3 id="Promise-resolve"><a href="#Promise-resolve" class="headerlink" title="Promise.resolve()"></a>Promise.resolve()</h3><ul>
-<li>将现有对象转为Promise对象</li>
-<li>参数<ul>
-<li>如果参数是Promise实例，Promise.resolve将、原封不动地返回这个实例。</li>
-<li>参数是一个thenable对象（具有then方法的对象），Promise.resolve方法会将这个对象转为Promise对象，然后就立即执行thenable对象的then方法。</li>
-<li>如果参数是一个原始值，或者是一个不具有then方法的对象，则Promise.resolve方法返回一个新的Promise对象，状态为Resolved。</li>
-<li>Promise.resolve方法允许调用时不带参数，直接返回一个Resolved状态的Promise对象。</li>
-</ul>
-</li>
-</ul>
-<h3 id="Promise-reject"><a href="#Promise-reject" class="headerlink" title="Promise.reject()"></a>Promise.reject()</h3><ul>
-<li>返回一个新的 Promise 实例，状态为rejected。</li>
-</ul>
-
+        <script src=/js/crypto-js.js></script><script>
+function doDecrypt(pwd, onError) {
+	console.log("in doDecrypt");
+	var txt = document.getElementById("enc_content").innerHTML;
+	var plantext;
+	try {
+	  	var bytes = CryptoJS.AES.decrypt(txt, pwd);
+		plaintext = bytes.toString(CryptoJS.enc.Utf8);
+	} catch(err) {
+		if(onError) {onError(err);}
+		return;
+	}
+	document.getElementById("enc_content").innerHTML = plaintext;
+	document.getElementById("enc_content").style.display = "block";
+   document.getElementById("enc_passwd").style.display = "none";
+}
+</script>
+<div id="enc_content" style="display:none">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</div><div id="enc_passwd"> <input id="enc_pwd_input" type="text" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
+<script>
+var onError = function(error) {
+	document.getElementById("enc_error").innerHTML = "password error!"
+};
+function decrypt() {
+var passwd = document.getElementById("enc_pwd_input").value;
+console.log(passwd);
+doDecrypt(passwd, onError);
+}
+</script>
+</div>
     
 
     
