@@ -355,6 +355,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#File-API-—-gt-FileReader"><span class="post-toc-number">1.</span> <span class="post-toc-text">File API —> FileReader</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#添加文件"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">添加文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#FileReader对象"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">FileReader对象</span></a></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -528,35 +537,23 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <script src=/js/crypto-js.js></script><script>
-function doDecrypt(pwd, onError) {
-	console.log("in doDecrypt");
-	var txt = document.getElementById("enc_content").innerHTML;
-	var plantext;
-	try {
-	  	var bytes = CryptoJS.AES.decrypt(txt, pwd);
-		plaintext = bytes.toString(CryptoJS.enc.Utf8);
-	} catch(err) {
-		if(onError) {onError(err);}
-		return;
-	}
-	document.getElementById("enc_content").innerHTML = plaintext;
-	document.getElementById("enc_content").style.display = "block";
-   document.getElementById("enc_passwd").style.display = "none";
-}
-</script>
-<div id="enc_content" style="display:none">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</div><div id="enc_passwd"> <input id="enc_pwd_input" type="text" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
-<script>
-var onError = function(error) {
-	document.getElementById("enc_error").innerHTML = "password error!"
-};
-function decrypt() {
-var passwd = document.getElementById("enc_pwd_input").value;
-console.log(passwd);
-doDecrypt(passwd, onError);
-}
-</script>
-</div>
+        <h1 id="File-API-—-gt-FileReader"><a href="#File-API-—-gt-FileReader" class="headerlink" title="File API —&gt; FileReader"></a>File API —&gt; FileReader</h1><h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><ul>
+<li>change时input加了一个files集合，包含file对象，每个file对象对应着一个文件。并且都有name,size,type,lastModifiedDate只读属性.</li>
+<li>可根据这些属性验证判断文件。</li>
+</ul>
+<h2 id="FileReader对象"><a href="#FileReader对象" class="headerlink" title="FileReader对象"></a>FileReader对象</h2><ul>
+<li>使用的是一种异步文件读取机制，读取的是文件系统</li>
+<li>有四种读取方法，结果存储在FileReader的result属性中<ul>
+<li>readAsText（file,encoding）：有两个参数，中第二个参数是文本的编码方式，默认值为 UTF-8，可省略。将文件以文本方式读取，读取的结果即是这个文本文件中的内容。</li>
+<li>readAsBinaryString（file）：将文件读取为二进制字符串，通常我们将它传送到后端，后端可以通过这段字符串存储文件。</li>
+<li>readAsDataURL（file）：将文件读取为一段以 data: 开头的字符串，字符串的实质就是 Data URL，Data URL是一种将小文件直接嵌入文档的方案。这里的小文件通常是指图像与 html 等格式的文件。</li>
+<li>readAsArrayBuffer(file)：读取文件并将一个包含文件内容的ArrayBuffer保存在result属性中</li>
+<li>abort() 中止该读取操作</li>
+</ul>
+</li>
+<li>result 读取到的文件内容.这个属性只在读取操作完成之后才有效,并且数据的格式取决于读取操作是由哪个方法发起的. 只读.</li>
+</ul>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=30070397&auto=1&height=66"></iframe>
         
     
 
@@ -639,7 +636,7 @@ doDecrypt(passwd, onError);
 <aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
     <div id="sidebar-main">
         <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpg);">
     <!-- Top bar -->
     <div class="top-bar"></div>
 

@@ -355,6 +355,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#注意"><span class="post-toc-number">1.</span> <span class="post-toc-text">注意</span></a></li></ol>
+    </ul>
+    
 
 
 
@@ -528,35 +537,22 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <script src=/js/crypto-js.js></script><script>
-function doDecrypt(pwd, onError) {
-	console.log("in doDecrypt");
-	var txt = document.getElementById("enc_content").innerHTML;
-	var plantext;
-	try {
-	  	var bytes = CryptoJS.AES.decrypt(txt, pwd);
-		plaintext = bytes.toString(CryptoJS.enc.Utf8);
-	} catch(err) {
-		if(onError) {onError(err);}
-		return;
-	}
-	document.getElementById("enc_content").innerHTML = plaintext;
-	document.getElementById("enc_content").style.display = "block";
-   document.getElementById("enc_passwd").style.display = "none";
-}
-</script>
-<div id="enc_content" style="display:none">U2FsdGVkX1+cDXs6RwJzy0/+OrgiHwv3EQ4TwFR96cg62JyrpoPFQstSzKGX9s3ozNPeGUBCVFWnXIJX3XZcVWZ3pUuJEV7R+gGOGTX3+mAUpThAQmjQVP3tSp2+KUuevP7n7YVXJ1h5NOksC+sNwgJTEy/sYwMp1aRcsDZ1y2xUwuKOazP9MKD4qh/WS/BEYQ5HeQd8eMYbDQ+orUG4nypPrQBpHm0ICwJeuhKD7CuZr2wrWngqly05jAkv3sM3P69NtIwBkzIVrGpQlXvI2mEZsUPTpWpGLabYV+8xU6rYc/oF+c3cnA2eQqUGdbOxHNuDu91rK0bwD2+tQbaPtyESArO0RkyOAPKXvi2JQ7yhN8FODUQKqiOL8nxrKOFzV2t+FlEgZdLjpuKR8ZPEQB8h8bd9dP9E0qMyMlvLGL04pEdQrdc9ee4nJ440PJpeHU6oFEs9fAJvNffPtgGIcy+iZFabeEdVL2P5AoEhsqA4m6RyKYHQObzwMTUvLij2KC6fP4NZQdiPG3VZo4Hagx4SW+99Qu0Oo2GbJWHpYZn3/J4aMaAChTSD2NDACHSU8GRegKbqbnVdiEAfJX48RSBvG1vuvtoHd0amu5C0ZZGY+fbCYz5nXJSNIgR3eB92hYSUVXzgSw+uN/4Ij53hzhlU+XyeJ4KWdug0liicRDaX0Vj2wXjSBOmyhq4VDETggsxOl1CXmfwwbzqXx6yexwDeV0zqRpY/JKGCstMaJ8Kbf7GbbKRYgnYaVPPRFV4rD0idlATpVGLri8ZmwgrKug==</div><div id="enc_passwd"> <input id="enc_pwd_input" type="text" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
-<script>
-var onError = function(error) {
-	document.getElementById("enc_error").innerHTML = "password error!"
-};
-function decrypt() {
-var passwd = document.getElementById("enc_pwd_input").value;
-console.log(passwd);
-doDecrypt(passwd, onError);
-}
-</script>
-</div>
+        <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>进入命令行界面以后，默认会在当前用户的家目录</li>
+<li>括号里的是Mac上的命令</li>
+</ul>
+<p>##命令</p>
+<pre><code>windows + r =&gt; 输入cmd =&gt; 回车
+</code></pre><p>打开cmd</p>
+<pre><code>cls(clear)  
+</code></pre><p>清空屏幕</p>
+<pre><code>cd 路径
+</code></pre><p>切换目录</p>
+<pre><code>盘符: 
+</code></pre><p>切换盘符</p>
+<pre><code>dir(ls)
+</code></pre><p>显示当前目录（一级）下的所有文件和文件夹</p>
+
         
     
 
@@ -639,7 +635,7 @@ doDecrypt(passwd, onError);
 <aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
     <div id="sidebar-main">
         <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpg);">
     <!-- Top bar -->
     <div class="top-bar"></div>
 

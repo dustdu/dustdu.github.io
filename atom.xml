@@ -24,10 +24,8 @@
     
     <summary type="html">
     
-      &lt;script src=/js/crypto-js.js&gt;&lt;/script&gt;&lt;script&gt;
-function doDecrypt(pwd, onError) {
-	console.log(&quot;in doDecrypt&quot;);
-	var txt = document.getEleme
+      &lt;h1 id=&quot;注意身体&quot;&gt;&lt;a href=&quot;#注意身体&quot; class=&quot;headerlink&quot; title=&quot;注意身体&quot;&gt;&lt;/a&gt;注意身体&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;下面Hash字符串前加 &lt;code&gt;magnet:?xt=urn:btih:&lt;/code&gt;,然后使
     
     </summary>
     
@@ -266,10 +264,11 @@ function doDecrypt(pwd, onError) {
     
     <summary type="html">
     
-      &lt;script src=/js/crypto-js.js&gt;&lt;/script&gt;&lt;script&gt;
-function doDecrypt(pwd, onError) {
-	console.log(&quot;in doDecrypt&quot;);
-	var txt = document.getEleme
+      &lt;h2 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;进入命令行界面以后，默认会在当前用户的家目录&lt;/li&gt;
+&lt;li&gt;括号里的是Mac上的命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;##命令&lt;
     
     </summary>
     
@@ -450,10 +449,7 @@ function doDecrypt(pwd, onError) {
     
     <summary type="html">
     
-      &lt;script src=/js/crypto-js.js&gt;&lt;/script&gt;&lt;script&gt;
-function doDecrypt(pwd, onError) {
-	console.log(&quot;in doDecrypt&quot;);
-	var txt = document.getEleme
+      &lt;h1 id=&quot;File-API-—-gt-FileReader&quot;&gt;&lt;a href=&quot;#File-API-—-gt-FileReader&quot; class=&quot;headerlink&quot; title=&quot;File API —&amp;gt; FileReader&quot;&gt;&lt;/a&gt;File API —&amp;gt
     
     </summary>
     
@@ -674,9 +670,9 @@ function doDecrypt(pwd, onError) {
       <category term="建站" scheme="http://lkang.me/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="建站" scheme="http://lkang.me/tags/%E5%BB%BA%E7%AB%99/"/>
-    
       <category term="hexo" scheme="http://lkang.me/tags/hexo/"/>
+    
+      <category term="建站" scheme="http://lkang.me/tags/%E5%BB%BA%E7%AB%99/"/>
     
       <category term="git" scheme="http://lkang.me/tags/git/"/>
     
