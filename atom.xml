@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>学海拾遗</title>
+  
   <subtitle>一些笔记</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lkang.me/"/>
-  <updated>2018-03-02T17:04:21.907Z</updated>
+  <updated>2018-03-16T15:47:44.977Z</updated>
   <id>http://lkang.me/</id>
   
   <author>
@@ -20,12 +21,11 @@
     <link href="http://lkang.me/2018/03/03/1/"/>
     <id>http://lkang.me/2018/03/03/1/</id>
     <published>2018-03-02T16:29:44.000Z</published>
-    <updated>2018-03-02T17:04:21.907Z</updated>
+    <updated>2018-03-16T15:47:44.977Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;注意身体&quot;&gt;&lt;a href=&quot;#注意身体&quot; class=&quot;headerlink&quot; title=&quot;注意身体&quot;&gt;&lt;/a&gt;注意身体&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;下面Hash字符串前加 &lt;code&gt;magnet:?xt=urn:btih:&lt;/code&gt;,然后使
+      本文章需要密码
     
     </summary>
     
@@ -45,8 +45,11 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Promise：承诺&quot;&gt;&lt;a href=&quot;#Promise：承诺&quot; class=&quot;headerlink&quot; title=&quot;Promise：承诺&quot;&gt;&lt;/a&gt;Promise：承诺&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;new Promise(
+      
+      
+        &lt;h2 id=&quot;Promise：承诺&quot;&gt;&lt;a href=&quot;#Promise：承诺&quot; class=&quot;headerlink&quot; title=&quot;Promise：承诺&quot;&gt;&lt;/a&gt;Promise：承诺&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;new Promise(
     /* executor *
+      
     
     </summary>
     
@@ -68,8 +71,11 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
+      
+      
+        &lt;blockquote&gt;
 &lt;p&gt;在学习js时，我们知道js是异步编程的，有时候在处理一些回调时，让人很头痛。在了解学习ES6时，有一个Promise内置对象，是对js异步编程的一种解决方案，其中还有 Generator 函数，在ES2017标准中更是有了async 函数对异步编程
+      
     
     </summary>
     
@@ -89,7 +95,10 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Object-defineProperty（）&quot;&gt;&lt;a href=&quot;#Object-defineProperty（）&quot; class=&quot;headerlink&quot; title=&quot;Object.defineProperty（）&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://
+      
+      
+        &lt;h2 id=&quot;Object-defineProperty（）&quot;&gt;&lt;a href=&quot;#Object-defineProperty（）&quot; class=&quot;headerlink&quot; title=&quot;Object.defineProperty（）&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://
+      
     
     </summary>
     
@@ -113,7 +122,10 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;认识vue2-0&quot;&gt;&lt;a href=&quot;#认识vue2-0&quot; class=&quot;headerlink&quot; title=&quot;认识vue2.0&quot;&gt;&lt;/a&gt;认识&lt;a href=&quot;https://cn.vuejs.org/&quot; target=&quot;_blank&quot; rel=&quot;externa
+      
+      
+        &lt;h2 id=&quot;认识vue2-0&quot;&gt;&lt;a href=&quot;#认识vue2-0&quot; class=&quot;headerlink&quot; title=&quot;认识vue2.0&quot;&gt;&lt;/a&gt;认识&lt;a href=&quot;https://cn.vuejs.org/&quot; target=&quot;_blank&quot; rel=&quot;noopene
+      
     
     </summary>
     
@@ -135,8 +147,11 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;AJAX&quot;&gt;&lt;a href=&quot;#AJAX&quot; class=&quot;headerlink&quot; title=&quot;AJAX&quot;&gt;&lt;/a&gt;AJAX&lt;/h1&gt;&lt;p&gt;Asynchronous Javascript And XML（异步JavaScript和XML）&lt;/p&gt;
+      
+      
+        &lt;h1 id=&quot;AJAX&quot;&gt;&lt;a href=&quot;#AJAX&quot; class=&quot;headerlink&quot; title=&quot;AJAX&quot;&gt;&lt;/a&gt;AJAX&lt;/h1&gt;&lt;p&gt;Asynchronous Javascript And XML（异步JavaScript和XML）&lt;/p&gt;
 &lt;h2 id=&quot;
+      
     
     </summary>
     
@@ -156,8 +171,11 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h2&gt;&lt;p&gt;关注的是特征（具有的特性）。面向对象不是没有过程，而是不关注过程。&lt;/p&gt;
+      
+      
+        &lt;h2 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h2&gt;&lt;p&gt;关注的是特征（具有的特性）。面向对象不是没有过程，而是不关注过程。&lt;/p&gt;
 &lt;h3 id=&quot;创建对象&quot;&gt;&lt;a href=&quot;#
+      
     
     </summary>
     
@@ -181,9 +199,12 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;时间对象&quot;&gt;&lt;a href=&quot;#时间对象&quot; class=&quot;headerlink&quot; title=&quot;时间对象&quot;&gt;&lt;/a&gt;时间对象&lt;/h2&gt;&lt;ul&gt;
+      
+      
+        &lt;h2 id=&quot;时间对象&quot;&gt;&lt;a href=&quot;#时间对象&quot; class=&quot;headerlink&quot; title=&quot;时间对象&quot;&gt;&lt;/a&gt;时间对象&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Date() 日期对象,获取当前系统的时间&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;var date = new Date(
+      
     
     </summary>
     
@@ -203,7 +224,10 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;math对象&quot;&gt;&lt;a href=&quot;#math对象&quot; class=&quot;headerlink&quot; title=&quot;math对象&quot;&gt;&lt;/a&gt;math对象&lt;/h2&gt;&lt;h3 id=&quot;Math-PI-圆周率&quot;&gt;&lt;a href=&quot;#Math-PI-圆周率&quot; class=&quot;header
+      
+      
+        &lt;h2 id=&quot;math对象&quot;&gt;&lt;a href=&quot;#math对象&quot; class=&quot;headerlink&quot; title=&quot;math对象&quot;&gt;&lt;/a&gt;math对象&lt;/h2&gt;&lt;h3 id=&quot;Math-PI-圆周率&quot;&gt;&lt;a href=&quot;#Math-PI-圆周率&quot; class=&quot;header
+      
     
     </summary>
     
@@ -223,7 +247,10 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;字符串&quot;&gt;&lt;a href=&quot;#字符串&quot; class=&quot;headerlink&quot; title=&quot;字符串&quot;&gt;&lt;/a&gt;字符串&lt;/h2&gt;&lt;p&gt;由0个多个字符组成，被成对英文的单引号或双引号包含起来&lt;br&gt;字符串还可以是用 \u unicode 编码来描述一个字符  &lt;/p&gt;
+      
+      
+        &lt;h2 id=&quot;字符串&quot;&gt;&lt;a href=&quot;#字符串&quot; class=&quot;headerlink&quot; title=&quot;字符串&quot;&gt;&lt;/a&gt;字符串&lt;/h2&gt;&lt;p&gt;由0个多个字符组成，被成对英文的单引号或双引号包含起来&lt;br&gt;字符串还可以是用 \u unicode 编码来描述一个字符  &lt;/p&gt;
+      
     
     </summary>
     
@@ -243,8 +270,11 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Node文件的执行&quot;&gt;&lt;a href=&quot;#Node文件的执行&quot; class=&quot;headerlink&quot; title=&quot;Node文件的执行&quot;&gt;&lt;/a&gt;Node文件的执行&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;node 要执行的node文件
+      
+      
+        &lt;h1 id=&quot;Node文件的执行&quot;&gt;&lt;a href=&quot;#Node文件的执行&quot; class=&quot;headerlink&quot; title=&quot;Node文件的执行&quot;&gt;&lt;/a&gt;Node文件的执行&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;node 要执行的node文件
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果
+      
     
     </summary>
     
@@ -264,11 +294,14 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h2&gt;&lt;ul&gt;
+      
+      
+        &lt;h2 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;进入命令行界面以后，默认会在当前用户的家目录&lt;/li&gt;
 &lt;li&gt;括号里的是Mac上的命令&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;##命令&lt;
+      
     
     </summary>
     
@@ -290,10 +323,13 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;let&quot;&gt;&lt;a href=&quot;#let&quot; class=&quot;headerlink&quot; title=&quot;let&quot;&gt;&lt;/a&gt;let&lt;/h2&gt;&lt;p&gt;es6新增的用于变量申明的关键字  &lt;/p&gt;
+      
+      
+        &lt;h2 id=&quot;let&quot;&gt;&lt;a href=&quot;#let&quot; class=&quot;headerlink&quot; title=&quot;let&quot;&gt;&lt;/a&gt;let&lt;/h2&gt;&lt;p&gt;es6新增的用于变量申明的关键字  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;同一作用域，通过let申明的变量，不允许重复申明&lt;/li&gt;
 &lt;li&gt;
+      
     
     </summary>
     
@@ -313,8 +349,11 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;sass安装&quot;&gt;&lt;a href=&quot;#sass安装&quot; class=&quot;headerlink&quot; title=&quot;sass安装&quot;&gt;&lt;/a&gt;sass安装&lt;/h2&gt;&lt;ol&gt;
+      
+      
+        &lt;h2 id=&quot;sass安装&quot;&gt;&lt;a href=&quot;#sass安装&quot; class=&quot;headerlink&quot; title=&quot;sass安装&quot;&gt;&lt;/a&gt;sass安装&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;安装ruby，&lt;a href=&quot;https://rubyinstaller.org/downlo
+      
     
     </summary>
     
@@ -334,8 +373,11 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;数组：一组有序的数据的集合&quot;&gt;&lt;a href=&quot;#数组：一组有序的数据的集合&quot; class=&quot;headerlink&quot; title=&quot;数组：一组有序的数据的集合&quot;&gt;&lt;/a&gt;数组：一组有序的数据的集合&lt;/h2&gt;&lt;ul&gt;
+      
+      
+        &lt;h2 id=&quot;数组：一组有序的数据的集合&quot;&gt;&lt;a href=&quot;#数组：一组有序的数据的集合&quot; class=&quot;headerlink&quot; title=&quot;数组：一组有序的数据的集合&quot;&gt;&lt;/a&gt;数组：一组有序的数据的集合&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;存储一组数据，在js中，数组本质其实就是
+      
     
     </summary>
     
@@ -355,9 +397,12 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;横竖屏判断&quot;&gt;&lt;a href=&quot;#横竖屏判断&quot; class=&quot;headerlink&quot; title=&quot;横竖屏判断&quot;&gt;&lt;/a&gt;横竖屏判断&lt;/h2&gt;&lt;ul&gt;
+      
+      
+        &lt;h2 id=&quot;横竖屏判断&quot;&gt;&lt;a href=&quot;#横竖屏判断&quot; class=&quot;headerlink&quot; title=&quot;横竖屏判断&quot;&gt;&lt;/a&gt;横竖屏判断&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;window.orientation 手机横竖屏的状态&lt;ul&gt;
 &lt;li&gt;undefined 设备不支持横
+      
     
     </summary>
     
@@ -379,7 +424,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;正则表达式（Regular-Expression）&quot;&gt;&lt;a href=&quot;#正则表达式（Regular-Expression）&quot; class=&quot;headerlink&quot; title=&quot;正则表达式（Regular Expression）&quot;&gt;&lt;/a&gt;正则表达式（Regul
+      
+      
+        &lt;h1 id=&quot;正则表达式（Regular-Expression）&quot;&gt;&lt;a href=&quot;#正则表达式（Regular-Expression）&quot; class=&quot;headerlink&quot; title=&quot;正则表达式（Regular Expression）&quot;&gt;&lt;/a&gt;正则表达式（Regul
+      
     
     </summary>
     
@@ -401,8 +449,11 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;移动端事件&quot;&gt;&lt;a href=&quot;#移动端事件&quot; class=&quot;headerlink&quot; title=&quot;移动端事件&quot;&gt;&lt;/a&gt;移动端事件&lt;/h1&gt;&lt;ul&gt;
+      
+      
+        &lt;h1 id=&quot;移动端事件&quot;&gt;&lt;a href=&quot;#移动端事件&quot; class=&quot;headerlink&quot; title=&quot;移动端事件&quot;&gt;&lt;/a&gt;移动端事件&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;在模拟器下，用事件绑定的方式添加touch事件，时好时坏,但是在真机上没有问题,最好用事件监听来添加事件
+      
     
     </summary>
     
@@ -424,10 +475,13 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h2&gt;&lt;ul&gt;
+      
+      
+        &lt;h2 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;function 功能方法 把一个个零散的代码和数据，组合成一个完整的方法.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;函数声明&quot;&gt;
+      
     
     </summary>
     
@@ -449,7 +503,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;File-API-—-gt-FileReader&quot;&gt;&lt;a href=&quot;#File-API-—-gt-FileReader&quot; class=&quot;headerlink&quot; title=&quot;File API —&amp;gt; FileReader&quot;&gt;&lt;/a&gt;File API —&amp;gt
+      
+      
+        &lt;h1 id=&quot;File-API-—-gt-FileReader&quot;&gt;&lt;a href=&quot;#File-API-—-gt-FileReader&quot; class=&quot;headerlink&quot; title=&quot;File API —&amp;gt; FileReader&quot;&gt;&lt;/a&gt;File API —&amp;gt
+      
     
     </summary>
     
@@ -473,10 +530,13 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h2&gt;&lt;ul&gt;
+      
+      
+        &lt;h2 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;JS本身严格区分大小写&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;javascript-JS-的组成&quot;&gt;&lt;a href=&quot;#java
+      
     
     </summary>
     
@@ -496,9 +556,12 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;ol&gt;
+      
+      
+        &lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;标准划分&lt;ul&gt;
 &lt;li&gt;基本类型: number/string/boolean/undefined/null&lt;
+      
     
     </summary>
     
@@ -522,7 +585,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;网站内部搜索&quot;&gt;&lt;a href=&quot;#网站内部搜索&quot; class=&quot;headerlink&quot; title=&quot;网站内部搜索&quot;&gt;&lt;/a&gt;网站内部搜索&lt;/h1&gt;&lt;p&gt;我使用的是Material主题，已经内置了google,swiftype,local三种搜索系统。根据自己的
+      
+      
+        &lt;h1 id=&quot;网站内部搜索&quot;&gt;&lt;a href=&quot;#网站内部搜索&quot; class=&quot;headerlink&quot; title=&quot;网站内部搜索&quot;&gt;&lt;/a&gt;网站内部搜索&lt;/h1&gt;&lt;p&gt;我使用的是Material主题，已经内置了google,swiftype,local三种搜索系统。根据自己的
+      
     
     </summary>
     
@@ -548,9 +614,12 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;window对象&quot;&gt;&lt;a href=&quot;#window对象&quot; class=&quot;headerlink&quot; title=&quot;window对象&quot;&gt;&lt;/a&gt;window对象&lt;/h2&gt;&lt;ul&gt;
+      
+      
+        &lt;h2 id=&quot;window对象&quot;&gt;&lt;a href=&quot;#window对象&quot; class=&quot;headerlink&quot; title=&quot;window对象&quot;&gt;&lt;/a&gt;window对象&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;表示浏览器中打开的窗口&lt;/li&gt;
 &lt;li&gt;如果文档包含框架（frame 或 if
+      
     
     </summary>
     
@@ -572,7 +641,10 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;VSCode插件&quot;&gt;&lt;a href=&quot;#VSCode插件&quot; class=&quot;headerlink&quot; title=&quot;VSCode插件&quot;&gt;&lt;/a&gt;VSCode插件&lt;/h2&gt;&lt;h3 id=&quot;Open-in-Browser-（在浏览器中查看）&quot;&gt;&lt;a href=&quot;#Open
+      
+      
+        &lt;h2 id=&quot;VSCode插件&quot;&gt;&lt;a href=&quot;#VSCode插件&quot; class=&quot;headerlink&quot; title=&quot;VSCode插件&quot;&gt;&lt;/a&gt;VSCode插件&lt;/h2&gt;&lt;h3 id=&quot;Open-in-Browser-（在浏览器中查看）&quot;&gt;&lt;a href=&quot;#Open
+      
     
     </summary>
     
@@ -594,7 +666,10 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;sublime插件&quot;&gt;&lt;a href=&quot;#sublime插件&quot; class=&quot;headerlink&quot; title=&quot;sublime插件&quot;&gt;&lt;/a&gt;sublime插件&lt;/h2&gt;&lt;h3 id=&quot;Alignment&quot;&gt;&lt;a href=&quot;#Alignment&quot; class
+      
+      
+        &lt;h2 id=&quot;sublime插件&quot;&gt;&lt;a href=&quot;#sublime插件&quot; class=&quot;headerlink&quot; title=&quot;sublime插件&quot;&gt;&lt;/a&gt;sublime插件&lt;/h2&gt;&lt;h3 id=&quot;Alignment&quot;&gt;&lt;a href=&quot;#Alignment&quot; class
+      
     
     </summary>
     
@@ -616,7 +691,10 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;BenVista-PhotoZoom-Pro-7-0-6-64-bit&quot;&gt;&lt;a href=&quot;#BenVista-PhotoZoom-Pro-7-0-6-64-bit&quot; class=&quot;headerlink&quot; title=&quot;BenVista PhotoZoom Pro
+      
+      
+        &lt;h2 id=&quot;BenVista-PhotoZoom-Pro-7-0-6-64-bit&quot;&gt;&lt;a href=&quot;#BenVista-PhotoZoom-Pro-7-0-6-64-bit&quot; class=&quot;headerlink&quot; title=&quot;BenVista PhotoZoom Pro
+      
     
     </summary>
     
@@ -638,8 +716,11 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Event-对象&quot;&gt;&lt;a href=&quot;#Event-对象&quot; class=&quot;headerlink&quot; title=&quot;Event 对象&quot;&gt;&lt;/a&gt;Event 对象&lt;/h2&gt;&lt;ul&gt;
+      
+      
+        &lt;h2 id=&quot;Event-对象&quot;&gt;&lt;a href=&quot;#Event-对象&quot; class=&quot;headerlink&quot; title=&quot;Event 对象&quot;&gt;&lt;/a&gt;Event 对象&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Event 对象代表事件的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的
+      
     
     </summary>
     
@@ -663,7 +744,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;hexo的简单介绍&quot;&gt;&lt;a href=&quot;#hexo的简单介绍&quot; class=&quot;headerlink&quot; title=&quot;hexo的简单介绍&quot;&gt;&lt;/a&gt;hexo的简单介绍&lt;/h1&gt;&lt;p&gt;Hexo 使用 Markdown（或其他渲染引擎）解析文章，配合上github和co
+      
+      
+        &lt;h1 id=&quot;hexo的简单介绍&quot;&gt;&lt;a href=&quot;#hexo的简单介绍&quot; class=&quot;headerlink&quot; title=&quot;hexo的简单介绍&quot;&gt;&lt;/a&gt;hexo的简单介绍&lt;/h1&gt;&lt;p&gt;Hexo 使用 Markdown（或其他渲染引擎）解析文章，配合上github和co
+      
     
     </summary>
     
