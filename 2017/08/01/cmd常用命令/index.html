@@ -545,7 +545,7 @@ function doDecrypt(pwd, onError) {
    document.getElementById("enc_passwd").style.display = "none";
 }
 </script>
-<div id="enc_content" style="display:none">U2FsdGVkX1+5cuqrb7AHbyBrAj3kkTE2IU8cxLB6mTHiOMvbj+uyaCbWVol6J0bNd97x4g94fHyFWPkdiuV3nPId6O5giRG578PThSBPdFVroxLh3BnrELAikJEA2Z6dY1P1YN1vYOY71VxOFmio8iZpY4C61RdufjOhcQMIrOG+Az1otLkKRBGfpwZ6c5Rjt/5w1dPyb2Uyv5TGGhyJkHDnetctPqK8c4LnfCvOLZZxV/Xsm0enzXYEwn5S8abMCg310dnd8/WHs7gQqImW7QpCvBdyetq6i/3r2nv1NVDiOQdgnmVe6gjZJQIyhXgIJ+yjUwgn/I7ax2Cdup7ukk7AGo9ajJOg1iXNRQrUwr57ojKwr+5LyjWrg8F+TkQTbAALt3gmDWqyvrb/5UCBcGjnOjDBtdlPJ9s735Kq/FAz7Im0gNUPqWcGm+Bj74oJhXzsP73v8Xft6lZudhb6BFO0qELj/XSoznqJVbcUH0vHDn/OXtGkgp/Ydyax5NdJbC3YdZW+DjTvPwm/hDwZ3D58rZud47LsKBLXWf7jovtp4VUA6Em4cDAhIxxUFHaXb1QowS9HD99rEl9Ib6QrLFv3qvUb6gvq/T8e22sQ07yUIpX5olmPjt7vgf5BJiNw/7J9ZVQHDiDBMtu2Zx7i6kS45hYqgW9r76loKRlQY4BKCDMWC6TNGIKROalxXu8qiqkfgix8Ja4JNcloacL2cXpMXIoOYQchlEVUz8SFewLwbOMQUqzHi3EbxMiy1GjvmShpJk1aUuxVRNd2ALR5VQ==</div><div id="enc_passwd"> <input id="enc_pwd_input" type="text" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
+<div id="enc_content" style="display:none">U2FsdGVkX1+cDXs6RwJzy0/+OrgiHwv3EQ4TwFR96cg62JyrpoPFQstSzKGX9s3ozNPeGUBCVFWnXIJX3XZcVWZ3pUuJEV7R+gGOGTX3+mAUpThAQmjQVP3tSp2+KUuevP7n7YVXJ1h5NOksC+sNwgJTEy/sYwMp1aRcsDZ1y2xUwuKOazP9MKD4qh/WS/BEYQ5HeQd8eMYbDQ+orUG4nypPrQBpHm0ICwJeuhKD7CuZr2wrWngqly05jAkv3sM3P69NtIwBkzIVrGpQlXvI2mEZsUPTpWpGLabYV+8xU6rYc/oF+c3cnA2eQqUGdbOxHNuDu91rK0bwD2+tQbaPtyESArO0RkyOAPKXvi2JQ7yhN8FODUQKqiOL8nxrKOFzV2t+FlEgZdLjpuKR8ZPEQB8h8bd9dP9E0qMyMlvLGL04pEdQrdc9ee4nJ440PJpeHU6oFEs9fAJvNffPtgGIcy+iZFabeEdVL2P5AoEhsqA4m6RyKYHQObzwMTUvLij2KC6fP4NZQdiPG3VZo4Hagx4SW+99Qu0Oo2GbJWHpYZn3/J4aMaAChTSD2NDACHSU8GRegKbqbnVdiEAfJX48RSBvG1vuvtoHd0amu5C0ZZGY+fbCYz5nXJSNIgR3eB92hYSUVXzgSw+uN/4Ij53hzhlU+XyeJ4KWdug0liicRDaX0Vj2wXjSBOmyhq4VDETggsxOl1CXmfwwbzqXx6yexwDeV0zqRpY/JKGCstMaJ8Kbf7GbbKRYgnYaVPPRFV4rD0idlATpVGLri8ZmwgrKug==</div><div id="enc_passwd"> <input id="enc_pwd_input" type="text" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
 <script>
 var onError = function(error) {
 	document.getElementById("enc_error").innerHTML = "password error!"
@@ -586,7 +586,7 @@ doDecrypt(passwd, onError);
     var gitment = new Gitment({
         id: 'Tue Aug 01 2017 11:29:44 GMT+0800', // 可选。默认为 location.href
         owner: 'dustdu',
-        repo: 'dustdu.github.io',
+        repo: 'lkang-discuss',
         oauth: {
             client_id: '636618e11ffaa32da979',
             client_secret: '58cb0a357753b31d212ea0ecea2c5cfd6dc4bea0',
