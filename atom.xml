@@ -670,9 +670,9 @@
       <category term="建站" scheme="http://lkang.me/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="hexo" scheme="http://lkang.me/tags/hexo/"/>
-    
       <category term="建站" scheme="http://lkang.me/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+      <category term="hexo" scheme="http://lkang.me/tags/hexo/"/>
     
       <category term="git" scheme="http://lkang.me/tags/git/"/>
     
