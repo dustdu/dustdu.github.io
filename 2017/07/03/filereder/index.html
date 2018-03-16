@@ -5,8 +5,41 @@
     <!--
         © Material Theme
         https://github.com/viosey/hexo-theme-material
-        Version: 1.4.0 -->
-    <script>window.materialVersion = "1.4.0"</script>
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Title -->
     
@@ -17,117 +50,18 @@
         学海拾遗
     </title>
 
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    
-    
-    
-    
-        <link rel="dns-prefetch" href="https://hm.baidu.com"/>
-    
-    
-    
-    
-        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
-    
-    
-    
-    
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="theme-color" content="#0097A7">
-    <meta name="author" content="李康">
-    <meta name="description" itemprop="description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、JavaScript、html、css">
-    <meta name="keywords" content="websit,web,前端,JavaScript,html,css,javascript,数据上传,html5">
-
-    <!-- Site Verification -->
-    <meta name="google-site-verification" content="v5PicV7YKMH26TAQk-s3SoPZrYivKv5aWk_EbmnneXA" />
-    <meta name="baidu-site-verification" content="BHYVK2e9BE" />
-
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon1.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon1.png">
-    <link rel="apple-touch-icon" href="/img/favicon1.png">
+    <link rel="icon" href="/img/favicon1.png">
 
-    <!--iOS -->
-    <meta name="apple-mobile-web-app-title" content="Title">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、JavaScript、html、css">
+    <meta name="keywords" content="websit,web,前端,JavaScript,html,css,javascript,数据上传,html5">
+    <meta name="theme-color" content="#0097A7">
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="学海拾遗">
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://lkang.me">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="FileReader的用法 | 学海拾遗">
-    <meta property="og:image" content="/img/favicon1.png" />
-    <meta property="og:description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、JavaScript、html、css">
-    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="数据上传"> <meta property="og:article:tag" content="html5"> 
-
-    
-        <meta property="article:published_time" content="7月 03, 2017" />
-        <meta property="article:modified_time" content="10月 10, 2017" />
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="FileReader的用法 | 学海拾遗">
-    <meta name="twitter:description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、JavaScript、html、css">
-    <meta name="twitter:image" content="/img/favicon1.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="http://lkang.me" />
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="http://lkang.me/2017/07/03/filereder/index.html" />
-    
-
-    <!-- Structured-data for SEO -->
-    
-        
-
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "publisher": {
-        "@type": "Organization",
-        "name": "学海拾遗",
-        "logo": "/img/favicon1.png"
-    },
-    "author": {
-        "@type": "Person",
-        "name": "李康",
-        "image": {
-            "@type": "ImageObject",
-            "url": "/img/favicon1.png"
-        },
-        "description": "欢迎啊！"
-    },
-    "headline": "FileReader的用法",
-    "url": "http://lkang.me/2017/07/03/filereder/index.html",
-    "datePublished": "7月 03, 2017",
-    "dateModified": "10月 10, 2017",
-    "description": "一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、JavaScript、html、css",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http://lkang.me"
-    }
-}
-</script>
-
-
-    
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -138,39 +72,38 @@
     <![endif]-->
 
     <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
 
-    <!-- Import CSS & jQuery -->
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
     
-        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
-        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?5orclITxRDGTPE/om2NxRQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
-        
-        
-            <style>
-    
-    
-    
-    
-    
-    
-    
-    .footer-sns-github {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
-    }
-    
-    
-    
-    
-    
-</style>
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
-        <!-- Config CSS -->
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
 
 <!-- Other Styles -->
 <style>
   body, html {
     font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
 
   a {
@@ -235,13 +168,8 @@
 <!-- Theme Background Related-->
 
     <style>
-      body {
-        background-color: undefined;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
-        background-color: #fff;
+      body{
+        background-image: url(/img/bg1.jpg);
       }
     </style>
 
@@ -268,18 +196,108 @@
 
 
 <!-- Import Font -->
+<!-- Import Roboto -->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 
 
-        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
     
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
     
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="学海拾遗">
+    <meta name="msapplication-starturl" content="http://lkang.me/2017/07/03/filereder/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="学海拾遗">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon1.png">
+
+    <!-- Site Verification -->
+    <meta name="google-site-verification" content="v5PicV7YKMH26TAQk-s3SoPZrYivKv5aWk_EbmnneXA" />
+    <meta name="baidu-site-verification" content="BHYVK2e9BE" />
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="/atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://lkang.me/2017/07/03/filereder/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="FileReader的用法 | 学海拾遗">
+    <meta property="og:image" content="/img/favicon1.png">
+    <meta property="og:description" content="一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、JavaScript、html、css">
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="数据上传"> <meta property="og:article:tag" content="html5"> 
+
+    
+        <meta property="article:published_time" content="Mon Jul 03 2017 22:18:15 GMT+0800">
+        <meta property="article:modified_time" content="Tue Oct 10 2017 08:55:00 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://lkang.me/2017/07/03/filereder/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://lkang.me/2017/07/03/filereder/index.html",
+    "headline": "FileReader的用法",
+    "datePublished": "Mon Jul 03 2017 22:18:15 GMT+0800",
+    "dateModified": "Tue Oct 10 2017 08:55:00 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "李康",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar1.png"
+        },
+        "description": "欢迎啊！"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "学海拾遗",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon1.png"
+        }
+    },
+    "keywords": ",javascript,数据上传,html5websit,web,前端,JavaScript,html,css",
+    "description": "一些平时学习的笔记和自己感兴趣的东西，前端的东西真是多啊！学海无涯苦作舟吧。前端、JavaScript、html、css",
+}
+</script>
+
+
+    
 
     <!-- Analytics -->
-    <script>
+    
+    
+        <script>
     var _hmt = _hmt || [];
     (function() {var hm = document.createElement('script');
     hm.src = 'https://hm.baidu.com/hm.js?ae7cf981f2e1092a6083079e78eeb1ac';
@@ -287,9 +305,12 @@
     s.parentNode.insertBefore(hm, s);
     })();
 </script>
+    
+    
 
     <!-- Custom Head -->
     
+
 </head>
 
 
@@ -330,23 +351,10 @@
     </div>
     -->
 
+
     <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
     
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        
-        <!--
-        <li class="mdl-menu__item">
-            Some Action
-        </li>
-        -->
-    </ul>
     
-
 
 
 
@@ -411,6 +419,7 @@
         <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://lkang.me/2017/07/03/filereder/">
     
 </ul>
+
     
 
     <!-- Tags (bookmark) -->
@@ -426,7 +435,8 @@
     
 
     <!-- Share -->
-    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
     <i class="material-icons" role="presentation">share</i>
     <span class="visuallyhidden">share</span>
 </button>
@@ -448,7 +458,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=FileReader的用法&url=http://lkang.me/2017/07/03/filereder/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=FileReader的用法&url=http://lkang.me/2017/07/03/filereder/index.html&pic=http://lkang.me/img/favicon1.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -510,6 +520,7 @@
     
 </ul>
 
+    
 </div>
 
                 
@@ -534,7 +545,7 @@ function doDecrypt(pwd, onError) {
    document.getElementById("enc_passwd").style.display = "none";
 }
 </script>
-<div id="enc_content" style="display:none">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</div><div id="enc_passwd"> <input id="enc_pwd_input" type="text" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
+<div id="enc_content" style="display:none">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</div><div id="enc_passwd"> <input id="enc_pwd_input" type="text" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
 <script>
 var onError = function(error) {
 	document.getElementById("enc_error").innerHTML = "password error!"
@@ -546,6 +557,7 @@ doDecrypt(passwd, onError);
 }
 </script>
 </div>
+        
     
 
     
@@ -557,6 +569,32 @@ doDecrypt(passwd, onError);
                 <!-- Post Comments -->
                 
                     
+    <!-- 使用 gitcoment -->
+<div id="gitment-comment">
+    <!-- Gitment 评论框 -->
+<div id="container"></div>
+</div>
+<style>
+    #gitment-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        //id: '页面 ID', // 可选。默认为 location.href
+        owner: 'dustdu',
+        repo: 'dustdu.github.io',
+        oauth: {
+            client_id: '636618e11ffaa32da979',
+            client_secret: '58cb0a357753b31d212ea0ecea2c5cfd6dc4bea0',
+        },
+    })
+    gitment.render('container')
+</script>
+
                 
             </div>
 
@@ -601,7 +639,7 @@ doDecrypt(passwd, onError);
 <aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
     <div id="sidebar-main">
         <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpg);">
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
     <!-- Top bar -->
     <div class="top-bar"></div>
 
@@ -656,8 +694,6 @@ doDecrypt(passwd, onError);
             </a>
         </li>
         
-            <li class="divider"></li>
-        
     
 
     <!-- Archives  -->
@@ -679,23 +715,6 @@ doDecrypt(passwd, onError);
     
 
     <!-- Categories  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
-                
-                分类
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                <a class="sidebar_archives-link" href="/categories/ES6/">ES6<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Vue/">Vue<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/css/">css<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/categories/node-js/">node.js<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/建站/">建站<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据处理/">数据处理<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/生活/">生活<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/软件应用/">软件应用<span class="sidebar_archives-count">3</span></a>
-            </ul>
-        </li>
-        
-            <li class="divider"></li>
-        
     
 
     <!-- Pages  -->
@@ -860,12 +879,16 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Telegram -->
     
+    
+    <!-- V2EX -->
+    
 </div>
 
 
         <!--Copyright-->
         <div id="copyright">
             Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>学海拾遗
+            
         </div>
 
         <!-- Paradox Footer Right Section -->
@@ -888,15 +911,17 @@ It will not impact the appearance and can give developers a lot of support :)
 </footer>
 
 
-                    <!-- Import File -->
+                    <!-- Import JS File -->
 
-
-    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
-    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
 
 
 
-    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
 
 
 <script type="text/ls-javascript" id="NProgress-script">
@@ -923,7 +948,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
     
-        <script>lsloader.load("js/smoothscroll.js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
     
 
 
@@ -934,6 +959,8 @@ It will not impact the appearance and can give developers a lot of support :)
     <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+   <!-- Gitment -->
 
 
 
@@ -948,15 +975,40 @@ It will not impact the appearance and can give developers a lot of support :)
 	}
 </script>
 
-<!-- Window Load-->
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
 <script type="text/ls-javascript" id="window-load">
     $(window).on('load', function() {
         // Post_Toc parent position fixed
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
 </script>
 
 <!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
 
 <script type="text/ls-javascript" id="lazy-load">
     // Offer LazyLoad
@@ -974,13 +1026,8 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 </script>
 
-<!-- Bing Background -->
+<!-- Custom Footer -->
 
-<script type="text/ls-javascript" id="Bing-Background-script">
-    queue.offer(function(){
-        $('body').attr('data-original', 'https://api.i-meto.com/bing?[object Object]');
-    });
-</script>
 
 
 <script>
@@ -992,7 +1039,7 @@ It will not impact the appearance and can give developers a lot of support :)
             lsloader.runInlineScript(item.id,item.id);
         }
     })()
-console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
 </script>
 
                 </main>
